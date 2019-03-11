@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<title>xtr</title>
     <link href="https://fonts.googleapis.com/css?family=Catamaran|Open+Sans:300" rel="stylesheet">
     <script src="file:///E:/resources/dev/cse/jquery-3.3.1.min.js"></script>
     <head>
@@ -435,6 +436,13 @@
             /**end Animations*/
         </style>
         <style>
+        	/*CENTRAL PAGE CONTROL. DONOT EDIT.*/
+        	#sd:checked~.dashboard .ddown,#sd:checked~.dashboard .dnoties,#sd:checked~.dashboard .dassociation,
+        	#a:checked~.dashboard .dhome,#a:checked~.dashboard .dnoties,#a:checked~.dashboard .dassociation,
+        	#b:checked~.dashboard .ddown,#b:checked~.dashboard .dhome,#b:checked~.dashboard .dassociation,
+        	#c:checked~.dashboard .ddown,#c:checked~.dashboard .dnoties,#c:checked~.dashboard .dhome
+        	{height:0;overflow:hidden;}
+        	/*END CENTRAL PAGE CONTROL*/
             .checkers {
                 display: none;
                 position: relative;
@@ -1300,10 +1308,11 @@
                 z-index: 20;
             }
 
+
             .dashboard_balnk {
                 font-size: 100px;
                 font-family: extralight;
-                height: 100vh;
+                height: 0vh;overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1339,15 +1348,15 @@
             }
 
             @keyframes dblank {
-                0% {
+                0% {height:100vh;
                     z-index: 25;
                 }
 
-                90% {
+                90% {height:100vh;
                     z-index: 25;
                 }
 
-                100% {
+                100% {height:100vh;
                     z-index: 25;
                 }
             }
@@ -2709,6 +2718,9 @@
                     font-size: 18px;
                 }
             }
+            .foot_tip {
+    font-size: 14px;
+    font-family: open sans;font-weight: 600;}
         </style>
         <style>
             .contt {
@@ -2851,7 +2863,7 @@
 
             #unselect:checked~.content .hover_cover {
                 z-index: -100;
-                height: 200vh;
+                height: 112vh;
                 width: 100vw;
                 position: fixed;
                 background: transparent;
@@ -3022,19 +3034,18 @@
     	0%{transform: rotatey(-25deg) translatey(10px) rotate(-13deg) scale(0.981);opacity:0;}
     	100%{transform: rotatey(0deg) translatey(0px) rotate(-10deg) scale(1);opacity:1;}
     }
-    .asso_tips{    width: 69%;
-    margin-left: 70px;}
-    .tabs{  margin: 20px 0px 0px 15px;
+    .tabs{  margin: 0px 0px 0px 15px;
     padding: 0px 0px 0px 0px;
     width: 100%;}
     .tab_nav{width:100%;    padding: 0 0 0 30px;}
     .tab_nav_lab{    display: inline-block;
-    transition: all .3s;cursor:pointer;
-    padding: 28px 10px 20px 9px;
+    transition: all .3s;
+    cursor: pointer;
+    padding: 16px 10px 14px 9px;
     color: rgba(97, 97, 97,.6);
-    margin: 10px 10px 0px 10px;}
+    margin: 0px 7px 0px 8px;}
     .tab{height: 0;    display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    margin-bottom: 191px;
     overflow: hidden;
     position: absolute;
     width: 100%;
@@ -3077,9 +3088,9 @@
     align-self: center;}.tab_fac_tip_sub {    display: block;
     font-family: open sans;
     font-size: 15px;}
-.dassociation .dash_title{    font-size: 33px;
-    margin: 0px 0px 36px 0%;
-    background:linear-gradient(rgba(255, 255, 255, 0) 60%,rgb(0, 0, 0) 103%);
+.dassociation .dash_title{     font-size: 33px;
+    margin: 0px 0px 0px 0%;
+    background: linear-gradient(rgba(255, 255, 255, 0) 60%,rgb(0, 0, 0) 103%);
     height: 200px;
     display: flex;
     flex-direction: column-reverse;
@@ -3087,7 +3098,77 @@
     color: rgb(255, 255, 255);}
 .dassociation {
     margin: 10px 0px 124px 13px;}
-    .dash_title_back{background:url('david.jpg');}
+    .dash_title_back {
+    background: url(file:///E:/3Pics/92627e72297975.5be2b7a373407.jpg);
+    background-position: 50% 33%;}
+    .dassociation #blur{background: url(david.jpg);
+    height: 42px;
+    background-position: 0% 100%;
+    filter: blur(6px);
+    transform: scale(1.091) translate(0px,-3px);
+    position: relative;
+    top: -32px;}
+    .dassociation .toola {height:40px;
+    position: relative;
+    top: -100px;}
+    .dassociation .tool3 {box-shadow:-6px 4px 23px 0px rgba(0, 0, 0, 0.2);
+    height: 236px;
+    padding: 0px;
+    overflow: hidden;
+    width: 19%;margin:32px 2% 0px 2%;
+    background: rgba(238, 239, 244, 0.31);}
+.dassociation .tooltip.toola.blue{    background: rgba(48, 55, 144, 0.75);
+    top: -100px;
+    color: rgb(255, 255, 255);}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(2){transition-delay: .1s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(3){transition-delay: .2s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(4){transition-delay: .31s;} 
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(5){transition-delay: .431s;} 
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(6){transition-delay: .541s;} 
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(7){transition-delay: .651s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(8){transition-delay: .761s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(9){transition-delay: .71s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(10){transition-delay: .81s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(11){transition-delay: .91s;}
+ /*----------------------------233x190 pixels, 240x240ppi, 44270 pixels-------------------------------*/
+.dassociation .tool3:nth-child(2) .tooltippic3 {background-image: url(t1.jpg);}
+.dassociation .tool3:nth-child(2) #blur {background-image: url(t1.jpg);}
+.dassociation .tool3:nth-child(3) .tooltippic3 {background-image: url(t2.jpg);}
+.dassociation .tool3:nth-child(3) #blur {background-image: url(t2.jpg);}
+.dassociation .tool3:nth-child(4) .tooltippic3 {background-image: url(t3.jpg);}
+.dassociation .tool3:nth-child(4) #blur {background-image: url(t3.jpg);}
+.dassociation .tool3:nth-child(5) .tooltippic3 {background-image: url(t4.jpg);}
+.dassociation .tool3:nth-child(5) #blur {background-image: url(t4.jpg);}
+.dassociation .tool3:nth-child(6) .tooltippic3 {background-image: url(t1.jpg);}
+.dassociation .tool3:nth-child(6) #blur {background-image: url(t1.jpg);}
+.dassociation .tool3:nth-child(7) .tooltippic3 {background-image: url(t2.jpg);}
+.dassociation .tool3:nth-child(7) #blur {background-image: url(t2.jpg);}
+.dassociation .tool3:nth-child(8) .tooltippic3 {background-image: url(t3.jpg);}
+.dassociation .tool3:nth-child(8) #blur {background-image: url(t3.jpg);}
+.dassociation .tool3:nth-child(9) .tooltippic3 {background-image: url(t4.jpg);}
+.dassociation .tool3:nth-child(9) #blur {background-image: url(t4.jpg);}
+.dassociation .tool3:nth-child(10) .tooltippic3 {background-image: url(t2.jpg);}
+.dassociation .tool3:nth-child(10) #blur {background-image: url(t2.jpg);}
+.dassociation .tool3:nth-child(11) .tooltippic3 {background-image: url(t4.jpg);}
+.dassociation .tool3:nth-child(11) #blur {background-image: url(t4.jpg);}
+.tipout{width:100%;margin: 2% 0% 0% 3%;}
+.dashboard .dassociation .tool3{transform: translatey(-6px); opacity:0;animation: none !important;transition: all .7s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(2),
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(3),
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(4), 
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(5), 
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(6), 
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(7),
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(8),
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(9),
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(10),
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(11){transform: translatey(0px); opacity:1;}
+    .hodtip{    background: rgba(91, 60, 255, 0.66);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    position: relative;
+    top: -6px;
+    padding: 3px;}
         </style>
         <script>
             $(document).ready(function() {
@@ -3095,7 +3176,7 @@
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #a,#b,#c,#d,#e,#f,#g').each(function() {
+                    $('#home, #a,#b,#c,#d,#e,#f,#g,#t1,#t2,#t3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash').each(function() {
@@ -3106,7 +3187,7 @@
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home,#sd,#b,#c,#d,#e,#f,#g').each(function() {
+                    $('#home,#sd,#b,#c,#d,#e,#f,#g,#t1,#t2,#t3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash,#unselect,#ktuback').each(function() {
@@ -3117,7 +3198,7 @@
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #sd,#a,#c,#d,#e,#f,#g').each(function() {
+                    $('#home, #sd,#a,#c,#d,#e,#f,#g,#t1,#t2,#t3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash').each(function() {
@@ -3128,10 +3209,10 @@
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #sd,#a,#b,#d,#e,#f,#g').each(function() {
+                    $('#home, #sd,#a,#b,#d,#e,#f,#g,#t1,#t2,#t3').each(function() {
                         $(this).prop('checked', false);
                     });
-                    $('#dash').each(function() {
+                    $('#dash, #t1').each(function() {
                         $(this).prop('checked', toStatus);
                     });
                 });
@@ -3139,7 +3220,7 @@
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #sd,#a,#b,#c,#e,#f,#g').each(function() {
+                    $('#home, #sd,#a,#b,#c,#e,#f,#g,#t1,#t2,#t3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash').each(function() {
@@ -3150,7 +3231,7 @@
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #sd,#a,#b,#c,#d,#f,#g').each(function() {
+                    $('#home, #sd,#a,#b,#c,#d,#f,#g,#t1,#t2,#t3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash').each(function() {
@@ -3161,7 +3242,7 @@
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #sd,#a,#b,#c,#d,#e,#g').each(function() {
+                    $('#home, #sd,#a,#b,#c,#d,#e,#g,#t1,#t2,#t3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash').each(function() {
@@ -3172,7 +3253,7 @@
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #sd,#a,#b,#c,#d,#e,#f').each(function() {
+                    $('#home, #sd,#a,#b,#c,#d,#e,#f,#t1,#t2,#t3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash').each(function() {
@@ -12695,7 +12776,6 @@
 
 	<div class='dash_title_back'><div class='dash_title'>The Computer Science Department</div></div>
 	<svg class='knz_oneplus' width="100%" height="100%" viewBox="0 0 480 879" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path style="fill: rgb(255, 255, 255);stroke: rgb(0, 0, 0);stroke-width: 2px;" d="M429.626,243l-0.943,0l0,-58.001l-1.044,-2.54c-0.602,-1.463 -0.92,-2.958 -0.953,-4.459l1.997,0c1.103,0 2,-0.896 2,-2l0,-40c0,-1.104 -0.897,-2 -2,-2l-2,0l0,-1.741c0,-1.589 0.32,-3.171 0.956,-4.718l1.044,-2.541l0,-71.415c0,-1.911 -0.051,-3.773 -0.155,-5.585l-4.545,0c-0.159,-2.818 -0.444,-5.489 -0.871,-8l4.565,0c-2.277,-14.112 -8.506,-24.539 -19.586,-30.8c-8.286,-4.682 -19.848,-7.069 -34.285,-7.299c-5.811,-0.093 -70.581,-1.9 -139.123,-1.901c-68.542,0.001 -133.315,1.808 -139.124,1.901c-14.438,0.23 -25.999,2.617 -34.286,7.299c-11.08,6.261 -17.309,16.688 -19.584,30.8l4.56,0c-0.428,2.511 -0.712,5.182 -0.871,8l-4.541,0c-0.104,1.812 -0.154,3.674 -0.154,5.585l0,154.415l4.5,0l0,8l-4.5,0l0,27l-0.551,0c-1.353,0 -2.449,1.097 -2.449,2.449l0,95.102c0,1.352 1.096,2.449 2.449,2.449l0.551,0l0,405.415c0,1.562 0.034,3.09 0.102,4.585l4.593,0c0.158,2.818 0.443,5.489 0.87,8l-4.714,0c2.141,14.62 8.4,25.393 19.739,31.801c8.287,4.681 19.848,7.068 34.286,7.299c5.809,0.092 70.582,1.899 139.124,1.9c68.542,-0.001 133.312,-1.808 139.123,-1.9c14.437,-0.231 25.999,-2.618 34.285,-7.299c11.34,-6.408 17.599,-17.181 19.74,-31.801l-4.719,0c0.427,-2.511 0.712,-5.182 0.871,-8l4.597,0c0.068,-1.495 0.103,-3.023 0.103,-4.585l0,-443.415l0.943,0c1.136,0 2.057,-0.921 2.057,-2.057l0,-57.887c0,-1.136 -0.921,-2.056 -2.057,-2.056"/><path d="M241.683,28.983l-14,0c-2.762,0 -5,-2.239 -5,-5c0,-2.762 2.238,-5 5,-5l14,0c2.762,0 5,2.238 5,5c0,2.761 -2.238,5 -5,5" style="fill:#32327c;"/><path d="M269.683,23.983c0,-2.209 -1.791,-4 -4,-4c-2.209,0 -4,1.791 -4,4c0,2.209 1.791,4 4,4c2.209,0 4,-1.791 4,-4m4,0c0,4.417 -3.582,8 -8,8c-4.418,0 -8,-3.583 -8,-8c0,-4.418 3.582,-8 8,-8c4.418,0 8,3.582 8,8" style="fill:#32327c;"/><g><clipPath id="_clip1"><path d="M293.123,16.15c-2.377,0.463 -6.251,2.252 -7.01,9.127c-1.112,10.085 -8.724,16.705 -18.313,16.705l-66.068,0c-9.59,0 -17.2,-6.62 -18.312,-16.705c-0.757,-6.861 -4.623,-8.659 -7.006,-9.127l-87.815,0c-12.5,0 -20.301,2.37 -25.92,7.769c-5.92,5.69 -8.08,14.28 -8.08,26.23l0,702c0,6.35 2.521,12.479 6.74,16.76c4.259,4.321 9.91,7.24 16.259,7.24l314,0c6.352,0 12.012,-2.919 16.272,-7.24c4.218,-4.281 6.729,-10.41 6.729,-16.76l0,-702c0,-11.95 -2.149,-20.54 -8.069,-26.23c-5.631,-5.399 -13.432,-7.769 -25.932,-7.769l-87.475,0Z" clip-rule="nonzero"/></clipPath><g clip-path="url(#_clip1)"><rect x="54.598" y="16.149" width="360" height="760" style="fill:#32327c;"/><path d="M0,124.39c0,0 182.217,-130.524 152.494,20.677c-29.723,151.202 -100.802,168.002 -6.462,208.064c94.34,40.063 0,219.696 0,219.696c0,0 -127.94,250.71 -136.986,45.231c-9.046,-205.48 -9.046,-493.668 -9.046,-493.668" style="fill:#ffac48;fill-rule:nonzero;"/><g><g><g><g><text x="74.599px" y="36.982px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:14px;fill:#fff;">K<tspan x="84.137px 92.123px 99.323px 103.413px 108.275px 116.261px 123.461px 130.661px " y="36.982px 36.982px 36.982px 36.982px 36.982px 36.982px 36.982px 36.982px ">nz rockz</tspan></text></g></g></g></g><path d="M391.474,26.624l0,-0.766l-2.625,0l0,0.766l-2.625,0l0,11.484l7.875,0l0,-11.484l-2.625,0Z" style="fill:#fff;fill-rule:nonzero;"/><path d="M364.599,38.108l12.25,0l0,-12.25l-12.25,12.25Z" style="fill:#fff;fill-rule:nonzero;"/><path d="M345.477,28.497c2.196,-1.657 4.931,-2.639 7.895,-2.639c2.963,0 5.697,0.982 7.894,2.639l-7.894,9.611l-7.895,-9.611Z" style="fill:#fff;fill-rule:nonzero;"/><path d="M458.774,420.332c0,0 -143.448,-54.278 -104.678,71.078c38.77,125.355 68.493,118.894 18.092,160.248c-50.4,41.354 15.508,178.34 -174.463,199.018c-189.972,20.677 295.942,84.001 281.726,-100.802c-14.215,-184.802 -20.677,-329.542 -20.677,-329.542" style="fill:#36d9ff;fill-rule:nonzero;"/></g></g><clipPath id="_clip2"><rect id="wlogowhite" x="135.932" y="327.159" width="197.502" height="137.981"/></clipPath><g clip-path="url(#_clip2)"><path d="M253.655,342.125c-4.088,-10.482 -15.917,-15.674 -26.4,-11.586c-10.482,4.088 -15.674,15.917 -11.586,26.4l36.676,94.052c4.088,10.483 15.917,15.674 26.4,11.586c10.482,-4.088 15.674,-15.916 11.586,-26.4l-36.676,-94.052Z" style="fill:#fff;fill-opacity:0.792157;"/><path d="M211.28,449.963c-4.614,10.261 -16.691,14.846 -26.953,10.232c-10.262,-4.615 -14.847,-16.693 -10.233,-26.955l41.402,-92.07c4.615,-10.262 16.693,-14.846 26.955,-10.232c10.26,4.614 14.846,16.692 10.232,26.954l-41.403,92.071Z" style="fill:#fff;fill-opacity:0.792157;"/><path d="M289.621,451.946c-4.614,10.262 -16.693,14.847 -26.955,10.232c-10.261,-4.614 -14.846,-16.691 -10.232,-26.953l41.402,-92.07c4.614,-10.262 16.692,-14.848 26.954,-10.234c10.262,4.616 14.846,16.693 10.232,26.955l-41.401,92.07Z" style="fill:#fff;fill-opacity:0.682353;"/><path d="M175.315,340.142c-4.087,-10.484 -15.917,-15.675 -26.399,-11.587c-10.484,4.088 -15.676,15.917 -11.588,26.4l36.677,94.053c4.088,10.482 15.918,15.674 26.401,11.586c10.482,-4.088 15.674,-15.918 11.586,-26.4l-36.677,-94.052Z" style="fill:#fff;fill-opacity:0.647059;"/></g></svg>
-	<div class='asso_tips'>The association strives to produce someting good and bas and yo n=ro bro no do gthe sthignd.</div>
 			<div class='tabs'>
 				<div class='tab_nav'>
 					<label for='t1' class='tab_nav_lab lab1'>Faculty</label>
@@ -12703,15 +12783,141 @@
 					<label for='t3' class='tab_nav_lab lab3'>Team</label>
 				</div>
 				<div class='tab tab1'>
+					<div class="tipout">Click to view resume.
+								</div>
 					<div class="tool3 light sub-head">
                                 <div class="tooltippic3"></div>
-                                <div class="tooltip" id="blur"></div>
+                                <div class="tooltip blur" id="blur"></div>
                                 <div class="tooltip toola">
-                                    News.
-								<div class="tip">Release of the new CSE association website.
+                                    First Lastname
+								<div class="tip hodtip">Head of Dept.
+								</div>
+                                </div>
+                                <div class="tooltip toola blue">
+								<div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
 								</div>
                                 </div>
                             </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+								<div class="tip">Assist. Proffesor
+								</div>
+                                </div>
+                                <div class="tooltip toola blue">
+								<div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+								</div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+								<div class="tip">Assist. Proffesor
+								</div>
+                                </div>
+                                <div class="tooltip toola blue">
+								<div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+								</div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+								<div class="tip">Assist. Proffesor
+								</div>
+                                </div>
+                                <div class="tooltip toola blue">
+								<div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+								</div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+								<div class="tip">Assist. Proffesor
+								</div>
+                                </div>
+                                <div class="tooltip toola blue">
+								<div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+								</div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+								<div class="tip">Assist. Proffesor
+								</div>
+                                </div>
+                                <div class="tooltip toola blue">
+								<div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+								</div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+								<div class="tip">Assist. Proffesor
+								</div>
+                                </div>
+                                <div class="tooltip toola blue">
+								<div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+								</div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+								<div class="tip">Assist. Proffesor
+								</div>
+                                </div>
+                                <div class="tooltip toola blue">
+								<div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+								</div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+								<div class="tip">Assist. Proffesor
+								</div>
+                                </div>
+                                <div class="tooltip toola blue">
+								<div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+								</div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+								<div class="tip">Assist. Proffesor
+								</div>
+                                </div>
+                                <div class="tooltip toola blue">
+								<div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+								</div>
+                                </div>
+                            </div>
+				</div>
+				<div class='tab tab2'>Gallery</div>
+				<div class='tab tab3'>
 					<div class='tab_fac'>
 						<div class='tab_fac_pic'>pic</div>
 						<div class='tab_fac_tip'>Sajan Sir<div class='tab_fac_tip_sub'>Compiler Design</div></div>
@@ -12753,8 +12959,6 @@
 						<div class='tab_fac_but obj_button'>Resume</div>
 					</div>
 				</div>
-				<div class='tab tab2'>Gallery</div>
-				<div class='tab tab3'>Team</div>
 			</div>
 		</div>
 <div class='dfoot_backcolor'>
@@ -12763,7 +12967,9 @@
         <div class='dfoot_obj1 darkmode_border'>
             < footer />
         </div>
-        <div class='dfoot_obj2 darkmode_border'>Wission, Computer Science Department, Holygrace Academy of Engineering, Mala</div>
+        <div class='dfoot_obj2 darkmode_border'>Wission, Computer Science Department, Holygrace Academy of Engineering, Mala
+<div class='foot_tip'>Initaited by Computer Science Branch. Develoeped by Akshay Knz</div>
+        </div>
     </div>
 </div>
 </div></div>
