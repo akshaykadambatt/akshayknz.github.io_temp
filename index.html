@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<title>xtr</title><link href="fav.png"  rel="icon">
+<title>xtr</title>
+<script src="./scrollreveal.min.js"></script>
+<link href="fav.png"  rel="icon">
     <link href="https://fonts.googleapis.com/css?family=Catamaran|Open+Sans:300" rel="stylesheet">
     <script src="jquery-3.3.1.min.js"></script>
     <head>
@@ -642,7 +644,7 @@
                 height: 70%;
                 background: url('david.jpg');
             }
-
+.dassociation .tooltippic3{background: none;background-size: cover;}
             .toola {
                 position: relative;
                 top: -90px;
@@ -728,7 +730,7 @@
             #home:checked~.home{opacity:1;}
         </style>
         <style>
-            .dashboard {
+            .dashboard {opacity:0;transition: opacity .3s .3s;
                 height: 100vh;
                 width: 100vw;
                 overflow-x: hidden;
@@ -736,6 +738,7 @@
                 position: absolute;
                 top: 0px;
             }
+            #dash:checked~.dashboard{opacity:1;transition: opacity .0s .0s;}
 
             .home {transition: all .3s .5s;
                 position: relative;
@@ -784,15 +787,13 @@
                 transform: translatey(0);
             }
 
-            .wlogo {
-                background: url(wlogo.svg) no-repeat;
-                height: 32px;
-                transition: all .3s;
-                width: 46px;
-                position: relative;
-                left: 7%;
-                top: 17%;
-            }
+            .wlogo {background: url(wlogo.svg) no-repeat;
+    height: 26px;
+    transition: all .3s;
+    width: 37px;
+    position: relative;
+    left: 7%;
+    top: 22%;}
 
             .menulogo {
                 height: 49px;
@@ -2799,7 +2800,7 @@
                 height: 100%;
                 position: absolute;
                 top: 0;
-                font-size: 15px;
+                font-size: 11px;
                 left: 11.4%;
                 padding: 0% 0%;
                 box-sizing: border-box;
@@ -2813,7 +2814,7 @@
                 width: auto;
                 background: rgba(0, 0, 0, 0.08);
                 display: flex;
-                padding: 3px 12px;
+                padding:1px 10px;
                 margin: 3px 4px;
                 overflow: hidden;
                 align-items: center;
@@ -2832,7 +2833,7 @@
             }
 
             .divider {
-                font-size: 25px;
+                font-size: 23px;
             }
 
             .path2 {
@@ -2853,7 +2854,7 @@
             #dash:checked~.dashboard .dnav .path .path2, #a:checked~.dashboard .dnav .path .path3, #b:checked~.dashboard .dnav .path .path4, #c:checked~.dashboard .dnav .path .path5, .path6 {
                 transform: scale(1) translatex(0px);
                 width: auto;
-                padding: 3px 12px;
+                padding:1px 9px;
                 margin: 3px 4px;
             }
 
@@ -3023,7 +3024,7 @@
     margin: 0 2% 0 0;}
     .dassosciations .dash_title{margin: 0px 1px 21px 10%;
     width: 91%;}
-    .knz_oneplus{    height: 564px;
+    .knz_oneplus{height: 564px;display: none;
     width: 306px;
     float: right;
     margin: -139px -12px 40px 0px;
@@ -3035,7 +3036,7 @@
     	100%{transform: rotatey(0deg) translatey(0px) rotate(-10deg) scale(1);opacity:1;}
     }
     .tabs{  margin: 0px 0px 0px 15px;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;background-color: #fff;
     width: 100%;}
     .tab_nav{width:100%;    padding: 0 0 0 30px;}
     .tab_nav_lab{    display: inline-block;
@@ -3045,16 +3046,16 @@
     color: rgba(97, 97, 97,.6);
     margin: 0px 7px 0px 8px;}
     .tab{height: 0;    display: flex;
-    flex-wrap: wrap;    margin-bottom: 191px;
+    flex-wrap: wrap;    margin-bottom:140px;
     overflow: hidden;
     position: absolute;
     width: 100%;
-    background: rgba(255, 255, 255,1);
+    background: rgb(243, 243, 243);
     padding: 0 0 0 30px;}
 #t1:checked~.dashboard .dassociation .tabs .lab1{color:#000;box-shadow: inset 0px -3px 0 0px rgba(0,0,0,.8);}
 #t2:checked~.dashboard .dassociation .tabs .lab2{color:#000;box-shadow: inset 0px -3px 0 0px rgba(0,0,0,.8);}
 #t3:checked~.dashboard .dassociation .tabs .lab3{color:#000;box-shadow: inset 0px -3px 0 0px rgba(0,0,0,.8);}
-#t1:checked~.dashboard .dassociation .tabs .tab1{height:auto;min-height:200px;}
+#t1:checked~.dashboard .dassociation .tabs .tab1{height:auto;min-height:200px;    padding-bottom: 70px;}
 #t2:checked~.dashboard .dassociation .tabs .tab2{height:auto;min-height:200px;}
 #t3:checked~.dashboard .dassociation .tabs .tab3{height:auto;min-height:200px;}
 .tab_fac {    flex-direction: row;
@@ -3098,11 +3099,10 @@
     color: rgb(255, 255, 255);}
 .dassociation {
     margin: 10px 0px 124px 13px;}
-    .dash_title_back {
-    background: url(download.jpg);
-    background-position: 50% 33%;}
+    .dash_title_back {    background: url(download.jpg) no-repeat;
+    background-size: contain;}
     .dassociation #blur{background: url(david.jpg);
-    height: 42px;
+    height: 42px;background-size: cover;
     background-position: 0% 100%;
     filter: blur(6px);
     transform: scale(1.091) translate(0px,-3px);
@@ -3111,25 +3111,24 @@
     .dassociation .toola {height:40px;
     position: relative;
     top: -100px;}
-    .dassociation .tool3 {box-shadow:-6px 4px 23px 0px rgba(0, 0, 0, 0.2);
-    height: 236px;
+    .dassociation .tool3 {height: 236px;
     padding: 0px;
     overflow: hidden;
     width: 19%;margin:32px 2% 0px 2%;
     background: rgba(238, 239, 244, 0.31);}
-.dassociation .tooltip.toola.blue{    background: rgba(48, 55, 144, 0.75);
+.dassociation .tooltip.toola.blue{    background: rgb(255, 255, 255);
     top: -100px;
-    color: rgb(255, 255, 255);}
-    #t1:checked~.dashboard .dassociation .tool3:nth-child(2){transition-delay: .1s;}
-    #t1:checked~.dashboard .dassociation .tool3:nth-child(3){transition-delay: .2s;}
-    #t1:checked~.dashboard .dassociation .tool3:nth-child(4){transition-delay: .31s;} 
-    #t1:checked~.dashboard .dassociation .tool3:nth-child(5){transition-delay: .431s;} 
-    #t1:checked~.dashboard .dassociation .tool3:nth-child(6){transition-delay: .541s;} 
-    #t1:checked~.dashboard .dassociation .tool3:nth-child(7){transition-delay: .651s;}
-    #t1:checked~.dashboard .dassociation .tool3:nth-child(8){transition-delay: .761s;}
-    #t1:checked~.dashboard .dassociation .tool3:nth-child(9){transition-delay: .71s;}
-    #t1:checked~.dashboard .dassociation .tool3:nth-child(10){transition-delay: .81s;}
-    #t1:checked~.dashboard .dassociation .tool3:nth-child(11){transition-delay: .91s;}
+    color: rgb(0, 0, 0);}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(2){transition-delay: .0s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(3){transition-delay: .05s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(4){transition-delay: .1s;} 
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(5){transition-delay: .15s;} 
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(6){transition-delay: .2s;} 
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(7){transition-delay: .24s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(8){transition-delay: .3s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(9){transition-delay: .35s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(10){transition-delay: .4s;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(11){transition-delay: .45s;}
  /*----------------------------233x190 pixels, 240x240ppi, 44270 pixels-------------------------------*/
 .dassociation .tool3:nth-child(2) .tooltippic3 {background-image: url(t1.jpg);}
 .dassociation .tool3:nth-child(2) #blur {background-image: url(t1.jpg);}
@@ -3152,7 +3151,7 @@
 .dassociation .tool3:nth-child(11) .tooltippic3 {background-image: url(t4.jpg);}
 .dassociation .tool3:nth-child(11) #blur {background-image: url(t4.jpg);}
 .tipout{width:100%;margin: 2% 0% 0% 3%;}
-.dashboard .dassociation .tool3{transform: translatey(-6px); opacity:0;animation: none !important;transition: all .7s;}
+.dashboard .dassociation .tool3{transform: translatey(16px); opacity:0;animation: none !important;transition: all .3s;}
     #t1:checked~.dashboard .dassociation .tool3:nth-child(2),
     #t1:checked~.dashboard .dassociation .tool3:nth-child(3),
     #t1:checked~.dashboard .dassociation .tool3:nth-child(4), 
@@ -3169,6 +3168,7 @@
     position: relative;
     top: -6px;
     padding: 3px;}
+    #t2:checked~.dashboard .dassociation .tabs .tab2{padding-bottom: 70px;}
         </style>
         <script>
             $(document).ready(function() {
@@ -3428,7 +3428,7 @@
             <!--dassociation team-->
             <!--end Navigation Checkboxes.-->
             <div class='nav'>
-                <div class='heading'>Wission
+                <div class='heading'>Wissen
 			</div>
                 <div class='nav-cover'>
                     <div class='nav-item'>Association
@@ -3452,7 +3452,7 @@
                 </div>
                 <div class='main-slider'>
                     <div class='slider'>
-                        <div class='head bold'>Wission CSE Holy Grace
+                        <div class='head bold'>Wissen CSE Holy Grace
 					</div>
                         <div class='tipi light'>Android Studio is the IDE for Android that was announced in
 						May 2013 at the Google I/O developers event, and is intended as an alternative to Eclipse.
@@ -3563,7 +3563,7 @@
                         </label>
                         <div class='wlogo_holder'>
                             <div class='wlogo_menu'></div>
-                            <div class='wlogo_txt'>ission</div>
+                            <div class='wlogo_txt'>issen</div>
                         </div>
                     </div>
                     <label for='sd' class='icon_holder iconi'>
@@ -3635,7 +3635,7 @@
                         <div class='gradients'>
                             <div class='ghead'>Gallery
 						</div>
-                            <div class='gfoot'>Holygrace snaps!
+                            <div class='gfoot'>Holygrace snaps and events!
 						</div>
                             <div class='gbutton darkmode_border opacity1 backfff'></div>
                         </div>
@@ -12763,7 +12763,7 @@
 				</div>
 
 	<div class='main_banner'>
-		<div class='banner_text'>Arts Day is coming</div>
+		<div class='banner_text'>Collage Day is coming.</div>
 		<div class='banner_text_tip'>The Holygrace Arts Day is coming. Submit your participation details to your teacher
 		</div><div class='banner_pic'></div>
 		<div class='banner_back'><div class='banner_back1'></div><div class='banner_back1'></div><div class='banner_back1'></div><div class='banner_back1'></div><div class='banner_back1'></div></div>
@@ -12968,11 +12968,18 @@
             < footer />
         </div>
         <div class='dfoot_obj2 darkmode_border'>Wission, Computer Science Department, Holygrace Academy of Engineering, Mala
-<div class='foot_tip'>Initaited by Computer Science Branch. Develoeped by Akshay Knz</div>
+<div class='foot_tip'>Initaited by Computer Science Branch. Develoeped by students.</div>
         </div>
     </div>
 </div>
 </div></div>
+<script>
+window.sr = ScrollReveal({ reset: false });
+sr.reveal('.leftdiv', {origin: 'top',distance: '0px',
+delay: 10,rotate: { x: 0, y: 0, z: 0 },easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',viewFactor: 0,});
+sr.reveal('.rightdiv',{delay: 200});
+sr.reveal('.foot',{delay:0,reset: true});
+   </script>
 </body><style>
     .switches {
         width: 26%;
@@ -13077,4 +13084,30 @@
     }
 </style><link href="fav.png"  rel="icon">
 <!--Mode styles-->
+<!--
+	STUFF OUT OF USEAGE
+	-----------------------------------------
+	Oneplus wireframe (home/dash/association)
+ 	.knz_oneplus{display: none;}
+	-----------------------------------------
+
+	-----------------------------------------
+
+	-----------------------------------------
+
+	-----------------------------------------
+
+	-----------------------------------------
+
+	-----------------------------------------
+
+	-----------------------------------------
+
+	-----------------------------------------
+
+	-----------------------------------------
+
+	-----------------------------------------
+
+-->
 </html>
