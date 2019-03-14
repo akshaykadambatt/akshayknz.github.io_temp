@@ -684,8 +684,8 @@
                 margin: 0px 0% 0px 3%;
             }
 
-            .nextmain {
-                height: 100vh;
+            .nextmain {padding-bottom: 60px;
+                height: auto;
             }
 
             .rightdiv {
@@ -700,15 +700,16 @@
                 text-align: right;
             }
 
-            .innerlr {    height: 180px;
+            .innerlr {   height: 180px;
     width: 290px;
                 background: rgb(240, 241, 245);
                 display: inline-block;
                 border-radius: 11px;
             }
-
+.leftdiv .innerlr {    background: url(vision.jpg);}
+.rightdiv .innerlr {   background: url(mission.jpg);}
             .foot {
-                height: 50vh;
+                height: 25vh;
                 background: rgb(58, 58, 58);
                 color: rgb(255, 255, 255);
                 padding: 40px;
@@ -1176,7 +1177,7 @@
             }
 
             .gobj {
-            	background-image: url('david.jpg');
+            	background-image: url('mission.jpg');
                 background-color: rgb(110, 195, 255);
                 height: 180px;
                 min-width: 33%;
@@ -1322,7 +1323,7 @@
                 z-index: -110;
                 position: fixed;
             }
-
+.dashboard_balnk svg{height:100px;width:100px;}
             .ddown,.dnoties,.dassociation {
                 height: auto;
                 transition: width .3s cubic-bezier(0.75, 0.51, 0.21, 0.96);
@@ -3162,13 +3163,15 @@
     #t1:checked~.dashboard .dassociation .tool3:nth-child(9),
     #t1:checked~.dashboard .dassociation .tool3:nth-child(10),
     #t1:checked~.dashboard .dassociation .tool3:nth-child(11){transform: translatey(0px); opacity:1;}
-    .hodtip{    background: rgba(91, 60, 255, 0.66);
+    .hodtip{    background: rgba(255, 60, 60, 0.85);
     color: rgb(255, 255, 255);
     display: inline-block;
     position: relative;
     top: -6px;
     padding: 3px;}
     #t2:checked~.dashboard .dassociation .tabs .tab2{padding-bottom: 70px;}
+    .home .dbanner{opacity: 1;    transform: translatey(0px);}
+    label{cursor: pointer;}
         </style>
         <script>
             $(document).ready(function() {
@@ -3431,12 +3434,12 @@
                 <div class='heading'>Wissen
 			</div>
                 <div class='nav-cover'>
-                    <div class='nav-item'>Association
-			</div>
-                    <div class='nav-item'>Faculty
-			</div>
-                    <div class='nav-item'>About
-			</div>
+                    <label for='b' class='nav-item'>News
+			</label>
+                    <label for='c' class='nav-item'>Faculty
+			</label>
+                    <label for='a' class='nav-item'>Notes
+			</label>
                     <div class='nav-item navitem1'>Log in
 			</div>
                 </div>
@@ -3514,9 +3517,46 @@
 					</div>
                         </div>
                     </div>
+                    <div class="dbanner">
+                        <div class="gradients">
+                            <div class="ghead">Notes
+                        </div>
+                            <div class="gfoot">Download semester-wise notes.
+                        </div>
+                            <div class="gbutton darkmode_border opacity1 backfff"></div>
+                        </div>
+                        <div class="gradients">
+                            <div class="ghead">Syllabus
+                        </div>
+                            <div class="gfoot">Download semester-wise syllabus
+                        </div>
+                            <div class="gbutton darkmode_border opacity1 backfff"></div>
+                        </div>
+                        <label for='b' class="gradients">
+                            <div class="ghead">Notifications
+                        </div>
+                            <div class="gfoot">Updates on events intra-collage and more
+                        </div>
+                            <div class="gbutton darkmode_border opacity1 backfff"></div>
+                        </label>
+                        <label for='c' class="gradients">
+                            <div class="ghead">Faculties
+                        </div>
+                            <div class="gfoot">HOD and Teachers-in-charge
+                        </div>
+                            <div class="gbutton darkmode_border opacity1 backfff"></div>
+                        </label>
+                        <div class="gradients">
+                            <div class="ghead">Gallery
+                        </div>
+                            <div class="gfoot">Holygrace snaps and events!
+                        </div>
+                            <div class="gbutton darkmode_border opacity1 backfff"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class='foot'>
-                    <div class='foothead bold head'>thats it
+                    <div class='foothead extralight head'>Footer
 				</div>
                 </div>
             </div>
@@ -3597,7 +3637,19 @@
                 </div>
                 <!--START Dashboard pages--------------------------------------------------------------------------->
                 <div class='dashboard_balnk'>
-                    < running />
+                  <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+    <path fill="rgb(0, 84, 255)" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+      <animateTransform 
+         attributeName="transform" 
+         attributeType="XML" 
+         type="rotate"
+         dur="1s" 
+         from="0 50 50"
+         to="360 50 50" 
+         repeatCount="indefinite" />
+  </path>
+</svg>
                 </div>
                 <div class='dhome'>
                 	<div class="banner_back"><div class="banner_back1"></div><div class="banner_back1"></div><div class="banner_back1"></div><div class="banner_back1"></div><div class="banner_back1"></div></div>
@@ -3650,7 +3702,7 @@
                         <div class='link_head extralight'>News
 					</div>
                         <div class='gslider'>
-                            <div class='gobj darkmode_border'>HGAE
+                            <div class='gobj darkmode_border'>
 						</div>
                             <div class='gobj_tip'>
                                 <span class='subbbb'>Holygrace Academy Of Engineering releases the new department website.</span><br/>
@@ -12978,7 +13030,13 @@ window.sr = ScrollReveal({ reset: false });
 sr.reveal('.leftdiv', {origin: 'top',distance: '0px',
 delay: 10,rotate: { x: 0, y: 0, z: 0 },easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',viewFactor: 0,});
 sr.reveal('.rightdiv',{delay: 200});
-sr.reveal('.foot',{delay:0,reset: true});
+sr.reveal('.foot',{delay:0,reset: false});
+sr.reveal('.home .dbanner',{delay:0,reset: false});
+sr.reveal('.home .gradients:nth-child(1)',{delay:00,reset: true});
+sr.reveal('.home .gradients:nth-child(2)',{delay:120,reset: true});
+sr.reveal('.home .gradients:nth-child(3)',{delay:220,reset: true});
+sr.reveal('.home .gradients:nth-child(4)',{delay:320,reset: true});
+sr.reveal('.home .gradients:nth-child(5)',{delay:420,reset: true});
    </script>
 </body><style>
     .switches {
@@ -13086,6 +13144,7 @@ sr.reveal('.foot',{delay:0,reset: true});
 <!--OPTIONAL STYLES-->
 <style>
     .tools div, .gradients, .obj_button,.main_banner,.banner_news,.tool3,.tool1,.tool2,.navitem1{border-radius: 0!important;}
+
 </style>
 
 <!--END OPTIONAL STYLES-->
