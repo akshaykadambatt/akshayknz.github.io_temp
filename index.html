@@ -25,365 +25,7 @@
             }
 
             /**Animations*/
-            .background {
-                opacity: .9;
-                height: 100vh;
-                width: 100vw;
-                overflow: hidden;
-                display: block;
-            }
-
-            #dash:checked~.home .background{opacity:0;transform: scale(1.1);}
-            #home:checked~.home .background{opacity:1;transform: scale(1);transition: all 1.3s 1s;}
-
-            .b {
-                height: 230px;
-                background: linear-gradient(rgb(125, 13, 255),rgb(222, 0, 174));
-                opacity: .68;
-                box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.32941176470588235);
-                border-radius: 100%;
-                width: 230px;
-                position: relative;
-                top: 27%;
-                left: 49%;
-                animation: startb 5s none 0s 1 alternate,backb 80s none 5s infinite alternate;
-            }
-
-            .a {
-                height: 70px;
-                background: linear-gradient(rgb(255, 0, 133),rgb(178, 0, 222));
-                opacity: .68;
-                box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.32941176470588235);
-                border-radius: 100%;
-                width: 70px;
-                position: relative;
-                top: 0%;
-                left: 37%;
-                animation: starta 5s none 0s 1 alternate,backa 80s none 5s infinite alternate;
-            }
-
-            .c {
-                height: 160px;
-                background: linear-gradient(rgb(0, 70, 255),rgb(0, 13, 76));
-                opacity: .68;
-                box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.32941176470588235);
-                border-radius: 100%;
-                width: 160px;
-                position: relative;
-                top: -1%;
-                left: 46%;
-                animation: startc 5s none 0s 1 alternate,backc 80s none 5s infinite alternate;
-            }
-
-            .d {
-                height: 120px;
-                background: linear-gradient(rgb(0, 255, 134),rgb(0, 120, 222));
-                opacity: .68;
-                box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.32941176470588235);
-                border-radius: 100%;
-                width: 120px;
-                position: relative;
-                top: -17%;
-                left: 39%;
-                animation: startd 5s none 0s 1 alternate,backd 40s none 5s infinite alternate;
-            }
-
-            .e {
-                height: 160px;
-                background: linear-gradient(rgb(189, 0, 255),rgb(0, 140, 222));
-                opacity: .68;
-                box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.32941176470588235);
-                border-radius: 100%;
-                width: 160px;
-                position: relative;
-                top: -48%;
-                left: 34%;
-                animation: starte 5s none 0s 1 alternate,backe 40s none 5s infinite alternate;
-            }
-
-            .f {
-                height: 340px;
-                background: linear-gradient(rgb(255, 71, 5),rgb(222, 0, 174));
-                opacity: .68;
-                box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.32941176470588235);
-                border-radius: 100%;
-                width: 340px;
-                position: relative;
-                top: -84%;
-                left: 39%;
-                animation: startf 5s none 0s 1 alternate,backf 80s none 5s infinite alternate;
-            }
-
-            @keyframes backb {
-                0% {
-                    transform: translate(240px,0px);
-                }
-
-                5% {
-                    transform: translate(240px,0px);
-                }
-
-                50% {
-                    transform: translate(300px,40px);
-                }
-
-                100% {
-                    transform: translate(130px,-110px);
-                }
-            }
-
-            @keyframes backa {
-                0% {
-                    transform: translate(10px,0px);
-                }
-
-                5% {
-                    transform: translate(10px,0px);
-                }
-
-                50% {
-                    transform: translate(70px,-120px);
-                }
-
-                100% {
-                    transform: translate(150px,0px);
-                }
-            }
-
-            @keyframes backc {
-                0% {
-                    transform: translate(380px,-270px);
-                }
-
-                5% {
-                    transform: translate(380px,-270px);
-                }
-
-                50% {
-                    transform: translate(210px,-120px);
-                }
-
-                100% {
-                    transform: translate(350px,-110px);
-                }
-            }
-
-            @keyframes backd {
-                0% {
-                    transform: translate(10px,0px);
-                }
-
-                5% {
-                    transform: translate(10px,0px);
-                }
-
-                50% {
-                    transform: translate(-10px,-180px);
-                }
-
-                100% {
-                    transform: translate(-80px,-10px);
-                }
-            }
-
-            @keyframes backe {
-                0% {
-                    transform: translate(-7px,110px);
-                }
-
-                5% {
-                    transform: translate(-7px,110px);
-                }
-
-                50% {
-                    transform: translate(150px,90px);
-                }
-
-                100% {
-                    transform: translate(73px,-10px);
-                }
-            }
-
-            @keyframes backf {
-                0% {
-                    transform: translate(63px,-30px);
-                }
-
-                5% {
-                    transform: translate(63px,-30px);
-                }
-
-                50% {
-                    transform: translate(43px,-100px);
-                }
-
-                100% {
-                    transform: translate(123px,30px);
-                }
-            }
-
-            @keyframes startf {
-                0% {
-                    transform: translate(-42px,-66px);
-                    opacity: 0;
-                }
-
-                3% {
-                    opacity: 1;
-                }
-
-                40% {
-                    transform: translate(-42px,-66px);
-                    opacity: 1;
-                }
-
-                60% {
-                    transform: translate(-42px,-66px);
-                    opacity: 1;
-                }
-
-                100% {
-                    transform: translate(63px,-30px);
-                }
-            }
-
-            @keyframes starte {
-                0% {
-                    transform: translate(-42px,-66px);
-                    opacity: 0;
-                    top: -46%;
-                    left: 40%;
-                }
-
-                20% {
-                    transform: translate(-32px,-36px);
-                    opacity: .9;
-                }
-
-                40% {
-                    transform: translate(-42px,-66px);
-                    opacity: .9;
-                }
-
-                60% {
-                    transform: translate(-32px,-36px);
-                    opacity: .9;
-                }
-
-                100% {
-                    transform: translate(-7px,110px);
-                }
-            }
-
-            @keyframes startd {
-                0% {
-                    transform: translate(-42px,-66px);
-                    opacity: 0;
-                    top: -26%;
-                    left: 46%;
-                }
-
-                20% {
-                    transform: translate(-32px,-36px);
-                    opacity: .9;
-                }
-
-                40% {
-                    transform: translate(-42px,-66px);
-                    opacity: .9;
-                }
-
-                60% {
-                    transform: translate(-32px,-36px);
-                    opacity: .9;
-                }
-
-                100% {
-                    transform: translate(10px,0px);
-                }
-            }
-
-            @keyframes startc {
-                0% {
-                    transform: translate(-42px,-66px);
-                    opacity: 0;
-                }
-
-                20% {
-                    transform: translate(-32px,-36px);
-                    opacity: .9;
-                }
-
-                40% {
-                    transform: translate(-42px,-66px);
-                    opacity: .9;
-                }
-
-                60% {
-                    transform: translate(-32px,-36px);
-                    opacity: .9;
-                }
-
-                100% {
-                    transform: translate(380px,-270px);
-                }
-            }
-
-            @keyframes startb {
-                0% {
-                    transform: translate(-42px,-66px);
-                    opacity: 0;
-                    top: 33%;
-                    left: 45%;
-                }
-
-                20% {
-                    transform: translate(-32px,-36px);
-                    opacity: .9;
-                }
-
-                40% {
-                    transform: translate(-42px,-66px);
-                    opacity: .9;
-                }
-
-                60% {
-                    transform: translate(-32px,-36px);
-                    opacity: .9;
-                }
-
-                100% {
-                    transform: translate(240px,0px);
-                }
-            }
-
-            @keyframes starta {
-                0% {
-                    transform: translate(-42px,-66px);
-                    opacity: 0;
-                    top: 4%;
-                    left: 44%;
-                }
-
-                20% {
-                    transform: translate(-32px,-36px);
-                    opacity: .9;
-                }
-
-                40% {
-                    transform: translate(-42px,-66px);
-                    opacity: .9;
-                }
-
-                60% {
-                    transform: translate(-32px,-36px);
-                    opacity: .9;
-                }
-
-                100% {
-                    transform: translate(10px,0px);
-                }
-            }
+ 
 
             @keyframes fade-down {
                 0% {
@@ -493,7 +135,7 @@
             }
 
             .main-slider {
-                height: 0vh;
+                height: 100vh;
             }
 
             .nav {
@@ -3172,6 +2814,146 @@
     #t2:checked~.dashboard .dassociation .tabs .tab2{padding-bottom: 70px;}
     .home .dbanner{opacity: 1;    transform: translatey(0px);}
     label{cursor: pointer;}
+
+    /*---------------------SLIDER-------------------------*/
+#one{background: url('2.jpg') no-repeat;    background-size: cover;}
+#two{background: url('2.jpg') no-repeat;    background-size: cover;}
+#three{background: url('3.jpg') no-repeat;    background-size: cover;}
+#four{background: url('4.jpg') no-repeat;    background-size: cover;}
+
+.container {    position: absolute;
+    width: 100vw;
+    margin-top: 100px;
+    margin-left: 100px; height: 80vh;
+    user-select: none;
+    box-sizing: border-box;
+    top: -8vh;
+    z-index: 0;
+}
+}
+.container input {
+  display: none;
+}
+.container .slide_img { 
+  position: absolute;
+  width: 80%;opacity:0;
+  height: 80%;
+  z-index: -99;
+ 
+}
+
+
+.container #nav_slide {
+    bottom: -5%;
+    left: 0;
+    position: absolute;
+    z-index: 3;
+    cursor: default;
+}
+.container #nav_slide .dots {    top: 0px;    width: 71px;
+    height: 62px;
+    margin: -4px 0px;
+    position: relative;
+    border-radius: 0;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: .4s;
+    cursor: pointer;
+}
+.container #nav_slide #dot1:hover {
+  background: #795548;
+}
+.container #nav_slide #dot2:hover {
+  background: #F44336;
+}
+.container #nav_slide #dot3:hover {
+  background: #2196F3;
+}
+.container #nav_slide #dot4:hover {
+  background: #4CAF50;
+}
+
+#i1:checked ~ #one,
+#i3:checked ~ #two,
+#i4:checked ~ #three,
+#i2:checked ~ #four
+{
+  z-index: 3;
+  animation: scroll 11s cubic-bezier(.165, .84, .44, 1);
+}
+.slide_inner1{height:342px;width:582px;background:url('s1.png') no-repeat;    margin: 51px 0px 16px 77px;}
+.slide_inner2{height:342px;width:582px;background:url('s2.png') no-repeat;    position: relative;
+    top: -280px;margin: 51px 0px 16px 77px;}
+#i1:checked ~#one .slide_inner1,
+#i2:checked ~#four .slide_inner1,
+#i3:checked ~#two .slide_inner1,
+#i4:checked ~#three .slide_inner1{animation: scrollin 15s cubic-bezier(.165, .84, .44, 1);}
+#i1:checked ~#one .slide_inner2,
+#i2:checked ~#four .slide_inner2,
+#i3:checked ~#two .slide_inner2,
+#i4:checked ~#three .slide_inner2
+{animation: scrollini 13s cubic-bezier(.165, .84, .44, 1);}
+#i1:checked ~ #nav_slide #dot1 {
+  background: #795548;
+}
+
+#i2:checked ~ #nav_slide #dot2 {
+  background: #F44336;
+}
+
+#i3:checked ~ #nav_slide #dot3 {
+  background: #2196F3;
+}
+
+#i4:checked ~ #nav_slide #dot4 {
+  background: #4CAF50;
+}
+
+@keyframes scroll {
+  0% {    clip-path: inset(0 0 0 100%);opacity:1;transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+  13% {   clip-path: inset(0 0 0 0%);transform: matrix3d(1,0,0.00,.000004,0.00,1,0.00,0.00004,0,0,1,0,0,0,10,1);
+    opacity: 1;
+  }
+   100% {  
+    opacity: 1; clip-path: inset(0 0 0 0%);transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+}
+@keyframes scrollin {
+  0% {    clip-path: inset(0 0 0 100%);opacity:1;transform: translateX(00px)  matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+  13% {   clip-path: inset(0 0 0 0%);transform:translateX(30px) matrix3d(1,0,0.00,.000004,0.00,1,0.00,0.00004,0,0,1,0,0,0,10,1);
+    opacity: 1;
+  }
+    94% {  
+    opacity: 1; clip-path: inset(0 0 0 0%);transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+    100% {  clip-path: inset(0 0 0 100%);opacity:1;transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+}
+@keyframes scrollini {
+  0% {    clip-path: inset(0 0 0 100%);opacity:1;transform: translateX(20px)  matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+  13% {   clip-path: inset(0 0 0 0%);transform:translateX(100px) matrix3d(1,0,0.00,.000004,0.00,1,0.00,0.00004,0,0,1,0,0,0,10,1);
+    opacity: 1;
+  }
+    94% {  
+    opacity: 1; clip-path: inset(0 0 0 0%);transform:matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+    100% {  clip-path: inset(0 0 0 100%);opacity:1;transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+}
+@media screen and (max-width: 685px) {
+  .container {
+    border: none;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55%;
+  }
+
+  
+}
+/* -----------------------------------------END SLIDER--------------------------------*/
         </style>
         <script>
             $(document).ready(function() {
@@ -3445,24 +3227,80 @@
                 </div>
             </div>
             <div class='home'>
-                <div class='background'>
-                    <div class='b'></div>
-                    <div class='a'></div>
-                    <div class='c'></div>
-                    <div class='d'></div>
-                    <div class='e'></div>
-                    <div class='f'></div>
-                </div>
+                
                 <div class='main-slider'>
-                    <div class='slider'>
+                    
+  <div class="container">
+    
+
+    <input type="radio" class='gall' id="i1" name="images" checked/>
+    <input type="radio" class='gall' id="i2" name="images"/>
+    <input type="radio" class='gall' id="i3" name="images"/>
+    <input type="radio" class='gall' id="i4" name="images"/>
+    
+    <div class="slide_img" id="one">  <div class='slider'>
                         <div class='head bold'>Department of Computer Science
-					</div>
-                        <div class='tipi light'>Android Studio is the IDE for Android that was announced in
-						May 2013 at the Google I/O developers event, and is intended as an alternative to Eclipse.
-						At the time of this writing, Android Studio is currently in Early Access Preview, with
-						the most recent version being 0.0.5.
-					</div>
                     </div>
+                        <div class='tipi light'>Android Studio is the IDE for Android that was announced in
+                        May 2013 at the Google I/O developers event, and is intended as an alternative to Eclipse.
+                        At the time of this writing, Android Studio is currently in Early Access Preview, with
+                        the most recent version being 0.0.5.
+                    </div>
+                    </div>          
+        <div class='slide_inner1'></div>
+        <div class='slide_inner2'></div>
+            
+        
+    </div>
+    
+    <div class="slide_img" id="two">
+        <div class='slide_inner1'></div>
+        <div class='slide_inner2'></div>
+        
+            
+        
+    </div>
+            
+    <div class="slide_img" id="three">
+        <div class='slide_inner1'></div>
+        <div class='slide_inner2'></div>
+            
+    </div>
+
+
+    <div class="slide_img" id="four">
+        <div class='slide_inner1'></div>
+        <div class='slide_inner2'></div>
+
+    </div>
+
+    <div id="nav_slide">
+        <label for="i1" class="dots" id="dot1"></label>
+        <label for="i2" class="dots" id="dot2"></label>
+        <label for="i3" class="dots" id="dot3"></label>
+        <label for="i4" class="dots" id="dot4"></label>
+    </div>
+        
+</div>
+  
+  
+
+    <script>onload  = start;
+
+function start(){   
+var i = 1;
+function Move(){    
+    i = (i%4)+1; // 4 is the Number of image in slider
+    document.getElementById('i'+i).checked = true;
+    
+}
+
+var gal=setInterval(Move,7000); //change img in 3 sec
+    
+}
+
+</script>
+                    
                     <div class='shortcuts'>
                         <div class='head bold'>Shortcuts
 					</div>
