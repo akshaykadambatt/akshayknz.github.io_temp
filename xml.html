@@ -11,17 +11,19 @@ xhttp.onreadystatechange = function() {
         myFunction(this);
     }
 };
-xhttp.open("GET", "books.xml", true);
+xhttp.open("GET", "https://akshayknz.github.io/xml.xml", true);
 xhttp.send();
 
 function myFunction(xml) {
-    var xmlDoc = xml.responseXML;
-    var x = xmlDoc.getElementsByTagName("title")[0];
-    var y = x.getAttributeNode("lang");
-    var txt = y.nodeValue;
-    document.getElementById("demo").innerHTML = txt;
+    var x, i, xmlDoc, txt;
+    xmlDoc = xml.responseXML;
+    txt = "";
+    x = xmlDoc.getElementsByTagName("PLANT");
+    for (i = 0; i < x.length; i++) {
+        txt += x[i].getAttributeNode("COMMON").nodeValue + "<br>";
+    }
+    document.getElementById("demo").innerHTML = txt; 
 }
 </script>
-
 </body>
 </html>
