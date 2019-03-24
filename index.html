@@ -7,6 +7,34 @@
     <link href="https://fonts.googleapis.com/css?family=Catamaran|Open+Sans:300" rel="stylesheet">
     <script src="jquery-3.3.1.min.js"></script>
     <head>
+        <script>
+      window.sr = ScrollReveal();
+    </script><script>
+$(document).ready(function(){$(window).scroll(function(){var scroll= $(window).scrollTop();
+if (scroll>100)
+{$(".nav").css("background","rgb(29, 1, 183)");
+$(".nav").css("transition-delay","0s");
+$(".nav-cover").css("top","-20px");
+$(".nav-cover").css("left","28%");
+$(".menu").css("top","22px");
+$(".heading").css("background","url(wissen_white_no_txt.svg) no-repeat");
+$(".heading").css("top","3px");
+$(".heading").css("left","15%");
+$(".nav").css("color","#fff");
+$(".nav").css("padding","11px 0 0 0px");}
+else{$(".nav").css("background","linear-gradient(#00000052,transparent)");
+$(".nav-cover").css("top","-27px");
+$(".nav-cover").css("left","36%");
+$(".heading").css("background-size","contain");
+$(".nav").css("color","#000");
+$(".heading").css("background-position","unset");
+$(".heading").css("background","url(wissen_white.svg) no-repeat");
+$(".heading").css("top","-8px");
+$(".heading").css("left","7%");
+$(".nav").css("padding"," 21px 0 0 0px");}
+
+})})
+</script>
     	<link href="fav.png"  rel="icon">
         <style>
             /**Defenitions classes*/
@@ -34,7 +62,7 @@
                     opacity: 0;
                 }
 
-                85% {
+                75% {
                     transform: translate(0px,-20px);
                     opacity: 0;
                 }
@@ -64,17 +92,17 @@
 
             @keyframes fade-left {
                 0% {
-                    transform: translate(30px);
+                    transform: translate(30px) scale(.87);
                     opacity: 0;
                 }
 
                 85% {
-                    transform: translate(30px);
+                    transform: translate(30px) scale(.87);
                     opacity: 0;
                 }
 
                 100% {
-                    transform: translate(0px);
+                    transform: translate(0px) scale(.87);
                     opacity: 1;
                 }
             }
@@ -139,32 +167,46 @@
                 height: 100vh;
             }
 
-            .nav {
-                z-index: 20;
-                position: relative;
-                padding: 20px 20px 0px 4%;transition: all .4s .4s;opacity:0;
-                animation: fade-down 4s none 0s 1 alternate;
+            .nav {    height: 50px;position: fixed;
+                z-index: 20;width: 100%;
+                padding: 21px 0 0 0;transition: all .4s .4s;opacity:0;
+                animation: fade-down 2s none 0s 1 alternate;
+                    background: linear-gradient(#00000052,transparent);
+    color: #000;
             }
-
+.nav-cover{    display: inline-block;
+    width: 67%;transition: left .2s;
+    left: 36%;
+    position: relative;
+    top: -27px;}
             #home:checked~.nav{opacity: 1;}
 
-            .shortcuts {
-                display: inline-block;
-                height: auto;
-                animation: fade-left 4.5s none 0s 1 alternate;
-                padding: 10px;
-                padding-right: 31px;
-                position: absolute;
-                right: 4.5%;
-                top: 3vh;
-                width: 227px;
-            }
+            .shortcuts {    display: inline-block;
+    height: auto;
+    animation: fade-left 4.5s none 0s 1 alternate;
+    padding: 10px;
+    padding-right: 31px;
+    position: absolute;
+    right: 1.5%;
+    top: 10vh;
+    width: 225px;
+    transform: scale(.87);}
 
             .shortcuts .head {
                 font-size: 23px;
             }
 
             .tool1, .tool2, .tool3 {
+                height: 140px;
+                padding: 10px;
+                width: 100%;
+                display: block;
+                background: rgba(238, 239, 244,.9);
+                border-radius: 7px;
+                margin: 15px 0px;
+                cursor: pointer;
+            }
+            .tool3news {
                 height: 140px;
                 padding: 10px;
                 width: 100%;
@@ -215,13 +257,15 @@
                 font-size: 18px;
             }
 
-            .heading {
-                display: inline-block;
-                font-family: bb;
-                font-size: 23px;
-                position: relative;
-                top: 3px;
-                left: 3%;
+            .heading {    background: url(wissen_white.svg) no-repeat;
+    display: inline-block;transition: all .1s;
+    font-family: bb;background-size: contain;
+    font-size: 23px;background-position: 0 0 ;
+    position: relative;
+    top: -7px;
+    left: 7%;
+    width: 62px;
+    height: 48px;
             }
 
             .nav-item {
@@ -232,13 +276,6 @@
                 font-weight: 600;
             }
 
-            .nav-cover {
-                position: absolute;
-                right: 0;
-                display: inline;
-                width: 55%;
-                top: 22px;
-            }
 
             .tool1 {
                 animation: fade-down 4.5s none 0s 1 alternate;
@@ -249,6 +286,9 @@
             }
 
             .tool3 {
+                animation: fade-down 4.7s none 0s 1 alternate;
+            }
+            .tool3news {
                 animation: fade-down 4.7s none 0s 1 alternate;
             }
 
@@ -267,6 +307,17 @@
             }
 
             .tool3 .tooltip {
+                background: rgba(238, 239, 244, 0.38);
+            }
+            .tool3news {
+                height: 231px;
+                padding: 0px;
+                overflow: hidden;
+                width: 109%;
+                background: rgba(238, 239, 244, 0.31);
+            }
+
+            .tool3news .tooltip {
                 background: rgba(238, 239, 244, 0.38);
             }
 
@@ -303,14 +354,14 @@
                 top: -11px;
             }
 
-            .navitem1 {
+            .navitem1 {color: #000;
                 background-color: rgb(255, 255, 255);
                 border-radius: 32px;
                 box-shadow: 0px 6px 17px 0px rgba(0, 0, 0, 0.08);
                 padding: 10px;
                 top: -10px;
                 position: absolute;
-                width: 81px;
+                width: 90px;
                 text-align: center;
             }
 
@@ -827,8 +878,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border-radius: 9px;
-            }
+                border-radius: 9px;}
 
             .gslider {
                 margin-top: 13px;
@@ -2366,6 +2416,11 @@
             .foot_tip {
     font-size: 14px;
     font-family: open sans;font-weight: 600;}
+    .nextmain .tab1 {
+    height: auto;
+    min-height: 200px;
+    padding-bottom: 70px;
+}
         </style>
         <style>
             .contt {
@@ -2696,6 +2751,19 @@
     width: 100%;
     background: rgb(243, 243, 243);
     padding: 0 0 0 30px;}
+    .nextmain .tab{    margin-bottom:0px;
+    padding: 7px 5px 14px 120px;
+    box-sizing: border-box;}
+    .nextmain .tab{
+    position: relative;}
+    .nxtmain_head.bold.head {width:50%;
+    margin: 31px 8px 0px 36px;
+}
+.nextmain .tipout {
+    width: 86%;
+    margin: 2% 0% 0% 3%;
+    display: block;
+}
 #t1:checked~.dashboard .dassociation .tabs .lab1{color:#000;box-shadow: inset 0px -3px 0 0px rgba(0,0,0,.8);}
 #t2:checked~.dashboard .dassociation .tabs .lab2{color:#000;box-shadow: inset 0px -3px 0 0px rgba(0,0,0,.8);}
 #t3:checked~.dashboard .dassociation .tabs .lab3{color:#000;box-shadow: inset 0px -3px 0 0px rgba(0,0,0,.8);}
@@ -2745,22 +2813,22 @@
     margin: 10px 0px 124px 13px;}
     .dash_title_back {    background: url(download.jpg) no-repeat;
     background-size: contain;}
-    .dassociation #blur{background: url(david.jpg);
+    .dassociation #blur,.nextmain #blur{background: url(david.jpg);
     height: 42px;background-size: cover;
     background-position: 0% 100%;
     filter: blur(6px);
     transform: scale(1.091) translate(0px,-3px);
     position: relative;
     top: -32px;}
-    .dassociation .toola {height:40px;
+    .dassociation .toola,.nextmain .toola {height:40px;
     position: relative;
     top: -100px;}
-    .dassociation .tool3 {height: 236px;
+    .dassociation .tool3,.tool3 {height: 236px;
     padding: 0px;
     overflow: hidden;
     width: 19%;margin:32px 2% 0px 2%;
     background: rgba(238, 239, 244, 0.31);}
-.dassociation .tooltip.toola.blue{    background: rgb(255, 255, 255);
+.dassociation .tooltip.toola.blue,.nextmain .tooltip.toola.blue{    background: rgb(255, 255, 255);
     top: -100px;
     color: rgb(0, 0, 0);}
     #t1:checked~.dashboard .dassociation .tool3:nth-child(2){transition-delay: .0s;}
@@ -2794,8 +2862,31 @@
 .dassociation .tool3:nth-child(10) #blur {background-image: url(t2.jpg);}
 .dassociation .tool3:nth-child(11) .tooltippic3 {background-image: url(t4.jpg);}
 .dassociation .tool3:nth-child(11) #blur {background-image: url(t4.jpg);}
+
+.nextmain .tool3:nth-child(2) .tooltippic3 {background-image: url(david.jpg);}
+.nextmain .tool3:nth-child(2) #blur {background-image: url(david.jpg);}
+.nextmain .tool3:nth-child(3) .tooltippic3 {background-image: url(t2.jpg);}
+.nextmain .tool3:nth-child(3) #blur {background-image: url(t2.jpg);}
+.nextmain .tool3:nth-child(4) .tooltippic3 {background-image: url(t3.jpg);}
+.nextmain .tool3:nth-child(4) #blur {background-image: url(t3.jpg);}
+.nextmain .tool3:nth-child(5) .tooltippic3 {background-image: url(t4.jpg);}
+.nextmain .tool3:nth-child(5) #blur {background-image: url(t4.jpg);}
+.nextmain .tool3:nth-child(6) .tooltippic3 {background-image: url(t1.jpg);}
+.nextmain .tool3:nth-child(6) #blur {background-image: url(t1.jpg);}
+.nextmain .tool3:nth-child(7) .tooltippic3 {background-image: url(t2.jpg);}
+.nextmain .tool3:nth-child(7) #blur {background-image: url(t2.jpg);}
+.nextmain .tool3:nth-child(8) .tooltippic3 {background-image: url(t3.jpg);}
+.nextmain .tool3:nth-child(8) #blur {background-image: url(t3.jpg);}
+.nextmain .tool3:nth-child(9) .tooltippic3 {background-image: url(t4.jpg);}
+.nextmain .tool3:nth-child(9) #blur {background-image: url(t4.jpg);}
+.nextmain .tool3:nth-child(10) .tooltippic3 {background-image: url(t2.jpg);}
+.nextmain .tool3:nth-child(10) #blur {background-image: url(t2.jpg);}
+.nextmain .tool3:nth-child(11) .tooltippic3 {background-image: url(t4.jpg);}
+.nextmain .tool3:nth-child(11) #blur {background-image: url(t4.jpg);}
+.navitem1:hover{background-color: #000;color: #fff;}
+
 .tipout{width:100%;margin: 2% 0% 0% 3%;}
-.dashboard .dassociation .tool3{transform: translatey(16px); opacity:0;animation: none !important;transition: all .3s;}
+.dashboard .dassociation .tool3,.tool3{transform: translatey(16px); opacity:0;animation: none !important;transition: all .3s;}
     #t1:checked~.dashboard .dassociation .tool3:nth-child(2),
     #t1:checked~.dashboard .dassociation .tool3:nth-child(3),
     #t1:checked~.dashboard .dassociation .tool3:nth-child(4), 
@@ -2805,7 +2896,7 @@
     #t1:checked~.dashboard .dassociation .tool3:nth-child(8),
     #t1:checked~.dashboard .dassociation .tool3:nth-child(9),
     #t1:checked~.dashboard .dassociation .tool3:nth-child(10),
-    #t1:checked~.dashboard .dassociation .tool3:nth-child(11){transform: translatey(0px); opacity:1;}
+    #t1:checked~.dashboard .dassociation .tool3:nth-child(11),.tool3{transform: translatey(0px); opacity:1;}
     .hodtip{    background: rgba(255, 60, 60, 0.85);
     color: rgb(255, 255, 255);
     display: inline-block;
@@ -2823,15 +2914,15 @@
 #four{background: url('4.jpg') no-repeat;    background-size: cover;}
 
 .container {    position: absolute;
-    width: 100vw;
-    margin-top: 100px;
-    margin-left: 100px; height: 80vh;
+    width: 90vw;
+    margin-top: 14vh;
+    margin-left: 61px;
+    height: 71vh;
     user-select: none;
     box-sizing: border-box;
-    top: -8vh;
+    top: 0vh;
     z-index: 0;
-}
-}
+    clip-path: inset(5px 252px 109px 2%);}
 .container input {
   display: none;
 }
@@ -2842,42 +2933,52 @@
   z-index: -99;
  
 }
-
-
-.container #nav_slide {
-    bottom: -5%;
-    left: 0;
+.for_slide {opacity: 0;
+    font-size: 23px;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: auto;
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    top: 71vh;
+    left: 6.5vw;
+    position: absolute;
+}
+#i1:checked ~ .for_one,
+#i3:checked ~ .for_two,
+#i4:checked ~ .for_three,
+#i2:checked ~ .for_four
+{opacity: 1;
+  z-index: 3;
+  animation: scroll 11s cubic-bezier(.165, .84, .44, 1);
+}
+#nav_slide {top: 90vh;
+    left: 1vw;
     position: absolute;
     z-index: 3;
-    cursor: default;
+    cursor: pointer;
 }
-.container #nav_slide .dots {    top: 0px;    width: 71px;
-    height: 62px;
+#nav_slide .dots {    top: 0px;
+    width: 48px;
+    height: 31px;
     margin: -4px 0px;
     position: relative;
     border-radius: 0;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.6);
-    transition: .4s;
-    cursor: pointer;
-}
-.container #nav_slide #dot1:hover {
-  background: #795548;
-}
-.container #nav_slide #dot2:hover {
-  background: #F44336;
-}
-.container #nav_slide #dot3:hover {
-  background: #2196F3;
-}
-.container #nav_slide #dot4:hover {
-  background: #4CAF50;
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: .1s;
+    cursor: pointer;}
+#nav_slide #dot1:hover,
+#nav_slide #dot2:hover,
+#nav_slide #dot3:hover,
+#nav_slide #dot4:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-#i1:checked ~ #one,
-#i3:checked ~ #two,
-#i4:checked ~ #three,
-#i2:checked ~ #four
+#i1:checked ~ .container #one,
+#i3:checked ~ .container #two,
+#i4:checked ~ .container #three,
+#i2:checked ~ .container #four
 {
   z-index: 3;
   animation: scroll 11s cubic-bezier(.165, .84, .44, 1);
@@ -2885,30 +2986,19 @@
 .slide_inner1{height:342px;width:582px;background:url('s1.png') no-repeat;    margin: 51px 0px 16px 77px;}
 .slide_inner2{height:342px;width:582px;background:url('s2.png') no-repeat;    position: relative;
     top: -280px;margin: 51px 0px 16px 77px;}
-#i1:checked ~#one .slide_inner1,
-#i2:checked ~#four .slide_inner1,
-#i3:checked ~#two .slide_inner1,
-#i4:checked ~#three .slide_inner1{animation: scrollin 15s cubic-bezier(.165, .84, .44, 1);}
-#i1:checked ~#one .slide_inner2,
-#i2:checked ~#four .slide_inner2,
-#i3:checked ~#two .slide_inner2,
-#i4:checked ~#three .slide_inner2
+#i1:checked ~.container #one .slide_inner1,
+#i2:checked ~.container #four .slide_inner1,
+#i3:checked ~.container #two .slide_inner1,
+#i4:checked ~.container #three .slide_inner1{animation: scrollin 15s cubic-bezier(.165, .84, .44, 1);}
+#i1:checked ~.container #one .slide_inner2,
+#i2:checked ~.container #four .slide_inner2,
+#i3:checked ~.container #two .slide_inner2,
+#i4:checked ~.container #three .slide_inner2
 {animation: scrollini 13s cubic-bezier(.165, .84, .44, 1);}
-#i1:checked ~ #nav_slide #dot1 {
-  background: #795548;
-}
-
-#i2:checked ~ #nav_slide #dot2 {
-  background: #F44336;
-}
-
-#i3:checked ~ #nav_slide #dot3 {
-  background: #2196F3;
-}
-
-#i4:checked ~ #nav_slide #dot4 {
-  background: #4CAF50;
-}
+#i1:checked ~ #nav_slide #dot1,
+#i2:checked ~ #nav_slide #dot2,
+#i3:checked ~ #nav_slide #dot3,
+#i4:checked ~ #nav_slide #dot4 {background: rgba(29, 1, 183, .8);}
 
 @keyframes scroll {
   0% {    clip-path: inset(0 0 0 100%);opacity:1;transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
@@ -3214,7 +3304,7 @@
             <!--dassociation team-->
             <!--end Navigation Checkboxes.-->
             <div class='nav'>
-                <div class='heading'>Wissen
+                <div class='heading'>
 			</div>
                 <div class='nav-cover'>
                     <label for='b' class='nav-item'>News
@@ -3223,30 +3313,25 @@
 			</label>
                     <label for='a' class='nav-item'>Notes
 			</label>
-                    <div class='nav-item navitem1'>Log in
-			</div>
+                    <label for='dash' class='nav-item navitem1'>Dashboard
+			</label>
                 </div>
             </div>
+            
             <div class='home'>
                 
                 <div class='main-slider'>
-                    
+                <input type="radio" class='gall' id="i1" name="images" checked/>
+    <input type="radio" class='gall' id="i2" name="images"/>
+    <input type="radio" class='gall' id="i3" name="images"/>
+    <input type="radio" class='gall' id="i4" name="images"/>    
   <div class="container">
     
 
-    <input type="radio" class='gall' id="i1" name="images" checked/>
-    <input type="radio" class='gall' id="i2" name="images"/>
-    <input type="radio" class='gall' id="i3" name="images"/>
-    <input type="radio" class='gall' id="i4" name="images"/>
+    
     
     <div class="slide_img" id="one">  <div class='slider'>
-                        <div class='head bold'>Department of Computer Science
-                    </div>
-                        <div class='tipi light'>Android Studio is the IDE for Android that was announced in
-                        May 2013 at the Google I/O developers event, and is intended as an alternative to Eclipse.
-                        At the time of this writing, Android Studio is currently in Early Access Preview, with
-                        the most recent version being 0.0.5.
-                    </div>
+                       
                     </div>          
         <div class='slide_inner1'></div>
         <div class='slide_inner2'></div>
@@ -3275,15 +3360,19 @@
 
     </div>
 
-    <div id="nav_slide">
+    
+        
+</div>
+<div class='for_slide for_one'>Wissen newsletter 1</div>
+<div class='for_slide for_two'>Wissen sometng 2</div>
+<div class='for_slide for_three'>Wissen thigs 3</div>
+<div class='for_slide for_four'>Wissen grts 4</div>
+  <div id="nav_slide">
         <label for="i1" class="dots" id="dot1"></label>
         <label for="i2" class="dots" id="dot2"></label>
         <label for="i3" class="dots" id="dot3"></label>
         <label for="i4" class="dots" id="dot4"></label>
     </div>
-        
-</div>
-  
   
 
     <script>onload  = start;
@@ -3319,7 +3408,7 @@ var gal=setInterval(Move,7000); //change img in 3 sec
                                 Notes
 						
                             </label>
-                            <div class='tool3 light sub-head'>
+                            <div class='tool3news light sub-head'>
                                 <div class='tooltippic3'></div>
                                 <div class='tooltip' id='blur'></div>
                                 <div class='tooltip toola'>
@@ -3393,6 +3482,143 @@ var gal=setInterval(Move,7000); //change img in 3 sec
                             <div class="gbutton darkmode_border opacity1 backfff"></div>
                         </div>
                     </div>
+                    <div class='tab tab1'>
+                        <div class='nxtmain_head bold head'>Faculty</div>
+                    <div class="tipout">Click to view resume.Android Studio is the IDE for Android that was announced in May 2013 at the Google I/O developers event, and is intended as an alternative to Eclipse. At the time of this writing, Android Studio is currently in Early Access Preview, with the most recent version being 0.0.5.Android Studio is the IDE for Android that was announced in May 2013 at the Google I/O developers event, and is intended as an alternative to Eclipse. At the time of this writing, Android Studio is currently in Early Access Preview, with the most recent version being 0.0.5.
+
+
+                                </div>
+                    <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+                                <div class="tip hodtip">Head of Dept.
+                                </div>
+                                </div>
+                                <div class="tooltip toola blue">
+                                <div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+                                </div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                                </div>
+                                <div class="tooltip toola blue">
+                                <div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+                                </div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                                </div>
+                                <div class="tooltip toola blue">
+                                <div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+                                </div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                                </div>
+                                <div class="tooltip toola blue">
+                                <div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+                                </div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                                </div>
+                                <div class="tooltip toola blue">
+                                <div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+                                </div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                                </div>
+                                <div class="tooltip toola blue">
+                                <div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+                                </div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                                </div>
+                                <div class="tooltip toola blue">
+                                <div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+                                </div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                                </div>
+                                <div class="tooltip toola blue">
+                                <div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+                                </div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                                </div>
+                                <div class="tooltip toola blue">
+                                <div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+                                </div>
+                                </div>
+                            </div>
+                            <div class="tool3 light sub-head">
+                                <div class="tooltippic3"></div>
+                                <div class="tooltip blur" id="blur"></div>
+                                <div class="tooltip toola">
+                                    First Lastname
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                                </div>
+                                <div class="tooltip toola blue">
+                                <div class="tip">Firstnmeaq@gmail.com<br/>0480-232426
+                                </div>
+                                </div>
+                            </div>
+                </div>
                 </div>
                 <div class='foot'>
                     <div class='foothead extralight head'>Footer
@@ -12871,11 +13097,13 @@ delay: 10,rotate: { x: 0, y: 0, z: 0 },easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
 sr.reveal('.rightdiv',{delay: 200});
 sr.reveal('.foot',{delay:0,reset: false});
 sr.reveal('.home .dbanner',{delay:0,reset: false});
-sr.reveal('.home .gradients:nth-child(1)',{delay:00,reset: true});
-sr.reveal('.home .gradients:nth-child(2)',{delay:120,reset: true});
-sr.reveal('.home .gradients:nth-child(3)',{delay:220,reset: true});
-sr.reveal('.home .gradients:nth-child(4)',{delay:320,reset: true});
-sr.reveal('.home .gradients:nth-child(5)',{delay:420,reset: true});
+sr.reveal('.home .gradients:nth-child(1)',{delay:00,reset: false});
+sr.reveal('.home .gradients:nth-child(2)',{delay:120,reset: false});
+sr.reveal('.home .gradients:nth-child(3)',{delay:220,reset: false});
+sr.reveal('.home .gradients:nth-child(4)',{delay:320,reset: false});
+sr.reveal('.home .gradients:nth-child(5)',{delay:420,reset: false});
+sr.reveal('.nextmain .tool3',{delay:40,reset: false});
+
    </script>
 </body><style>
     .switches {
@@ -12982,7 +13210,7 @@ sr.reveal('.home .gradients:nth-child(5)',{delay:420,reset: true});
 </style>
 <!--OPTIONAL STYLES-->
 <style>
-    .tools div, .gradients, .obj_button,.main_banner,.banner_news,.tool3,.tool1,.tool2,.navitem1{border-radius: 0!important;}
+    .tools div, .gradients, .obj_button,.main_banner,.banner_news,.tool3,.tool3news,.tool1,.tool2,.navitem1{border-radius: 0!important;}
 
 </style>
 

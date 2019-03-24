@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<title>xtr</title>
+<meta name="author" content="Akshay K Nair">
+<script src="./scrollreveal.min.js"></script>
+<link href="fav.png"  rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Open+Sans:300" rel="stylesheet">
+    <script src="jquery-3.3.1.min.js"></script>
+    <head>
+        <script>
+      window.sr = ScrollReveal();
+    </script><script>
+$(document).ready(function(){$(window).scroll(function(){var scroll= $(window).scrollTop();
+if (scroll>10)
+{$(".nav").css("background","rgb(29, 1, 183)");
+$(".nav").css("transition-delay","0s");
+$(".nav-cover").css("top","-20px");
+$(".menu").css("top","22px");
+$(".heading").css("background","url(wissen_white_no_txt.svg) no-repeat");
+$(".heading").css("top","3px");
+
+$(".nav").css("padding","11px 0 0 0px");}
+else{$(".nav").css("background","rgba(29, 1, 183,.7)");$(".nav-cover").css("top","-27px");
+$(".heading").css("background-size","contain");
+$(".heading").css("background-position","unset");
+$(".heading").css("background","url(wissen_white.svg) no-repeat");
+$(".heading").css("top","-8px");
+$(".nav").css("padding"," 21px 0 0 0px");}
+
+})})
+</script>
+      <link href="fav.png"  rel="icon">
+        <style> /*---------------------SLIDER-------------------------*/
+#one{background: url('2.jpg') no-repeat;    background-size: cover;}
+#two{background: url('2.jpg') no-repeat;    background-size: cover;}
+#three{background: url('3.jpg') no-repeat;    background-size: cover;}
+#four{background: url('4.jpg') no-repeat;    background-size: cover;}
+
+.container {    position: absolute;
+    width: 100vw;
+    margin-top: 14vh;
+    margin-left: 61px; height: 80vh;
+    user-select: none;
+    box-sizing: border-box;
+    top: 0vh;
+    z-index: 0;clip-path: inset(11px 280px 110px 3%);
+}
+.container input {
+  display: none;
+}
+.container .slide_img { 
+  position: absolute;
+  width: 80%;opacity:0;
+  height: 80%;
+  z-index: -99;
+ 
+}
+
+
+#nav_slide {top: 90vh;
+    left: 1vw;
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+}
+#nav_slide .dots {    top: 0px;    width: 71px;
+    height: 62px;
+    margin: -4px 0px;
+    position: relative;
+    border-radius: 0;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: .4s;
+    cursor: pointer;
+}
+#nav_slide #dot1:hover {
+  background: #795548;
+}
+#nav_slide #dot2:hover {
+  background: #F44336;
+}
+#nav_slide #dot3:hover {
+  background: #2196F3;
+}
+#nav_slide #dot4:hover {
+  background: #4CAF50;
+}
+
+#i1:checked ~ #one,
+#i3:checked ~ #two,
+#i4:checked ~ #three,
+#i2:checked ~ #four
+{
+  z-index: 3;
+  animation: scroll 11s cubic-bezier(.165, .84, .44, 1);
+}
+.slide_inner1{height:342px;width:582px;background:url('s1.png') no-repeat;    margin: 51px 0px 16px 77px;}
+.slide_inner2{height:342px;width:582px;background:url('s2.png') no-repeat;    position: relative;
+    top: -280px;margin: 51px 0px 16px 77px;}
+#i1:checked ~#one .slide_inner1,
+#i2:checked ~#four .slide_inner1,
+#i3:checked ~#two .slide_inner1,
+#i4:checked ~#three .slide_inner1{animation: scrollin 15s cubic-bezier(.165, .84, .44, 1);}
+#i1:checked ~#one .slide_inner2,
+#i2:checked ~#four .slide_inner2,
+#i3:checked ~#two .slide_inner2,
+#i4:checked ~#three .slide_inner2
+{animation: scrollini 13s cubic-bezier(.165, .84, .44, 1);}
+#i1:checked ~ #nav_slide #dot1 {
+  background: #795548;
+}
+
+#i2:checked ~ #nav_slide #dot2 {
+  background: #F44336;
+}
+
+#i3:checked ~ #nav_slide #dot3 {
+  background: #2196F3;
+}
+
+#i4:checked ~ #nav_slide #dot4 {
+  background: #4CAF50;
+}
+
+@keyframes scroll {
+  0% {    clip-path: inset(0 0 0 100%);opacity:1;transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+  13% {   clip-path: inset(0 0 0 0%);transform: matrix3d(1,0,0.00,.000004,0.00,1,0.00,0.00004,0,0,1,0,0,0,10,1);
+    opacity: 1;
+  }
+   100% {  
+    opacity: 1; clip-path: inset(0 0 0 0%);transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+}
+@keyframes scrollin {
+  0% {    clip-path: inset(0 0 0 100%);opacity:1;transform: translateX(00px)  matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+  13% {   clip-path: inset(0 0 0 0%);transform:translateX(30px) matrix3d(1,0,0.00,.000004,0.00,1,0.00,0.00004,0,0,1,0,0,0,10,1);
+    opacity: 1;
+  }
+    94% {  
+    opacity: 1; clip-path: inset(0 0 0 0%);transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+    100% {  clip-path: inset(0 0 0 100%);opacity:1;transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+}
+@keyframes scrollini {
+  0% {    clip-path: inset(0 0 0 100%);opacity:1;transform: translateX(20px)  matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+  13% {   clip-path: inset(0 0 0 0%);transform:translateX(100px) matrix3d(1,0,0.00,.000004,0.00,1,0.00,0.00004,0,0,1,0,0,0,10,1);
+    opacity: 1;
+  }
+    94% {  
+    opacity: 1; clip-path: inset(0 0 0 0%);transform:matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+    100% {  clip-path: inset(0 0 0 100%);opacity:1;transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+}
+@media screen and (max-width: 685px) {
+  .container {
+    border: none;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55%;
+  }
+
+  
+}
+/* -----------------------------------------END SLIDER--------------------------------*/
+</style>
+<body>
+  
+    <div class="container">
+    
+
+    <input type="radio" class='gall' id="i1" name="images" checked/>
+    <input type="radio" class='gall' id="i2" name="images"/>
+    <input type="radio" class='gall' id="i3" name="images"/>
+    <input type="radio" class='gall' id="i4" name="images"/>
+    
+    <div class="slide_img" id="one">  <div class='slider'>
+                        
+                    </div>          
+        <div class='slide_inner1'></div>
+        <div class='slide_inner2'></div>
+            
+        
+    </div>
+    
+    <div class="slide_img" id="two">
+        <div class='slide_inner1'></div>
+        <div class='slide_inner2'></div>
+        
+            
+        
+    </div>
+            
+    <div class="slide_img" id="three">
+        <div class='slide_inner1'></div>
+        <div class='slide_inner2'></div>
+            
+    </div>
+
+
+    <div class="slide_img" id="four">
+        <div class='slide_inner1'></div>
+        <div class='slide_inner2'></div>
+
+    </div>
+
+    
+        
+</div>
+  <div id="nav_slide">
+        <label for="i1" class="dots" id="dot1"></label>
+        <label for="i2" class="dots" id="dot2"></label>
+        <label for="i3" class="dots" id="dot3"></label>
+        <label for="i4" class="dots" id="dot4"></label>
+    </div>
+  
+
+    <script>onload  = start;
+
+function start(){   
+var i = 1;
+function Move(){    
+    i = (i%4)+1; // 4 is the Number of image in slider
+    document.getElementById('i'+i).checked = true;
+    
+}
+
+var gal=setInterval(Move,7000); //change img in 3 sec
+    
+}
+
+</script>
+</body>

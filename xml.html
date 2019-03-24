@@ -1,29 +1,67 @@
-<!DOCTYPE html>
 <html>
+<head>
+    <title>Extract XML Data using JavaScript</title>
+    <style>
+        body {font:14px Calibri;}
+        #books {
+            width:390px;
+            text-align:center;
+            border:solid 1px #000;
+            overflow:hidden;
+        }
+        #books div {
+            width:180px;
+            text-align:left;
+            border:solid 1px #000;
+            margin:1px;
+            padding:2px 5px;
+        }
+        .col1 {
+            float:left;
+            clear:both;
+        }
+        .col2 {
+            float:right;
+        }
+    </style>
+</head>
 <body>
-
-<p id="demo"></p>
+    <p>Data extracted from an <b>XML</b> file</p>
+    <div id="books"></div>
+</body>
 
 <script>
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        myFunction(this);
-    }
-};
-xhttp.open("GET", "https://akshayknz.github.io/xml.xml", true);
-xhttp.send();
+    var oXHR = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 
-function myFunction(xml) {
-    var x, i, xmlDoc, txt;
-    xmlDoc = xml.responseXML;
-    txt = "";
-    x = xmlDoc.getElementsByTagName("PLANT");
-    for (i = 0; i < x.length; i++) {
-        txt += x[i].getAttributeNode("COMMON").nodeValue + "<br>";
+    function reportStatus() {
+        if (oXHR.readyState == 4)               // REQUEST COMPLETED.
+            showTheList(this.responseXML);      // ALL SET. NOW SHOW XML DATA.
     }
-    document.getElementById("demo").innerHTML = txt; 
-}
+
+    oXHR.onreadystatechange = reportStatus;
+    oXHR.open("GET", "xml.xml", true);      // true = ASYNCHRONOUS REQUEST (DESIRABLE), false = SYNCHRONOUS REQUEST.
+    oXHR.send();
+
+    function showTheList(xml) {
+
+        var divBooks = document.getElementById('books');        // THE PARENT DIV.
+        var Book_List = xml.getElementsByTagName('List');       // THE XML TAG NAME.
+
+        for (var i = 0; i < Book_List.length; i++) {
+
+            // CREATE CHILD DIVS INSIDE THE PARENT DIV.
+            var divLeft = document.createElement('div');
+            divLeft.className = 'col1';
+            divLeft.innerHTML = Book_List[i].getElementsByTagName("BookName")[0].childNodes[0].nodeValue;
+
+            var divRight = document.createElement('div');
+            divRight.className = 'col2';
+            divRight.innerHTML = Book_List[i].getElementsByTagName("Category")[0].childNodes[0].nodeValue;
+
+            // ADD THE CHILD TO THE PARENT DIV.
+            divBooks.appendChild(divLeft);
+            divBooks.appendChild(divRight);
+        }
+    };
 </script>
-</body>
 </html>
