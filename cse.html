@@ -12,7 +12,7 @@
     </script><script>
 $(document).ready(function(){$(window).scroll(function(){var scroll= $(window).scrollTop();
 if (scroll>100)
-{$(".nav").css("background","rgb(29, 1, 183)");
+{$(".nav").css("background","rgba(59, 59, 60,.9)");
 $(".nav").css("transition-delay","0s");
 $(".nav-cover").css("top","-20px");
 $(".nav-cover").css("left","28%");
@@ -365,43 +365,37 @@ $(".nav").css("padding"," 21px 0 0 0px");}
                 text-align: center;
             }
 
-            .leftdiv, .rightdiv {
-                width: 100%;
-                margin: 3% 0 8% 0%;
-                position: relative;
-                left: 4%;
+            .leftdiv, .rightdiv { color:#fff;
+    display: inline-block;overflow: hidden;
+    padding:48px 3%;
+    box-sizing: border-box;
             }
-
-            .innerleft, .innerright {
-                display: inline-block;
-                width: 35%;
-                margin: 0px 0% 0px 3%;
+.leftandright{background: transparent;    margin: 3% 0px;display: flex;
+    flex-direction: row;}
+            .innerleft, .innerright {display: inline-block;
+    margin: 0px 0% 35px 0px;
+    width: 100%;
+    text-align: left;
             }
-
+.leftdiv{background: linear-gradient(to bottom right,#2e48ff,#4a44c5);    width: 103%;} 
+.rightdiv {background: linear-gradient(to bottom right,#ff4242,#f70000);width: 103%;}
             .nextmain {padding-bottom: 60px;
                 height: auto;
             }
+.leftandright .head.bold {    font-size: 59px;
+    font-family: extralight;
+    font-weight: 100;}
 
-            .rightdiv {
-                position: relative;
-                left: 34%;
-            }
 
-            .innerleft {
-                display: inline-block;
-                margin: 0px 3% 0px 0px;
-                width: 35%;
-                text-align: right;
-            }
-
-            .innerlr {   height: 180px;
-    width: 290px;
-                background: rgb(240, 241, 245);
-                display: inline-block;
-                border-radius: 11px;
-            }
-.leftdiv .innerlr {    background: url(vision.jpg);}
-.rightdiv .innerlr {   background: url(mission.jpg);}
+.innerlr{filter: invert(100);background: url(chip.svg) no-repeat;
+    background-size: 99%;height: 317px;
+    width: 50%;
+    display: inline-block;
+    position: absolute;
+    opacity: .2;
+    bottom: -7px;
+    right: -5px;}
+    .leftdiv .innerlr{opacity: .1;right: -54px;background: url(brain.svg) no-repeat;}
             .foot {
                 height: 25vh;
                 background: rgb(58, 58, 58);
@@ -2958,9 +2952,8 @@ $(".nav").css("padding"," 21px 0 0 0px");}
     z-index: 3;
     cursor: pointer;
 }
-#nav_slide .dots {    top: 0px;
-    width: 48px;
-    height: 31px;
+#nav_slide .dots {    top: 0px;    width: 35px;
+    height: 24px;
     margin: -4px 0px;
     position: relative;
     border-radius: 0;
@@ -3014,6 +3007,42 @@ $(".nav").css("padding"," 21px 0 0 0px");}
 #i4:checked ~ #nav_slide #dot4 {background: rgba(29, 1, 183, .8);}
 
 @keyframes scroll {
+  0% {    opacity:1;transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+  13% {   transform: matrix3d(1,0,0.00,.000004,0.00,1,0.00,0.00004,0,0,1,0,0,0,10,1);
+    opacity: 1;
+  }
+   100% {  
+    opacity: 1; transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+}
+@keyframes scrollin {
+  0% {   opacity:1;transform: translateX(00px)  matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+  8% {   transform:translateX(30px) matrix3d(1,0,0.00,.000004,0.00,1,0.00,0.00004,0,0,1,0,0,0,10,1);
+    opacity: 1;
+  }
+    94% {  
+    opacity: 1; transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+    100% {  opacity:1;transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+}
+@keyframes scrollini {
+  0% {    opacity:1;transform: translateX(20px)  matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+  8% {   transform:translateX(100px) matrix3d(1,0,0.00,.000004,0.00,1,0.00,0.00004,0,0,1,0,0,0,10,1);
+    opacity: 1;
+  }
+    94% {  
+    opacity: 1; transform:matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+    100% {  opacity:1;transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
+  }
+}
+/*
+--------------------------BACKUP OF CLIPPED-IN-TRANSITION HOME SCROLL SLIDER---------------------------------
+@keyframes scroll {
   0% {    clip-path: inset(0 0 0 100%);opacity:1;transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,-.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
   }
   13% {   clip-path: inset(0 0 0 0%);transform: matrix3d(1,0,0.00,.000004,0.00,1,0.00,0.00004,0,0,1,0,0,0,10,1);
@@ -3047,6 +3076,7 @@ $(".nav").css("padding"," 21px 0 0 0px");}
     100% {  clip-path: inset(0 0 0 100%);opacity:1;transform: matrix3d(0.98,0,-0.17,-0.00009,0.00,0.98,-0.17,.00000000084,0.17,0.17,0.000009603999999999999,0,0,-0.000000004,-100,1);
   }
 }
+*/
 @media screen and (max-width: 685px) {
   .container {
     border: none;
@@ -3418,7 +3448,7 @@ var gal=setInterval(Move,7000); //change img in 3 sec
 </script>
                     
                     <div class='shortcuts'>
-                        <div class='head bold'>Shortcuts
+                        <div class='head extralight'>Shortcuts
 					</div>
                         <div class='tools'>
                             <label for='dash' class='tool1 light sub-head'>
@@ -3469,31 +3499,35 @@ var gal=setInterval(Move,7000); //change img in 3 sec
 
 
 
-
+<div class='leftandright'>
                     <div class='leftdiv'>
                         <div class='innerleft'>
-                            <div class='head bold'>Mission
+                            <div class='head bold'>Vision
 					</div>
-                            <div class='mission light ssub-head'>Android Studio is the IDE for Android that was announced in
-						May 2013 at the Google I/O developers event, and is intended as an alternative to Eclipse.
-						At the time of this writing, Android Studio is currently in Early Access Preview, with
-						the most recent version being 0.0.5.
+                            <div class='mission light ssub-head'>To facilitate transformation of students into good human beings, responsible citizens and competent professionals, focusing on assimilation, generation and dissemination of knowledge in the area of Computer Science & Engineering.
+                                Our Goal
+
+<il><li>Impart quality technical education with the latest technological developments in the emerging areas of IT.</li>
+<li>Develop domain specific expertise amongst the students through workshops, conferences and publications.</li>
+<li>Foster a culture of research and industry-related projects.</li>
+<li>To continuously achieve better employability.</li>
+<li>To be a premier department in the field of Computer Science & Engineering education.</li><il>
 					</div>
                         </div>
                         <div class='innerlr'></div>
                     </div>
                     <div class='rightdiv'>
-                        <div class='innerlr'></div>
+                       
                         <div class='innerright'>
-                            <div class='head bold'>Vision
+                            <div class='head bold'>Mission
 					</div>
-                            <div class='mission light ssub-head'>Android Studio is the IDE for Android that was announced in
-						May 2013 at the Google I/O developers event, and is intended as an alternative to Eclipse.
-						At the time of this writing, Android Studio is currently in Early Access Preview, with
-						the most recent version being 0.0.5.
+                            <div class='mission light ssub-head'><il><li>Impart quality education to meet the needs of profession and society, and achieve excellence in teaching-learning and research in the area of Computer Science & Engineering.</li>
+<li>Attract and develop talented and committed human resource, and provide an environment conducive to innovation, creativity, team-spirit and entrepreneurial leadership in Computer Science & Engineering field.</li>
+<li>Facilitate effective interactions among faculty and students of the CSE Department, and foster networking with alumni, industries, institutions and other stake-holders.</li>
+<li>Practice and promote high standards of professional ethics, transparency and accountability.</li></il>
 					</div>
-                        </div>
-                    </div>
+                        </div> <div class='innerlr'></div>
+                    </div></div>
                     <div class="dbanner">
                         <div class="gradients">
                             <div class="ghead">Notes
@@ -13144,8 +13178,6 @@ window.sr = ScrollReveal({ reset: false });
 sr.reveal('.leftdiv', {origin: 'top',distance: '0px',
 delay: 10,rotate: { x: 0, y: 0, z: 0 },easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',viewFactor: 0,});
 sr.reveal('.rightdiv',{delay: 200});
-sr.reveal('.foot',{delay:0,reset: false});
-sr.reveal('.home .dbanner',{delay:0,reset: false});
 sr.reveal('.home .gradients:nth-child(1)',{delay:00,reset: false});
 sr.reveal('.home .gradients:nth-child(2)',{delay:120,reset: false});
 sr.reveal('.home .gradients:nth-child(3)',{delay:220,reset: false});
