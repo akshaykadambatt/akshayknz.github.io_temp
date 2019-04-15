@@ -1,31 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
     <title>xtr</title>
     <meta charset="UTF-8" />
     <meta name="author" content="Akshay K Nair">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="knz" />
     <meta name="keywords" content="knz" />
     <script src="./scrollreveal.min.js"></script>
+    <script src="./blazy.min.js"></script>
     <link href="fav.png" rel="icon">
     <link href="https://fonts.googleapis.com/css?family=Catamaran|Open+Sans:300" rel="stylesheet">
     <script src="jquery-3.3.1.min.js"></script>
-    <head>
-        <script src="blazy.min.js"></script>
     <script>
-        ;(function() {
+            window.sr = ScrollReveal();
+            ;(function() {
             // Initialize
             var bLazy = new Blazy();
         })();
-    </script>
-        <script>
-            window.sr = ScrollReveal();
-        </script>
+        var bLazy = new Blazy({ 
+        breakpoints: [{
+              width: 420 // max-width
+        , src: 'data-src-small'
+         }
+           , {
+              width: 768 // max-width
+            , src: 'data-src-medium'
+    }]
+    });
+        </script><head>
+        
+
+        
         <script>
             $(document).ready(function() {
                 $(window).scroll(function() {
                     var scroll = $(window).scrollTop();
-                    if (scroll > 100) //THEME--------------------------------------------------------------
+                    if (scroll > 910) //THEME--------------------------------------------------------------
                     {
                         $(".nav").css("background", "#000");
                         //end THEME----------------------------------------------------------
@@ -82,6 +92,15 @@
             }
         </style>
         <style>
+            @keyframes load_pic{0%{filter: blur(6px);}80%{filter: blur(6px);}100%{filter: blur(0px);}}
+            .b-lazy {
+                transition: filter 2s;
+                 width: 100%;
+                   opacity: 1;filter:blur(10px);
+    }
+    .b-lazy.b-loaded {
+                   animation: load_pic 1s ease-in-out 0s 1 normal;filter:blur(0px);
+    }
             /**Defenitions classes*/
             @font-face {
                 font-family: 'bb';
@@ -1053,13 +1072,13 @@
             .subbbb {     font-size: 20px;
     background: #3a374c24;
     color: #000;
-            }span.subbb {
+            }span.subbb {font-family: 'open sans';
     font-size: 14px;
-    font-weight: 900;
+    font-weight: 100;
 }
 
             .obj_button {
-                background: url(next.svg) no-repeat;
+                background: url('next.svg') no-repeat;
                 background-size: 20%;
                 cursor: pointer;
                 background-position: 77% 55%;
@@ -3592,11 +3611,11 @@ label.obj_button.darkmode_border.backfff {
             }
 
             .nextmain .tool3:nth-child(3) .tooltippic3 {
-                background-image: url('file:///E:/Downloads/faculty%20wissen%20download-20190409T013945Z-001/faculty%20wissen%20download/download%20(6).jpg');
+                background-image: url();
             }
 
             .nextmain .tool3:nth-child(3) #blur {
-                background-image: url('file:///E:/Downloads/faculty%20wissen%20download-20190409T013945Z-001/faculty%20wissen%20download/download%20(6).jpg');
+                background-image: url();
             }
 
             .nextmain .tool3:nth-child(4) .tooltippic3 {
@@ -3719,7 +3738,7 @@ label.obj_button.darkmode_border.backfff {
             }
 
             #three {
-                background: url('4.jpg') no-repeat;
+                background: url() no-repeat;
                 background-size: cover;
             }
 
@@ -3823,7 +3842,7 @@ label.obj_button.darkmode_border.backfff {
             /*3rd slide=slide_innera*/
             .slide_innera1 {    height: 402px;
     width: 372px;
-                background: url('file:///C:/Users/Knz/Desktop/P4R2SS1.webp') no-repeat;
+                background: url('P4R2SS1.webp') no-repeat;
                 margin: 51px 0px 16px 307px;background-size: 89%;
             }
 
@@ -4066,7 +4085,26 @@ label.obj_button.darkmode_border.backfff {
 .dassociation .tab .tooltip.toola.blue,.nextmain .tab .tooltip.toola.blue{    top: -108px;}
 .dassociation .tab .toola,.nextmain .tab .toola{    top: -109px;}
 .tab .toola .tip{display: block;width:auto;}
-
+/*DASH Media query*/
+.path,.switches,.dwholder{display: none !important;}
+.dnav2{    bottom: 0;
+    top: auto;
+    height:58px;
+    width: 100vw;    display: flex;}
+.icon_holder1{width: 100%;}
+.dash_welcome{margin: auto;    padding: 15px 3%;}
+.gallery {
+    width: 90vw;
+    margin: 0px 0.11% 0 5%;
+}.imp_links{
+    width: 90%;
+    margin: 16px 5.11% 1px 0%;}
+.dhome{width:100vw;    padding: 35px 0px 41px 0px;}
+#sd:checked~.dashboard .dnav .iconi,#a:checked~.dashboard .dnav .iconii,#b:checked~.dashboard .dnav .iconiii,#c:checked~.dashboard .dnav .iconiv{box-shadow: inset 0px -6px 0px 0px rgba(0, 79, 255, 0.52);}
+label.obj_button.darkmode_border.backfff{position: static;}
+.gobj_tip{    max-width: 99%;}
+.gradients{margin: 13px 2px 22px 4px;}
+/*end DASH Media query*/
                 .gslider {
                     display: block;
                 }
@@ -4638,9 +4676,8 @@ label.obj_button.darkmode_border.backfff {
 
 
                                 </div>
-                                <img class="b-lazy" src="download.jpg"  data-src="kulfy.jpg"></img>
                         <div class="tool3 light sub-head">
-                            <img class="b-lazy tooltippic3" src="download.jpg"  data-src="kulfy.jpg"></img>
+                            <img class="b-lazy tooltippic3" src="faculty/sajan_low.jpg"  data-src="faculty/sajan.jpg"></img>
                             <div class="tooltip blur" id="blur"></div>
                             <div class="tooltip toola">
                                 First Lastnameyoyoyo
