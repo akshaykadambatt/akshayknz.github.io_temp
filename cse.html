@@ -7,26 +7,13 @@
     <meta name="description" content="knz" />
     <meta name="keywords" content="knz" />
     <script src="./scrollreveal.min.js"></script>
-    <script src="./blazy.min.js"></script>
     <link href="fav.png" rel="icon">
     <link href="https://fonts.googleapis.com/css?family=Catamaran|Open+Sans:300" rel="stylesheet">
     <script src="jquery-3.3.1.min.js"></script>
     <script>
             window.sr = ScrollReveal();
-            ;(function() {
-            // Initialize
-            var bLazy = new Blazy();
-        })();
-        var bLazy = new Blazy({ 
-        breakpoints: [{
-              width: 420 // max-width
-        , src: 'data-src-small'
-         }
-           , {
-              width: 768 // max-width
-            , src: 'data-src-medium'
-    }]
-    });
+            
+        
         </script><head>
         
 
@@ -35,7 +22,7 @@
             $(document).ready(function() {
                 $(window).scroll(function() {
                     var scroll = $(window).scrollTop();
-                    if (scroll > 910) //THEME--------------------------------------------------------------
+                    if (scroll > 10) //THEME--------------------------------------------------------------
                     {
                         $(".nav").css("background", "#000");
                         //end THEME----------------------------------------------------------
@@ -66,6 +53,14 @@
         </script>
         <link href="fav.png" rel="icon">
         <style>
+            html {
+    overflow-x: hidden;
+}
+            /*ERR DEFENITIONS*/
+.err_505,.err_505:before{content: 'Error';font-size: 70px;font-family:'extralight';color:#000;padding:20px;}
+.err_505:after{content: '505, bigtime. This is not what you are looking for. Apologies.';display: block;
+font-size: 15px;padding:20px;font-family:'o';}
+            /*end ERR DEFENITIONS*/
             /*THEME*/
             .leftdiv {
                 background: #4353ff;
@@ -418,15 +413,12 @@
                 display: inline-block;
             }
 
-            .tooltippic3 {
-                height: 70%;
-                background: url('david.jpg');
+            .tooltippic3 {background: url('n1.jpg');background-size: cover;
+                height: 70%;    background-position: 50%;
+                
             }
 
-            .dassociation .tooltippic3 {
-                background: none;
-                background-size: cover;
-            }
+           
 
             .toola {
                 position: relative;
@@ -434,7 +426,7 @@
             }
 
             #blur {
-                background: url(david.jpg);
+                background: url(n1.jpg);
                 height: 61px;
                 background-position: 0% 95%;
                 filter: blur(6px);
@@ -478,7 +470,7 @@
             }
 
             .nextmain {
-                padding-bottom: 60px;
+                padding-bottom: 0;
                 height: auto;
             }
 
@@ -507,21 +499,27 @@
                 background: url(brain.svg) no-repeat;
             }
 
-            .foot {
-                height: 25vh;
-                background: rgb(58, 58, 58);
-                color: rgb(255, 255, 255);
-                padding: 40px;
+            .foot {height: auto;
+    background: rgb(58, 58, 58);
+    color: rgb(255, 255, 255);
+    padding: 90px 10px;display: flex;
+    justify-content: space-evenly;
                 box-sizing: border-box;
             }
-
+.foothead{max-width: 500px;min-width:300px;    display: flex;margin:0 17px;
+    flex-flow: column;
+}
+.foothead:nth-child(2){text-align: right;
+}
             .foothead.bold.head {
                 display: inline-block;
                 background: rgb(0, 0, 0);
-                padding: 8px;
+                padding: 8px;font-size: 19px;
                 box-shadow: 0px 6px 0px 0px #fff;
             }
-
+            .foothead_bottom{width:100vw;background-color: #000;color:rgba(255,255,255,.5);max-width: unset;min-width:unset;margin:0 0px;
+                padding: 20px;text-align: center;font-size: 13px;}
+.foot_links{text-decoration: none;color:#fff;display: block;font-size: 13px;}
             #dash:checked~.home {
                 height: 0px;
                 opacity: 0;
@@ -531,6 +529,7 @@
             #home:checked~.home {
                 opacity: 1;
             }
+            .label_list{display: none;}
         </style>
         <style>
             .dashboard {
@@ -570,7 +569,7 @@
                 transition: all .3s .2s;
                 width: 100%;
                 box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.06);
-                display: block;
+                display: block;overflow: hidden;
             }
 
             .dnav2 {
@@ -602,7 +601,7 @@
                 background: url(wlogo.svg) no-repeat;
                 height: 26px;
                 transition: all .3s;
-                width: 37px;
+                width: 37px;display: block;
                 position: relative;
                 left: 7%;
                 top: 22%;
@@ -1540,7 +1539,7 @@ label.obj_button.darkmode_border.backfff {
                 width: 100%;
                 top: 0;
                 transition: all .3s .05s cubic-bezier(0.53, 0.19, 0.22, 0.99),opacity .17s .2s;
-                opacity: 0;
+                opacity: 0;display: none;
             }
 
             input {
@@ -1621,7 +1620,7 @@ label.obj_button.darkmode_border.backfff {
 
             #bi:checked~.content center .holder .nxti {
                 transform: translatey(-717px) scale(1);
-                z-index: 1;
+                z-index: 1;display: block;
                 opacity: 1;
                 height: 100%;
                 position: relative;
@@ -1630,14 +1629,14 @@ label.obj_button.darkmode_border.backfff {
             #bii:checked~.content center .holder .nxtii {
                 transform: translatey(-717px) scale(1);
                 z-index: 1;
-                opacity: 1;
+                opacity: 1;display: block;
                 height: 100%;
                 position: relative;
             }
 
             #biii:checked~.content center .holder .nxtiii {
                 transform: translatey(-717px) scale(1);
-                z-index: 1;
+                z-index: 1;display: block;
                 opacity: 1;
                 height: 100%;
                 position: relative;
@@ -1646,7 +1645,7 @@ label.obj_button.darkmode_border.backfff {
             #biv:checked~.content center .holder .nxtiv {
                 transform: translatey(-717px) scale(1);
                 z-index: 1;
-                opacity: 1;
+                opacity: 1;display: block;
                 height: 100%;
                 position: relative;
             }
@@ -1654,14 +1653,14 @@ label.obj_button.darkmode_border.backfff {
             #bv:checked~.content center .holder .nxtv {
                 transform: translatey(-717px) scale(1);
                 z-index: 1;
-                opacity: 1;
+                opacity: 1;display: block;
                 height: 100%;
                 position: relative;
             }
 
             #bvi:checked~.content center .holder .nxtvi {
                 transform: translatey(-717px) scale(1);
-                z-index: 1;
+                z-index: 1;display: block;
                 opacity: 1;
                 height: 100%;
                 position: relative;
@@ -1669,7 +1668,7 @@ label.obj_button.darkmode_border.backfff {
 
             #bvii:checked~.content center .holder .nxtvii {
                 transform: translatey(-717px) scale(1);
-                z-index: 1;
+                z-index: 1;display: block;
                 opacity: 1;
                 height: 100%;
                 position: relative;
@@ -1677,7 +1676,7 @@ label.obj_button.darkmode_border.backfff {
 
             #bviii:checked~.content center .holder .nxtviii {
                 transform: translatey(-717px) scale(1);
-                z-index: 1;
+                z-index: 1;display: block;
                 opacity: 1;
                 height: 100%;
                 position: relative;
@@ -1696,7 +1695,7 @@ label.obj_button.darkmode_border.backfff {
                 display: inline-block;
                 position: absolute;
                 width: 62px;
-                transform: scale(-1);
+                transform: scale(1);
                 left: 23.3vw;
                 top: 7vh;
                 transition: all .25s, opacity .7s;
@@ -1797,9 +1796,6 @@ label.obj_button.darkmode_border.backfff {
                 z-index: 3;
             }
 
-            .unxt {
-                transform: scale(-1);
-            }
 
             #bi:checked~.content .def {
                 transform: translatex(-300px);
@@ -2467,9 +2463,9 @@ label.obj_button.darkmode_border.backfff {
                 top: -20vh;
             }
 
-            #unselect:checked~.content .unnxt {
+            #unselect:checked~.unnxt {
                 opacity: 0;
-                transfrom: translatex(-30px);
+                transform:scale(.81);
             }
 
             @media (max-width: 1300px) {
@@ -2553,12 +2549,6 @@ label.obj_button.darkmode_border.backfff {
                     margin-top: 89px;
                 }
 
-                .unnxt {
-                    right: 13vw;
-                    font-size: 16px;
-                    line-height: 54px;
-                    height: 54px;
-                }
 
                 .heightc {
                     right: 3vw;
@@ -2746,7 +2736,7 @@ label.obj_button.darkmode_border.backfff {
             }
 
             .nconii {
-                text-align: center;
+                text-align: center;    margin-bottom: 350px;
                 background: rgb(243, 243, 243);
             }
 
@@ -2900,7 +2890,7 @@ label.obj_button.darkmode_border.backfff {
                 transition: all .3s 0s;
                 background-color: rgb(255, 255, 255);
                 border-radius: 5px;
-                padding: 25px 2%;
+                padding: 25px 2%;overflow: hidden;
                 box-sizing: border-box;
             }
 
@@ -2969,25 +2959,22 @@ label.obj_button.darkmode_border.backfff {
             }
 
             .banner_back {
-                position: absolute;
+                position: relative;
                 z-index: 1;
                 width: 86.7%;
-                overflow: hidden;
-                height: 180px;
-                margin: -25px 0 0 -26px;
-                border-radius: 6px;
-            }
-
+                height: 180px;top: -118px;
+                margin: -25px 0 0 -26px;left: 0px; 
+                border-radius: 6px;}
             .banner_pic {
                 position: relative;
                 z-index: 3;
                 width: 320px;
                 height: 140px;
-                background: url(kulfy.jpg) no-repeat;
+                background: url(n1.jpg) no-repeat;
                 background-size: cover;
                 position: absolute;
-                right: 2%;
-                margin-top: -5px;
+                right: 2%;background-position: 0 38%;
+                margin-top: -111px;
             }
 
             .banner_back1 {
@@ -3446,7 +3433,7 @@ label.obj_button.darkmode_border.backfff {
 
             .dash_title_back {
                 background: url(download.jpg) no-repeat;
-                background-size: contain;
+                background-size: cover;    background-position: 50%;
             }
 
             .dassociation #blur,.nextmain #blur {
@@ -3466,11 +3453,10 @@ label.obj_button.darkmode_border.backfff {
                 top: -100px;
             }
 
-            .dassociation .tool3,.tool3 {
-                height: 236px;
-                padding: 0px;
-                overflow: hidden;
-                width: 19%;
+            .dassociation .tool3,.tool3 {height: 256px;
+    padding: 0px;
+    overflow: hidden;
+    width: 14%;    min-width: 187px;
                 margin: 32px 2% 0px 2%;
                 background: rgba(238, 239, 244, 0.31);
             }
@@ -3522,76 +3508,77 @@ label.obj_button.darkmode_border.backfff {
             }
 
             /*----------------------------233x190 pixels, 240x240ppi, 44270 pixels-------------------------------*/
+            
             .dassociation .tool3:nth-child(2) .tooltippic3 {
-                background-image: url(david.jpg);
+                background-image: url('faculty/sanam.jpg');
             }
 
             .dassociation .tool3:nth-child(2) #blur {
-                background-image: url(david.jpg);
+                background-image: url('faculty/sanam.jpg');
             }
 
             .dassociation .tool3:nth-child(3) .tooltippic3 {
-                background-image: url(t2.jpg);
+                background-image: url('faculty/sajan.jpg');
             }
 
             .dassociation .tool3:nth-child(3) #blur {
-                background-image: url(t2.jpg);
+                background-image: url('faculty/sajan.jpg');
             }
 
             .dassociation .tool3:nth-child(4) .tooltippic3 {
-                background-image: url(t3.jpg);
+                background-image: url('faculty/sruthy.jpg');
             }
 
             .dassociation .tool3:nth-child(4) #blur {
-                background-image: url(t3.jpg);
+                background-image: url('faculty/sruthy.jpg');
             }
 
             .dassociation .tool3:nth-child(5) .tooltippic3 {
-                background-image: url(t4.jpg);
+                background-image: url('faculty/jean.jpg');
             }
 
             .dassociation .tool3:nth-child(5) #blur {
-                background-image: url(t4.jpg);
+                background-image: url('faculty/jean.jpg');
             }
 
             .dassociation .tool3:nth-child(6) .tooltippic3 {
-                background-image: url(t1.jpg);
+                background-image: url('faculty/sujitha.jpg');
             }
 
             .dassociation .tool3:nth-child(6) #blur {
-                background-image: url(t1.jpg);
+                background-image: url('faculty/sujitha.jpg');
             }
 
             .dassociation .tool3:nth-child(7) .tooltippic3 {
-                background-image: url(t2.jpg);
+                background-image: url('faculty/susu.jpg');
             }
 
             .dassociation .tool3:nth-child(7) #blur {
-                background-image: url(t2.jpg);
+                background-image: url('faculty/susu.jpg');
             }
 
             .dassociation .tool3:nth-child(8) .tooltippic3 {
-                background-image: url(t3.jpg);
+                background-image: url('faculty/rinsu.jpg');
             }
 
             .dassociation .tool3:nth-child(8) #blur {
-                background-image: url(t3.jpg);
+                background-image: url('faculty/rinsu.jpg');
             }
 
             .dassociation .tool3:nth-child(9) .tooltippic3 {
-                background-image: url(t4.jpg);
+                background-image: url('faculty/lab2.jpg');
             }
 
             .dassociation .tool3:nth-child(9) #blur {
-                background-image: url(t4.jpg);
+                background-image: url('faculty/lab2.jpg');
             }
 
             .dassociation .tool3:nth-child(10) .tooltippic3 {
-                background-image: url(t2.jpg);
+                background-image: url('faculty/lab1.jpg');
             }
 
             .dassociation .tool3:nth-child(10) #blur {
-                background-image: url(t2.jpg);
+                background-image: url('faculty/lab1.jpg');
             }
 
             .dassociation .tool3:nth-child(11) .tooltippic3 {
@@ -3611,75 +3598,75 @@ label.obj_button.darkmode_border.backfff {
             }
 
             .nextmain .tool3:nth-child(3) .tooltippic3 {
-                background-image: url();
+                background-image: url('faculty/sanam.jpg');
             }
 
             .nextmain .tool3:nth-child(3) #blur {
-                background-image: url();
+                background-image: url('faculty/sanam.jpg');
             }
 
             .nextmain .tool3:nth-child(4) .tooltippic3 {
-                background-image: url(t3.jpg);
+                background-image: url('faculty/sajan.jpg');
             }
 
             .nextmain .tool3:nth-child(4) #blur {
-                background-image: url(t3.jpg);
+                background-image: url('faculty/sajan.jpg');
             }
 
             .nextmain .tool3:nth-child(5) .tooltippic3 {
-                background-image: url(t4.jpg);
+                background-image: url('faculty/sruthy.jpg');
             }
 
             .nextmain .tool3:nth-child(5) #blur {
-                background-image: url(t4.jpg);
+                background-image: url('faculty/sruthy.jpg');
             }
 
             .nextmain .tool3:nth-child(6) .tooltippic3 {
-                background-image: url(t1.jpg);
+                background-image: url('faculty/jean.jpg');
             }
 
             .nextmain .tool3:nth-child(6) #blur {
-                background-image: url(t1.jpg);
+                background-image: url('faculty/jean.jpg');
             }
 
             .nextmain .tool3:nth-child(7) .tooltippic3 {
-                background-image: url(t2.jpg);
+                background-image: url('faculty/sujitha.jpg');
             }
 
             .nextmain .tool3:nth-child(7) #blur {
-                background-image: url(t2.jpg);
+                background-image: url('faculty/sujitha.jpg');
             }
 
             .nextmain .tool3:nth-child(8) .tooltippic3 {
-                background-image: url(t3.jpg);
+                background-image: url('faculty/susu.jpg');
             }
 
             .nextmain .tool3:nth-child(8) #blur {
-                background-image: url(t3.jpg);
+                background-image: url('faculty/susu.jpg');
             }
 
             .nextmain .tool3:nth-child(9) .tooltippic3 {
-                background-image: url(t4.jpg);
+                background-image: url('faculty/rinsu.jpg');
             }
 
             .nextmain .tool3:nth-child(9) #blur {
-                background-image: url(t4.jpg);
+                background-image: url('faculty/rinsu.jpg');
             }
 
             .nextmain .tool3:nth-child(10) .tooltippic3 {
-                background-image: url(t2.jpg);
+                background-image: url('faculty/lab2.jpg');
             }
 
             .nextmain .tool3:nth-child(10) #blur {
-                background-image: url(t2.jpg);
+                background-image: url('faculty/lab2.jpg');
             }
 
             .nextmain .tool3:nth-child(11) .tooltippic3 {
-                background-image: url(t4.jpg);
+                background-image: url('faculty/lab1.jpg');
             }
 
             .nextmain .tool3:nth-child(11) #blur {
-                background-image: url(t4.jpg);
+                background-image: url('faculty/lab1.jpg');
             }
 
             .navitem1:hover {
@@ -3728,7 +3715,7 @@ label.obj_button.darkmode_border.backfff {
 
             /*---------------------SLIDER-------------------------*/
             #one {
-                background: url('slieder_imgpjcnob.jpg') no-repeat;
+                background: url('newsback.jpg') no-repeat;
                 background-size: cover;
             }
 
@@ -3738,13 +3725,14 @@ label.obj_button.darkmode_border.backfff {
             }
 
             #three {
-                background: url() no-repeat;
+                background: url('slieder_imgpjcnob.jpg') no-repeat;
                 background-size: cover;
             }
 
             #four {
-                background: url('rgrg.jpg') no-repeat;
-                background-size: cover;
+                background: url('1.jpg') no-repeat;
+                background-size: 99% 99%;
+    background-position: 10px 10px;
             }
 
             .container {
@@ -3833,7 +3821,7 @@ label.obj_button.darkmode_border.backfff {
             .slide_innerb2 {
                 height: 342px;
                 width: 582px;
-                background: url('sefre2.png') no-repeat;
+                background: url('') no-repeat;
                 position: relative;
                 top: -280px;
                 margin: 51px 0px 16px 77px;
@@ -3873,20 +3861,23 @@ label.obj_button.darkmode_border.backfff {
             }
 
             /*3rd slide=slide_innerd*/
-            .slide_innerd1 {
-                height: 342px;
-                width: 582px;
-                background: url('') no-repeat;
-                margin: 51px 0px 16px 77px;
+            .slide_innerd1 {    height: 342px;
+    width: 100%;
+    background: url(2.png) no-repeat;
+    margin: 21px 0px 26px 77px;
+    background-size: 104% 106%;
+    background-position: -77px -11px;
             }
 
             .slide_innerd2 {
                 height: 342px;
                 width: 582px;
-                background: url('s.png') no-repeat;
+                background: url('3.png') no-repeat;
                 position: relative;
-                top: -280px;
-                margin: 51px 0px 16px 77px;
+                    top: -310px;
+    margin: 51px 0px 16px 77px;
+    background-size: 149% 109%;
+    background-position: -100px -101px;
             }
 
             #i1:checked ~.container #one .slide_inner1, #i2:checked ~.container #four .slide_inner1, #i3:checked ~.container #two .slide_inner1, #i4:checked ~.container #three .slide_inner1 {
@@ -4044,12 +4035,91 @@ label.obj_button.darkmode_border.backfff {
             }
 .mobile{display: none;}
             @media (max-width: 700px) {
-.shortcuts{    left: 1.5%;
+                .acro_head {
+    font-size: 15px;
+    font-family: 'o';}
+                .slide_inner1,.slide_inner2{display: none;}
+                #one {
+    background: url(1mob.jpg) no-repeat;
+    background-size: cover;
+}
+#four {
+    background: url(2mob.jpg) no-repeat;
+    background-size: cover;
+    background-position: 0;
+}
+#two {
+    background: url(3mob.jpg) no-repeat;
+    background-size: cover;
+}
+#three {
+    background: url(4mob.jpg) no-repeat;
+    background-size: cover;
+}
+                .container .slide_img {    width: 94.5vw;
+    height: 52vh;
+}
+                 @keyframes scroll {
+                0% {
+                    opacity: 1;
+                }
+
+                13% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes scrollin {
+                0% {
+                    opacity: 1;
+                }
+
+                8% {
+                    opacity: 1;
+                }
+
+                94% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes scrollini {
+                0% {
+                    opacity: 1;
+                }
+
+                8% {
+                    opacity: 1;
+                }
+
+                94% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+.nav-item{display: none;font-size: 14px;}
+.heading{width: 56px;
+    height: 44px;}
+.navitem1{display: block;top: -26px;    right: 69px;}
+.nav{position: static;}
+.for_slide {    font-size: 14px;}
+.shortcuts{    left: 1.5%;display: none;
     top: 93vh;width: auto;}
-.tool2, .tool3{height: auto;width: 44%;
+.tool2, .tool3{height: auto;width: 37%;
     display: inline-block;}
 #blur{display: none;}
-.tooltippic3 {background-position: 50%;background-size: 100%;
+.tooltippic3 {background-position: 50%;background-size: cover;
     height: 100%;}
 .toola .tip{display: block;}
 .toola{top: -63px;}
@@ -4060,8 +4130,8 @@ label.obj_button.darkmode_border.backfff {
 .tool1{display: none;}
 .mobile .tooltippic2{ background: url(coding%20(1).svg);}   
 .tool3news{width: 99%;margin:0;}
-.main-slider{height: 158vh;}
-.container{    width: 113vw;
+.main-slider{height: 115vh;}
+.container{    width: 100vw;
     margin-top: 15vh;
     clip-path: none;
     margin-left: 3%;
@@ -4078,12 +4148,11 @@ label.obj_button.darkmode_border.backfff {
 .arco:hover{padding: 20px 3% 20px 3%;}
 .acro_head span{padding:0;}
 .gradients:nth-child(5){display: none;}
-.nextmain .tab{padding:0;}
+.nextmain .tab{padding:0;padding-bottom:30px;}
 .nextmain .tipout{width: 100%;}
-.tab .tool3{height: 214px;}
-.tab .tooltippic3{background-position: initial;}
-.dassociation .tab .tooltip.toola.blue,.nextmain .tab .tooltip.toola.blue{    top: -108px;}
-.dassociation .tab .toola,.nextmain .tab .toola{    top: -109px;}
+.tab .tool3{height: 203px;}
+.dassociation .tab .tooltip.toola.blue,.nextmain .tab .tooltip.toola.blue{display:none;top: -108px;}
+.dassociation .tab .toola,.nextmain .tab .toola{    top: -59px;}
 .tab .toola .tip{display: block;width:auto;}
 /*DASH Media query*/
 .path,.switches,.dwholder{display: none !important;}
@@ -4092,31 +4161,128 @@ label.obj_button.darkmode_border.backfff {
     height:58px;
     width: 100vw;    display: flex;}
 .icon_holder1{width: 100%;}
-.dash_welcome{margin: auto;    padding: 15px 3%;}
+.dash_welcome{margin: auto;    padding: 15px 6%;font-size: 14px;}
+.dash_welcome_head {font-size: 21px;}
+.link {font-size: 12px;}
 .gallery {
     width: 90vw;
     margin: 0px 0.11% 0 5%;
 }.imp_links{
     width: 90%;
     margin: 16px 5.11% 1px 0%;}
-.dhome{width:100vw;    padding: 35px 0px 41px 0px;}
+
+.dfoot_backcolor{width: 100%;    height: 321px;}
+
+.dfoot_obj{flex-direction: column;left: 0;
+    width: 100%;}
+    .dfoot_obj1, .dfoot_obj2 {position: absolute;
+    top: 43px;width: 86%;
+    opacity: .8;
+}.dfoot_obj2 {border-left:none;top: 102px;}
+.foot_tip {
+    font-size: 12px;}
+    .dfoot_obj1 {
+    font-size: 24px;
+    text-align: center;
+}
+.dhome{width:100vw;    padding: 35px 0px 41px 0px;margin: 49px 0px 320px 22px;}
 #sd:checked~.dashboard .dnav .iconi,#a:checked~.dashboard .dnav .iconii,#b:checked~.dashboard .dnav .iconiii,#c:checked~.dashboard .dnav .iconiv{box-shadow: inset 0px -6px 0px 0px rgba(0, 79, 255, 0.52);}
 label.obj_button.darkmode_border.backfff{position: static;}
 .gobj_tip{    max-width: 99%;}
-.gradients{margin: 13px 2px 22px 4px;}
+.gradients{margin: 9px 2px 9px 4px;font-size: 17px;    padding: 9px 16px;    min-width: 270px;}
+.gfoot {font-size: 12px;    margin: 5px 0;}
+.dash_title {font-size: 26px;margin: 1px 0px 21px 21%;}
+.gbutton {width: 35px;height: 35px;}
+.ddown, .dnoties, .dassociation{width: 100vw;    margin: 49px 0px 320px 22px;}
+.banner_back {top: -268px;
+    height: 10px;
+    left: 0px;    position: relative;}
+.banner_temp_mob{    display: flex;
+    flex-flow: column;}
+.main_banner {overflow: hidden;
+    height: auto;}
+    .banner_text {
+    font-size: 24px;}
+    .banner_text_tip {font-size: 16px;
+    width: 100%;}
+.banner_pic{position: static;width: auto;margin-top: 10px;}
+.banner_news {font-size: 14px;}
+.dassociation{padding:0;}
+.tabs {margin:0px;}
+.tab_nav_lab {font-size: 14px;}
+.tab{margin-bottom: 0;position: static;padding:0;}
+.dassociation .tool3, .tool3{min-width: 160px;}.sub-head {
+    font-size: 16px;
+}.tip {
+    font-family: o;
+    margin-top: 5px;
+    font-size: 12px;
+}.tab .tooltippic3{    background-position: 50%;}
+.tab_nav {
+    width: 100%;
+    padding: 0 0 0 0px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.dashboard .dassociation .tabs label{width: 100%;text-align: center;transition: all .4s;}
+            #t1:checked~.dashboard .dassociation .tabs .lab1,#t2:checked~.dashboard .dassociation .tabs .lab2 ,#t3:checked~.dashboard .dassociation .tabs .lab3{color: #000;padding-top:25px;padding-bottom:25px;
+                box-shadow: inset 0px -3px 0 0px rgba(0,0,0,.8);background: #000;color: #fff;}
+.tab_fac_headtip {font-size: 19px;margin:27px 14px 10px 4%;}
+.tab_fac{    padding: 9px 13px 9px 14px;}
+.tab_fac_tip {    font-size: 16px; margin:0;}
+.tab_fac_but.obj_button {font-size: 14px;}
+.sub span {font-size: 17px;    margin: 0px 0 16px 0;}
+.icontip {display: none;}
+.modus {    width: auto;
+    padding: 1px 1.6%;}
+    .mods {    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    flex-flow: column;}
 /*end DASH Media query*/
+/* DASH Media query mobMENU*/
+#mobmenu:checked~.main .dashboard .dnav1 {height: 60vh;z-index: 100;}
+#mobmenu:checked~.main .dashboard .dnav1 .label_list{height:70%;opacity: 1;transform: scale(1);top:7%;}
+#mobmenu:checked~.main .dashboard .mobmenu_cover{height:100vh;transition: all 0s .3s;}
+.mobmenu_cover{height:0vh;display:block;width: 100vw;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 33;
+    position: fixed;}
+.mobmenu {
+    position: absolute;
+    right: 20px;
+    top: 14px;}
+.mobmenu:before,.mobmenu:after,.mobmenu{    content: '';
+    height: 2px;
+    background: rgba(0, 0, 0, 0.4);
+    width: 38px;
+    display: inline-block;}
+.mobmenu:before{top:-6px;position: relative;}
+.mobmenu:after{top:-19px;position: relative;}
+.label_list{    height: 0%;opacity: 0;transform: scaley(.5);
+    width: 60%;overflow: hidden;
+    float: right;transition: all .3s .3s,top .96s .2s;
+    display: flex;
+    flex-flow: column;
+    font-size: 22px;
+    position: relative;
+    top: 16%;
+    justify-content: space-evenly;}
+.labels_in_list{display: inline-block;
+    width: auto;}
+/*end DASH Media query mobMENU*/
                 .gslider {
                     display: block;
                 }
 
                 .ncon {
                     font-size: 30px;
-                    margin-top: 68px;
+                    margin-top: 118px;
                 }
 
-                .dash_title {
-                    margin: 1px 0px 21px 21%;
-                }
+                
 
                 .gobj_tip {
                     position: static;
@@ -4124,11 +4290,14 @@ label.obj_button.darkmode_border.backfff{position: static;}
                 }
 
                 .obj_button {
-                    width: 15%;
+                    width: 68px;
                 }
 
-                .unnxt {
-                    right: 22vw;
+                .unnxt {position: fixed;
+    top: 49px;font-size: 16px;
+    line-height: 42px;font-family: 'o';
+    height: 42px;left:unset;
+                    right: 0vw;
                 }
 
                 #drop:checked~.content .def .defi .drop {
@@ -4137,12 +4306,9 @@ label.obj_button.darkmode_border.backfff{position: static;}
 
                 .holder {
                     width: 668px;
-                    padding: 16% 0;
+                    padding: 26% 0;
                 }
 
-                .dfoot_obj1 {
-                    font-size: 30px;
-                }
 
                 .dfoot_obj2 {
                     font-size: 18px;
@@ -4385,6 +4551,8 @@ label.obj_button.darkmode_border.backfff{position: static;}
         <!--Dev mode-->
         <input type='checkbox' class='checkers' name='darkmode' id='darkmode'>
         <!--Dark mode-->
+        <input type='checkbox' class='checkers' name='mobMenu' id='mobmenu'>
+        <!--mobMenu ex/con-->
         <div class='main'>
             <!----Navigation Checkboxes. DONT TOUCH---->
             <input checked type='radio' class='checkers' name='home' id='home'>
@@ -4481,10 +4649,12 @@ label.obj_button.darkmode_border.backfff{position: static;}
                             <div class='slide_inner2 slide_innerd2'></div>
                         </div>
                     </div>
-                    <div class='for_slide for_one'>Wissen newsletter 1</div>
-                    <div class='for_slide for_two'>Wissen sometng 2</div>
-                    <div class='for_slide for_three'>Wissen thigs 3</div>
-                    <div class='for_slide for_four'>Wissen grts 4</div>
+                    <div class='for_slide for_one'>Wissen Newsletter April Edition</div>
+                    <div class='for_slide for_four'>The Wissen Portal</div>
+
+                    <div class='for_slide for_two'>The HGAE Computer Science Department</div>
+                    <div class='for_slide for_three'>Holy Grace Academy of Engineering</div>
+                    
                     <div id="nav_slide">
                         <label for="i1" class="dots" id="dot1"></label>
                         <label for="i2" class="dots" id="dot2"></label>
@@ -4532,7 +4702,7 @@ label.obj_button.darkmode_border.backfff{position: static;}
                         
                             
                             </label>
-                            <div class='tool3news light sub-head'>
+                            <label for='b' class='tool3news light sub-head'>
                                 <div class='tooltippic3'></div>
                                 <div class='tooltip' id='blur'></div>
                                 <div class='tooltip toola'>
@@ -4540,7 +4710,7 @@ label.obj_button.darkmode_border.backfff{position: static;}
                                 <div class='tip'>Release of the new CSE association website.
                                 </div>
                                 </div>
-                            </div>
+                            </dilabelv>
                         </div>
                     </div>
                 </div>
@@ -4677,10 +4847,10 @@ label.obj_button.darkmode_border.backfff{position: static;}
 
                                 </div>
                         <div class="tool3 light sub-head">
-                            <img class="b-lazy tooltippic3" src="faculty/sajan_low.jpg"  data-src="faculty/sajan.jpg"></img>
+                            <div class="tooltippic3"></div>
                             <div class="tooltip blur" id="blur"></div>
                             <div class="tooltip toola">
-                                First Lastnameyoyoyo
+                                Sanam E Anto
                                 <div class="tip hodtip">Head of Dept.
                                 </div>
                             </div>
@@ -4695,7 +4865,82 @@ label.obj_button.darkmode_border.backfff{position: static;}
                             <div class="tooltippic3"></div>
                             <div class="tooltip blur" id="blur"></div>
                             <div class="tooltip toola">
-                                First Lastname
+                                Sajan Antony
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                            </div>
+                            <div class="tooltip toola blue">
+                                <div class="tip">
+                                    Firstnmeaq@gmail.com<br/>0480-232426
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tool3 light sub-head">
+                            <div class="tooltippic3"></div>
+                            <div class="tooltip blur" id="blur"></div>
+                            <div class="tooltip toola">
+                                Sruthy Raghu
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                            </div>
+                            <div class="tooltip toola blue">
+                                <div class="tip">
+                                    Firstnmeaq@gmail.com<br/>0480-232426
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tool3 light sub-head">
+                            <div class="tooltippic3"></div>
+                            <div class="tooltip blur" id="blur"></div>
+                            <div class="tooltip toola">
+                                Jean P Johny
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                            </div>
+                            <div class="tooltip toola blue">
+                                <div class="tip">
+                                    Firstnmeaq@gmail.com<br/>0480-232426
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tool3 light sub-head">
+                            <div class="tooltippic3"></div>
+                            <div class="tooltip blur" id="blur"></div>
+                            <div class="tooltip toola">
+                                Sujitha Cherkottu
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                            </div>
+                            <div class="tooltip toola blue">
+                                <div class="tip">
+                                    Firstnmeaq@gmail.com<br/>0480-232426
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tool3 light sub-head">
+                            <div class="tooltippic3"></div>
+                            <div class="tooltip blur" id="blur"></div>
+                            <div class="tooltip toola">
+                                Soosan Francis
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                            </div>
+                            <div class="tooltip toola blue">
+                                <div class="tip">
+                                    Firstnmeaq@gmail.com<br/>0480-232426
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tool3 light sub-head">
+                            <div class="tooltippic3"></div>
+                            <div class="tooltip blur" id="blur"></div>
+                            <div class="tooltip toola">
+                                Rinsu Aravind
                                 <div class="tip">Assist. Proffesor
                                 </div>
                             </div>
@@ -4736,108 +4981,38 @@ label.obj_button.darkmode_border.backfff{position: static;}
                                 </div>
                             </div>
                         </div>
-                        <div class="tool3 light sub-head">
-                            <div class="tooltippic3"></div>
-                            <div class="tooltip blur" id="blur"></div>
-                            <div class="tooltip toola">
-                                First Lastname
-                                <div class="tip">Assist. Proffesor
-                                </div>
-                            </div>
-                            <div class="tooltip toola blue">
-                                <div class="tip">
-                                    Firstnmeaq@gmail.com<br/>0480-232426
-                                
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tool3 light sub-head">
-                            <div class="tooltippic3"></div>
-                            <div class="tooltip blur" id="blur"></div>
-                            <div class="tooltip toola">
-                                First Lastname
-                                <div class="tip">Assist. Proffesor
-                                </div>
-                            </div>
-                            <div class="tooltip toola blue">
-                                <div class="tip">
-                                    Firstnmeaq@gmail.com<br/>0480-232426
-                                
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tool3 light sub-head">
-                            <div class="tooltippic3"></div>
-                            <div class="tooltip blur" id="blur"></div>
-                            <div class="tooltip toola">
-                                First Lastname
-                                <div class="tip">Assist. Proffesor
-                                </div>
-                            </div>
-                            <div class="tooltip toola blue">
-                                <div class="tip">
-                                    Firstnmeaq@gmail.com<br/>0480-232426
-                                
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tool3 light sub-head">
-                            <div class="tooltippic3"></div>
-                            <div class="tooltip blur" id="blur"></div>
-                            <div class="tooltip toola">
-                                First Lastname
-                                <div class="tip">Assist. Proffesor
-                                </div>
-                            </div>
-                            <div class="tooltip toola blue">
-                                <div class="tip">
-                                    Firstnmeaq@gmail.com<br/>0480-232426
-                                
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tool3 light sub-head">
-                            <div class="tooltippic3"></div>
-                            <div class="tooltip blur" id="blur"></div>
-                            <div class="tooltip toola">
-                                First Lastname
-                                <div class="tip">Assist. Proffesor
-                                </div>
-                            </div>
-                            <div class="tooltip toola blue">
-                                <div class="tip">
-                                    Firstnmeaq@gmail.com<br/>0480-232426
-                                
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tool3 light sub-head">
-                            <div class="tooltippic3"></div>
-                            <div class="tooltip blur" id="blur"></div>
-                            <div class="tooltip toola">
-                                First Lastname
-                                <div class="tip">Assist. Proffesor
-                                </div>
-                            </div>
-                            <div class="tooltip toola blue">
-                                <div class="tip">
-                                    Firstnmeaq@gmail.com<br/>0480-232426
-                                
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class='foot'>
-                    <div class='foothead extralight head'>Footer
+                    <div class='foothead extralight head'>
+                        Wissen, The Computer Science Department Assosciation
+                        <label for='dash' class='foot_links'>Dashboard</label>
+                        <label for='a' class='foot_links'>Downloads</label>
+                        <label for='b' class='foot_links'>News</label>
+                        <label for='c' class='foot_links'>Faculty</label>
+                        <label for='t2' class='foot_links'>Gallery</label>
+                        <label for='t3' class='foot_links'>Information</label>
                 </div>
+                <div class='foothead extralight head'>
+                        Holy Grace Academy of Engineering, Mala, Thrissur, Kerala
+                        <a href='' class='foot_links'>HGAE Website</a>
+                        <a href='' class='foot_links'>KTU Website</a>
+                        <a href='' class='foot_links'>KTU Portal</a>
+                        <a href='' class='foot_links'>KTU Students</a>
+                        <a href='' class='foot_links'>Tutorial Point</a>
+                </div>
+                
+                </div>
+                <div class='foothead foothead_bottom extralight head'>
+                        The website was developed by the ....,  said Brad Pitt.
                 </div>
             </div>
             <div class='dashboard'>
                 <input type='checkbox' class='checkers' name='menu' id='menu'/>
                 <!--Menu expand input-->
                 <div class='dnav dnav1 darkmode_border'>
-                    <div class='wlogo'></div>
+                    <label for='home' class='wlogo'></label>
                     <div class='path'>
                         <!--Paths are the central navigation ui-->
                         <label for='home' class='pathdiv path1'>Home</label>
@@ -4868,7 +5043,14 @@ label.obj_button.darkmode_border.backfff{position: static;}
                         </div>
                         </label>
                     </div>
+                    <label for='mobmenu' class='mobmenu'></label>
+                    <div class='label_list'><label for='home' class='labels_in_list'>Home</label>
+                    <label for='sd' class='labels_in_list'>Dashboard home</label>
+                <label for='a' class='labels_in_list'>Downloads</label>
+            <label for='b' class='labels_in_list'>Notifications</label>
+        <label for='c' class='labels_in_list'>Association</label></div>
                 </div>
+                <label for='mobmenu' class='mobmenu_cover'></label>
                 <div class='dnav dnav2 darkmode_border'>
                     <div class='dwholder'>
                         <label for='menu' class='menulogo'>
@@ -5021,10 +5203,10 @@ label.obj_button.darkmode_border.backfff{position: static;}
                             <input id="dropiv" name='drops' type="radio">
                             <input id="dropv" name='drops' type="radio">
                             <input id="drop" name='drop' type="checkbox">
-                            <div class='content'>
-                                <label for='unselect' class='unnxt obj_button'>
+                            <label for='unselect' class='unnxt obj_button'>
                                     <div class='unxt'>go back</div>
-                                </label>
+                                </label><div class='content'>
+                                
                                 <label for='drop' class='dropback'></label>
                                 <div class='def'>
                                     Select branch and browse semesters.
@@ -15473,10 +15655,10 @@ label.obj_button.darkmode_border.backfff{position: static;}
     <div class="dash_title extralight">News
                 </div>
     <div class='main_banner'>
-        <div class='banner_text'>The official site is here.</div>
+        <div class='banner_temp_mob'><div class='banner_text'>The official site is here.</div>
         <div class='banner_text_tip'>The Holygrace department of computer science brings a new portal for students and teachers alike to have an access to free resources.
         </div>
-        <div class='banner_pic'></div>
+        <div class='banner_pic'></div></div>
         <div class='banner_back'>
             <div class='banner_back1'></div>
             <div class='banner_back1'></div>
@@ -15553,7 +15735,7 @@ label.obj_button.darkmode_border.backfff{position: static;}
                 <div class="tooltippic3"></div>
                 <div class="tooltip blur" id="blur"></div>
                 <div class="tooltip toola">
-                    First Lastname
+                    Sanam E Anto
                                 <div class="tip hodtip">Head of Dept.
                                 </div>
                 </div>
@@ -15568,7 +15750,82 @@ label.obj_button.darkmode_border.backfff{position: static;}
                 <div class="tooltippic3"></div>
                 <div class="tooltip blur" id="blur"></div>
                 <div class="tooltip toola">
-                    First Lastname
+                    Sajan Antony
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                </div>
+                <div class="tooltip toola blue">
+                    <div class="tip">
+                        Firstnmeaq@gmail.com<br/>0480-232426
+                                
+                    </div>
+                </div>
+            </div>
+            <div class="tool3 light sub-head">
+                <div class="tooltippic3"></div>
+                <div class="tooltip blur" id="blur"></div>
+                <div class="tooltip toola">
+                    Sruthy Raghu
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                </div>
+                <div class="tooltip toola blue">
+                    <div class="tip">
+                        Firstnmeaq@gmail.com<br/>0480-232426
+                                
+                    </div>
+                </div>
+            </div>
+            <div class="tool3 light sub-head">
+                <div class="tooltippic3"></div>
+                <div class="tooltip blur" id="blur"></div>
+                <div class="tooltip toola">
+                    Jean P Johny
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                </div>
+                <div class="tooltip toola blue">
+                    <div class="tip">
+                        Firstnmeaq@gmail.com<br/>0480-232426
+                                
+                    </div>
+                </div>
+            </div>
+            <div class="tool3 light sub-head">
+                <div class="tooltippic3"></div>
+                <div class="tooltip blur" id="blur"></div>
+                <div class="tooltip toola">
+                    Sujitha Cherkottu
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                </div>
+                <div class="tooltip toola blue">
+                    <div class="tip">
+                        Firstnmeaq@gmail.com<br/>0480-232426
+                                
+                    </div>
+                </div>
+            </div>
+            <div class="tool3 light sub-head">
+                <div class="tooltippic3"></div>
+                <div class="tooltip blur" id="blur"></div>
+                <div class="tooltip toola">
+                    Soosan Francis
+                                <div class="tip">Assist. Proffesor
+                                </div>
+                </div>
+                <div class="tooltip toola blue">
+                    <div class="tip">
+                        Firstnmeaq@gmail.com<br/>0480-232426
+                                
+                    </div>
+                </div>
+            </div>
+            <div class="tool3 light sub-head">
+                <div class="tooltippic3"></div>
+                <div class="tooltip blur" id="blur"></div>
+                <div class="tooltip toola">
+                    Rinsu Aravind
                                 <div class="tip">Assist. Proffesor
                                 </div>
                 </div>
@@ -15609,98 +15866,9 @@ label.obj_button.darkmode_border.backfff{position: static;}
                     </div>
                 </div>
             </div>
-            <div class="tool3 light sub-head">
-                <div class="tooltippic3"></div>
-                <div class="tooltip blur" id="blur"></div>
-                <div class="tooltip toola">
-                    First Lastname
-                                <div class="tip">Assist. Proffesor
-                                </div>
-                </div>
-                <div class="tooltip toola blue">
-                    <div class="tip">
-                        Firstnmeaq@gmail.com<br/>0480-232426
-                                
-                    </div>
-                </div>
-            </div>
-            <div class="tool3 light sub-head">
-                <div class="tooltippic3"></div>
-                <div class="tooltip blur" id="blur"></div>
-                <div class="tooltip toola">
-                    First Lastname
-                                <div class="tip">Assist. Proffesor
-                                </div>
-                </div>
-                <div class="tooltip toola blue">
-                    <div class="tip">
-                        Firstnmeaq@gmail.com<br/>0480-232426
-                                
-                    </div>
-                </div>
-            </div>
-            <div class="tool3 light sub-head">
-                <div class="tooltippic3"></div>
-                <div class="tooltip blur" id="blur"></div>
-                <div class="tooltip toola">
-                    First Lastname
-                                <div class="tip">Assist. Proffesor
-                                </div>
-                </div>
-                <div class="tooltip toola blue">
-                    <div class="tip">
-                        Firstnmeaq@gmail.com<br/>0480-232426
-                                
-                    </div>
-                </div>
-            </div>
-            <div class="tool3 light sub-head">
-                <div class="tooltippic3"></div>
-                <div class="tooltip blur" id="blur"></div>
-                <div class="tooltip toola">
-                    First Lastname
-                                <div class="tip">Assist. Proffesor
-                                </div>
-                </div>
-                <div class="tooltip toola blue">
-                    <div class="tip">
-                        Firstnmeaq@gmail.com<br/>0480-232426
-                                
-                    </div>
-                </div>
-            </div>
-            <div class="tool3 light sub-head">
-                <div class="tooltippic3"></div>
-                <div class="tooltip blur" id="blur"></div>
-                <div class="tooltip toola">
-                    First Lastname
-                                <div class="tip">Assist. Proffesor
-                                </div>
-                </div>
-                <div class="tooltip toola blue">
-                    <div class="tip">
-                        Firstnmeaq@gmail.com<br/>0480-232426
-                                
-                    </div>
-                </div>
-            </div>
-            <div class="tool3 light sub-head">
-                <div class="tooltippic3"></div>
-                <div class="tooltip blur" id="blur"></div>
-                <div class="tooltip toola">
-                    First Lastname
-                                <div class="tip">Assist. Proffesor
-                                </div>
-                </div>
-                <div class="tooltip toola blue">
-                    <div class="tip">
-                        Firstnmeaq@gmail.com<br/>0480-232426
-                                
-                    </div>
-                </div>
-            </div>
+            
         </div>
-        <div class='tab tab2'>Gallery</div>
+        <div class='tab tab2'><div class='err_505'></div></div>
         <div class='tab tab3'>
             <div class='tab_fac_headtip'>General Downloads
                     </div>

@@ -41,7 +41,7 @@ body{padding: 0;
     overflow: hidden;
     height: 100vh;}
 
-.title{display: block;font-family: o;font-family: extralight;
+.title{display: block;font-family: o;font-family: extralight;width: fit-content;
  font-size: 30px;transition: all .2s;
  margin-left: 42px;position: relative;cursor: pointer;
  margin-top: 0px;
@@ -97,6 +97,22 @@ body{padding: 0;
 }
 .title:hover{position:relative;padding-left:20px;opacity:.5;}
 a{text-decoration: none;color:#fff;}
+.title_auth:hover~.err{opacity:.1;}
+.title_auth:active~.err{opacity:1;}
+.err{height:100vh;width:100vw;background:red;opacity:0;position: absolute;top:0;left:0;z-index: -1;
+transition: all .2s;}
+.err_tip:after{position: absolute;background:#000;display: block;overflow: hidden;border-radius: 100%;width:80px;height:40px;font-size: 15px;font-family: 'extralight';line-height: 40px;text-align: center;color:transparent;display: block;transform: scale(.5) rotate(30deg);opacity: 0;transform-origin: left;bottom:6vh;right:5vw;}
+.title:hover~.err_tip:after{animation:tip_anim 2s none 0s 1 normal;content: 'Access.';background-color: green;}
+.title.title_auth:hover~.err_tip:after{animation:tip_anim 2s none 0s 1 normal;content: 'Auth required.';background-color: #000;}
+
+@keyframes tip_anim{
+    0%{opacity:0;border-radius: 100%;width:40px;height:40px;color:transparent;transform: scale(.5) rotate(30deg) translatex(30px);box-shadow:0 0 0px 5px rgba(255,255,255,.4),0 0 0px 15px rgba(255,255,255,.2), 0 0 0px 75px rgba(255,255,255,.05);}
+    20%{opacity:1;border-radius: 20px;width:40px;height:40px;transform: scale(1) rotate(30deg) translatex(0px);}
+    25%{transform: scale(1) rotate(0deg);color:transparent;}
+    30%{opacity:1;border-radius: 20px;width:130px;height:40px;transform: scale(1) rotate(0deg);color:#fff;}
+    90%{opacity:1;border-radius: 20px;width:130px;height:40px;transform: scale(1) rotate(0deg);}
+    100%{opacity:0;border-radius: 100%;color:#fff;transform: scale(1) rotate(0deg);}
+}
 </style>
 
 </head>
@@ -105,12 +121,15 @@ a{text-decoration: none;color:#fff;}
     <div class='red'>knz projects
     </div>
     <div class='main'>
-        <a href='#' class='title'><div class='t1'>Arsite</div></a>
+        <a href='#auth_check_fail' class='title title_auth'><div class='t1'>Arsite</div></a>
         <a href='cse.html' class='title'><div class='t2'>Wissen cse</div></a>
-        <a href='#' class='title'><div class='t3'>Muhurtham</div></a>
-        <a href='#' class='title'><div class='t4'>ktu guru</div></a>
-        <a href='#' class='title'><div class='t5'>knz new tab</div></a>
-        <a href='#' class='title'><div class='t6'>knz Visual Inspector</div></a>
+        <a href='#auth_check_fail' class='title title_auth'><div class='t3'>Muhurtham</div></a>
+        <a href='#auth_check_fail' class='title title_auth'><div class='t4'>ktu guru</div></a>
+        <a href='#auth_check_fail' class='title title_auth'><div class='t5'>knz new tab</div></a>
+        <a href='#auth_check_fail' class='title title_auth'><div class='t6'>knz Visual Inspector</div></a>
+        <div class='err'></div>
+        <div class='err_tip'></div>
+
     </div>
 
     </body>
