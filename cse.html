@@ -119,7 +119,7 @@ font-size: 15px;padding:20px;font-family:'o';}
                     opacity: 0;
                 }
 
-                75% {
+                85% {
                     transform: translate(0px,-20px);
                     opacity: 0;
                 }
@@ -233,7 +233,7 @@ font-size: 15px;padding:20px;font-family:'o';}
                 padding: 21px 0 0 0;
                 transition: all .4s .4s;
                 opacity: 0;
-                animation: fade-down 2s none 0s 1 alternate;
+                animation: fade-down 4s none 0s 1 alternate;
                 background: linear-gradient(rgba(0, 0, 0, 0.14),transparent);
                 color: #000;
             }
@@ -897,7 +897,30 @@ font-size: 15px;padding:20px;font-family:'o';}
                     opacity: 1;
                 }
             }
-
+@keyframes fade-up-main {
+                0% {opacity: 0;}
+                80% {transform: translatey(20px);opacity: 0;}
+                100% {transform: translatey(0px);}}
+@keyframes fade-up-main-for_slide {
+                0% {opacity: 0;}
+                90% {transform: translatey(10px);opacity: 0;}
+                100% {transform: translatey(0px);}}
+@keyframes fade-up-main-dot1 {
+                0% {opacity: 0;}
+                80% {transform: translatey(20px);opacity: 0;}
+                100% {transform: translatey(0px);opacity: 1;}}
+                @keyframes fade-up-main-dot2 {
+                0% {opacity: 0;}
+                83% {transform: translatey(20px);opacity: 0;}
+                100% {transform: translatey(0px);opacity: 1;}}
+                @keyframes fade-up-main-dot3 {
+                0% {opacity: 0;}
+                85% {transform: translatey(20px);opacity: 0;}
+                100% {transform: translatey(0px);opacity: 1;}}
+                @keyframes fade-up-main-dot4 {
+                0% {opacity: 0;}
+                87% {transform: translatey(20px);opacity: 0;}
+                100% {transform: translatey(0px);opacity: 1;}}
             #sd:checked~.dashboard .dhome .dbanner {
                 transform: translatey(0px);
                 opacity: 1;
@@ -3298,7 +3321,7 @@ label.obj_button.darkmode_border.backfff {
 
             .nextmain .tab {
                 margin-bottom: 0px;
-                padding: 7px 5px 14px 120px;
+                padding: 47px 5px 14px 20px;
                 box-sizing: border-box;
             }
 
@@ -3597,78 +3620,88 @@ label.obj_button.darkmode_border.backfff {
                 background-image: url(david.jpg);
             }
 
-            .nextmain .tool3:nth-child(3) .tooltippic3 {
+            .nextmain .tool3:nth-child(1) .tooltippic3 {
                 background-image: url('faculty/sanam.jpg');
+            }
+
+            .nextmain .tool3:nth-child(1) #blur {
+                background-image: url('faculty/sanam.jpg');
+            }
+
+            .nextmain .tool3:nth-child(2) .tooltippic3 {
+                background-image: url('faculty/sajan.jpg');
+            }
+
+            .nextmain .tool3:nth-child(2) #blur {
+                background-image: url('faculty/sajan.jpg');
+            }
+
+            .nextmain .tool3:nth-child(3) .tooltippic3 {
+                background-image: url('faculty/sruthy.jpg');
             }
 
             .nextmain .tool3:nth-child(3) #blur {
-                background-image: url('faculty/sanam.jpg');
+                background-image: url('faculty/sruthy.jpg');
             }
 
             .nextmain .tool3:nth-child(4) .tooltippic3 {
-                background-image: url('faculty/sajan.jpg');
+                background-image: url('faculty/jean.jpg');
             }
 
             .nextmain .tool3:nth-child(4) #blur {
-                background-image: url('faculty/sajan.jpg');
+                background-image: url('faculty/jean.jpg');
             }
 
             .nextmain .tool3:nth-child(5) .tooltippic3 {
-                background-image: url('faculty/sruthy.jpg');
+                background-image: url('faculty/sujitha.jpg');
             }
 
             .nextmain .tool3:nth-child(5) #blur {
-                background-image: url('faculty/sruthy.jpg');
+                background-image: url('faculty/sujitha.jpg');
             }
 
             .nextmain .tool3:nth-child(6) .tooltippic3 {
-                background-image: url('faculty/jean.jpg');
+                background-image: url('faculty/susu.jpg');
             }
 
             .nextmain .tool3:nth-child(6) #blur {
-                background-image: url('faculty/jean.jpg');
+                background-image: url('faculty/susu.jpg');
             }
 
             .nextmain .tool3:nth-child(7) .tooltippic3 {
-                background-image: url('faculty/sujitha.jpg');
+                background-image: url('faculty/rinsu.jpg');
             }
 
             .nextmain .tool3:nth-child(7) #blur {
-                background-image: url('faculty/sujitha.jpg');
+                background-image: url('faculty/rinsu.jpg');
             }
 
             .nextmain .tool3:nth-child(8) .tooltippic3 {
-                background-image: url('faculty/susu.jpg');
+                background-image: url('faculty/lab2.jpg');
             }
 
             .nextmain .tool3:nth-child(8) #blur {
-                background-image: url('faculty/susu.jpg');
+                background-image: url('faculty/lab2.jpg');
             }
 
             .nextmain .tool3:nth-child(9) .tooltippic3 {
-                background-image: url('faculty/rinsu.jpg');
+                background-image: url('faculty/lab1.jpg');
             }
 
             .nextmain .tool3:nth-child(9) #blur {
-                background-image: url('faculty/rinsu.jpg');
-            }
-
-            .nextmain .tool3:nth-child(10) .tooltippic3 {
-                background-image: url('faculty/lab2.jpg');
-            }
-
-            .nextmain .tool3:nth-child(10) #blur {
-                background-image: url('faculty/lab2.jpg');
-            }
-
-            .nextmain .tool3:nth-child(11) .tooltippic3 {
                 background-image: url('faculty/lab1.jpg');
             }
-
-            .nextmain .tool3:nth-child(11) #blur {
-                background-image: url('faculty/lab1.jpg');
-            }
-
+.tool3_home_holder {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 88vw;
+}
+.tool3_home_holder_float {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
             .navitem1:hover {
                 background-color: #000;
                 color: #fff;
@@ -3735,7 +3768,7 @@ label.obj_button.darkmode_border.backfff {
     background-position: 10px 10px;
             }
 
-            .container {
+            .container {animation: fade-up-main 5s none 0s 1 alternate;
                 position: absolute;
                 width: 90vw;
                 margin-top: 14vh;
@@ -3760,7 +3793,7 @@ label.obj_button.darkmode_border.backfff {
                 z-index: -99;
             }
 
-            .for_slide {
+            .for_slide {animation: fade-up-main-for_slide 5s none 0s 1 alternate !important;
                 opacity: 0;
                 font-size: 23px;
                 background-color: rgba(0, 0, 0, 0.9);
@@ -3799,7 +3832,10 @@ label.obj_button.darkmode_border.backfff {
                 transition: .1s;
                 cursor: pointer;
             }
-
+#dot1{animation: fade-up-main-dot1 5s none 0s 1 alternate;}
+#dot2{animation: fade-up-main-dot2 5s none 0s 1 alternate;}
+#dot3{animation: fade-up-main-dot3 5s none 0s 1 alternate;}
+#dot4{animation: fade-up-main-dot4 5s none 0s 1 alternate;}
             #nav_slide #dot1:hover, #nav_slide #dot2:hover, #nav_slide #dot3:hover, #nav_slide #dot4:hover {
                 background-color: rgba(0, 0, 0, 0.4);
             }
@@ -4035,6 +4071,8 @@ label.obj_button.darkmode_border.backfff {
             }
 .mobile{display: none;}
             @media (max-width: 700px) {
+                .tab1 {justify-content: space-evenly;}
+                .tool3_home_holder {justify-content: space-evenly;}
                 .acro_head {
     font-size: 15px;
     font-family: 'o';}
@@ -4043,6 +4081,9 @@ label.obj_button.darkmode_border.backfff {
     background: url(1mob.jpg) no-repeat;
     background-size: cover;
 }
+.foot{display: block;}
+.foothead_bottom {
+    width: auto;}
 #four {
     background: url(2mob.jpg) no-repeat;
     background-size: cover;
@@ -4208,7 +4249,6 @@ label.obj_button.darkmode_border.backfff{position: static;}
 .banner_pic{position: static;width: auto;margin-top: 10px;}
 .banner_news {font-size: 14px;}
 .dassociation{padding:0;}
-.tabs {margin:0px;}
 .tab_nav_lab {font-size: 14px;}
 .tab{margin-bottom: 0;position: static;padding:0;}
 .dassociation .tool3, .tool3{min-width: 160px;}.sub-head {
@@ -4323,6 +4363,21 @@ label.obj_button.darkmode_border.backfff{position: static;}
                     width: 100%;
                 }
             }
+.loading_bar{height: 1px;width: 100vw;background:rgba(0, 0, 0, 0.82);position: absolute;top: 0px;box-shadow:0 0 20px 1px rgba(0, 0, 0, 0.52);    z-index: 1000;animation: loading_bar 4s none 0s 1 alternate;opacity: 0;}
+#dash:checked~.loading_bar{z-index: 1000000;animation: loading_bar 4s none 0s 1 alternate;opacity: 0;}
+@keyframes loading_bar{
+    0%{width:0vw;opacity: 1;}
+    0%{width:0vw;opacity: 1;}
+    60%{width:10vw;}
+    70%{width:20vw;}
+    77%{opacity: 1;}
+    100%{width:100vw;opacity: 0;}
+}
+@keyframes loading_bar_for_star{
+    0%{height:100vh;overflow: hidden !important;}
+    100%{height:100vh;overflow: hidden !important;}
+}
+body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;height: auto;}
 
         </style>
         <script>
@@ -4611,6 +4666,7 @@ label.obj_button.darkmode_border.backfff{position: static;}
             <input type='radio' class='checkers' name='acro' id='arco_ass_details6'>
             <!--acro expands( for department logs )-->
             <!--end Navigation Checkboxes.-->
+            <div class='loading_bar'></div>
             <div class='nav'>
                 <div class='heading'></div>
                 <div class='nav-cover'>
@@ -4841,11 +4897,13 @@ label.obj_button.darkmode_border.backfff{position: static;}
                         </label>
                     </div>
                     <div class='tab tab1'>
-                        <div class='nxtmain_head bold head'>Faculty</div>
+                        <div class='nxtmain_head about_cse head'>Faculty</div>
                         <div class="tipout">Click to view resume.Android Studio is the IDE for Android that was announced in May 2013 at the Google I/O developers event, and is intended as an alternative to Eclipse. At the time of this writing, Android Studio is currently in Early Access Preview, with the most recent version being 0.0.5.Android Studio is the IDE for Android that was announced in May 2013 at the Google I/O developers event, and is intended as an alternative to Eclipse. At the time of this writing, Android Studio is currently in Early Access Preview, with the most recent version being 0.0.5.
 
 
                                 </div>
+                                <div class='tool3_home_holder_float'>
+                                <div class='tool3_home_holder'>
                         <div class="tool3 light sub-head">
                             <div class="tooltippic3"></div>
                             <div class="tooltip blur" id="blur"></div>
@@ -4981,7 +5039,7 @@ label.obj_button.darkmode_border.backfff{position: static;}
                                 </div>
                             </div>
                         </div>
-                        
+                        </div></div>
                     </div>
                 </div>
                 <div class='foot'>
