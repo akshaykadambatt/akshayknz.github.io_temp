@@ -15,7 +15,7 @@
             
         
         </script><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
 
         
         <script>
@@ -87,15 +87,7 @@ font-size: 15px;padding:20px;font-family:'o';}
             }
         </style>
         <style>
-            @keyframes load_pic{0%{filter: blur(6px);}80%{filter: blur(6px);}100%{filter: blur(0px);}}
-            .b-lazy {
-                transition: filter 2s;
-                 width: 100%;
-                   opacity: 1;filter:blur(10px);
-    }
-    .b-lazy.b-loaded {
-                   animation: load_pic 1s ease-in-out 0s 1 normal;filter:blur(0px);
-    }
+
             /**Defenitions classes*/
             @font-face {
                 font-family: 'bb';
@@ -168,7 +160,7 @@ font-size: 15px;padding:20px;font-family:'o';}
         </style>
         <style>
             /*CENTRAL PAGE CONTROL. DONOT EDIT.*/
-            #sd:checked~.dashboard .ddown,#sd:checked~.dashboard .dnoties,#sd:checked~.dashboard .dassociation, #a:checked~.dashboard .dhome,#a:checked~.dashboard .dnoties,#a:checked~.dashboard .dassociation, #b:checked~.dashboard .ddown,#b:checked~.dashboard .dhome,#b:checked~.dashboard .dassociation, #c:checked~.dashboard .ddown,#c:checked~.dashboard .dnoties,#c:checked~.dashboard .dhome {
+            #showdash:checked~.dashboard .ddown,#showdash:checked~.dashboard .dnoties,#showdash:checked~.dashboard .dassociation, #dasha:checked~.dashboard .dhome,#dasha:checked~.dashboard .dnoties,#dasha:checked~.dashboard .dassociation, #dashb:checked~.dashboard .ddown,#dashb:checked~.dashboard .dhome,#dashb:checked~.dashboard .dassociation, #dashc:checked~.dashboard .ddown,#dashc:checked~.dashboard .dnoties,#dashc:checked~.dashboard .dhome {
                 height: 0;
                 overflow: hidden;
             }
@@ -832,19 +824,19 @@ a{text-decoration: none;color: unset;}
                 transition-delay: .2s;
             }
 
-            #sd:checked~.dashboard .dnav .iconi {
+            #showdash:checked~.dashboard .dnav .iconi {
                 box-shadow: inset -3px 0px 0px 0px rgba(0, 79, 255, 0.52);
             }
 
-            #a:checked~.dashboard .dnav .iconii {
+            #dasha:checked~.dashboard .dnav .iconii {
                 box-shadow: inset -3px 0px 0px 0px rgba(0, 79, 255, 0.52);
             }
 
-            #b:checked~.dashboard .dnav .iconiii {
+            #dashb:checked~.dashboard .dnav .iconiii {
                 box-shadow: inset -3px 0px 0px 0px rgba(0, 79, 255, 0.52);
             }
 
-            #c:checked~.dashboard .dnav .iconiv {
+            #dashc:checked~.dashboard .dnav .iconiv {
                 box-shadow: inset -3px 0px 0px 0px rgba(0, 79, 255, 0.52);
             }
 
@@ -921,7 +913,7 @@ a{text-decoration: none;color: unset;}
                 0% {opacity: 0;}
                 87% {transform: translatey(20px);opacity: 0;}
                 100% {transform: translatey(0px);opacity: 1;}}
-            #sd:checked~.dashboard .dhome .dbanner {
+            #showdash:checked~.dashboard .dhome .dbanner {
                 transform: translatey(0px);
                 opacity: 1;
                 transition: all .3s .1s;
@@ -931,7 +923,7 @@ a{text-decoration: none;color: unset;}
                 animation: fade-up 1.4s none 0s 1 normal;
             }
 
-            #sd:checked~.dashboard .dhome .dash_welcome {
+            #showdash:checked~.dashboard .dhome .dash_welcome {
                 transform: translatey(0px);
                 opacity: 1;
                 transition: all .3s .151s;
@@ -941,7 +933,7 @@ a{text-decoration: none;color: unset;}
                 animation: fade-up 1.4s none .1s 1 normal;
             }
 
-            #sd:checked~.dashboard .dhome .imp_links {
+            #showdash:checked~.dashboard .dhome .imp_links {
                 transform: translatey(0px);
                 opacity: 1;
                 transition: all .3s .21s;
@@ -951,7 +943,7 @@ a{text-decoration: none;color: unset;}
                 animation: fade-up 1.4s none .23s 1 normal;
             }
 
-            #sd:checked~.dashboard .dhome .gallery {
+            #showdash:checked~.dashboard .dhome .gallery {
                 transform: translatey(0px);
                 opacity: 1;
                 transition: all .3s .251s;
@@ -1210,7 +1202,7 @@ label.obj_button.darkmode_border.backfff {
                 z-index: -100;
             }
 
-            #sd:checked~.dashboard .dhome {
+            #showdash:checked~.dashboard .dhome {
                 z-index: 20;
             }
 
@@ -1235,7 +1227,7 @@ label.obj_button.darkmode_border.backfff {
 
             .ddown,.dnoties,.dassociation {
                 height: auto;
-                transition: width .3s cubic-bezier(0.75, 0.51, 0.21, 0.96);
+                transition: width .3s cubic-bezier(0.75, 0.51, 0.21, 0.96), padding .3s .3s;
                 background-color: rgb(243, 243, 243);
                 margin: 49px 0px 140px 22px;
                 width: 95vw;
@@ -1250,11 +1242,11 @@ label.obj_button.darkmode_border.backfff {
                 width: 84vw;
             }
 
-            #sd:checked~.dashboard .ddown {
+            #showdash:checked~.dashboard .ddown {
                 height: 0;
             }
 
-            #a:checked~.dashboard .ddown,#b:checked~.dashboard .dnoties,#c:checked~.dashboard .dassociation {
+            #dasha:checked~.dashboard .ddown,#dashb:checked~.dashboard .dnoties,#dashc:checked~.dashboard .dassociation {
                 z-index: 20;
             }
 
@@ -1363,39 +1355,39 @@ label.obj_button.darkmode_border.backfff {
                 transition: all .2s;
             }
 
-            #a:checked~ .dashboard .ddown .conback .mainnote .content .def {
+            #dasha:checked~ .dashboard .ddown .conback .mainnote .content .def {
                 animation: fade-up-bloki .4s none 0s 1 normal;
             }
 
-            #a:checked~ .dashboard .ddown .conback .mainnote .content center .holder .i {
+            #dasha:checked~ .dashboard .ddown .conback .mainnote .content center .holder .i {
                 animation: fade-up-bloki .4s none 0s 1 normal;
             }
 
-            #a:checked~ .dashboard .ddown .conback .mainnote .content center .holder .ii {
+            #dasha:checked~ .dashboard .ddown .conback .mainnote .content center .holder .ii {
                 animation: fade-up-blokii .55s none 0s 1 normal;
             }
 
-            #a:checked~ .dashboard .ddown .conback .mainnote .content center .holder .iii {
+            #dasha:checked~ .dashboard .ddown .conback .mainnote .content center .holder .iii {
                 animation: fade-up-blokiii .66s none 0s 1 normal;
             }
 
-            #a:checked~ .dashboard .ddown .conback .mainnote .content center .holder .iv {
+            #dasha:checked~ .dashboard .ddown .conback .mainnote .content center .holder .iv {
                 animation: fade-up-blokiv .77s none 0s 1 normal;
             }
 
-            #a:checked~ .dashboard .ddown .conback .mainnote .content center .holder .v {
+            #dasha:checked~ .dashboard .ddown .conback .mainnote .content center .holder .v {
                 animation: fade-up-blokv .88s none 0s 1 normal;
             }
 
-            #a:checked~ .dashboard .ddown .conback .mainnote .content center .holder .vi {
+            #dasha:checked~ .dashboard .ddown .conback .mainnote .content center .holder .vi {
                 animation: fade-up-blokvi .99s none 0s 1 normal;
             }
 
-            #a:checked~ .dashboard .ddown .conback .mainnote .content center .holder .vii {
+            #dasha:checked~ .dashboard .ddown .conback .mainnote .content center .holder .vii {
                 animation: fade-up-blokvii 1.2s none 0s 1 normal;
             }
 
-            #a:checked~ .dashboard .ddown .conback .mainnote .content center .holder .viii {
+            #dasha:checked~ .dashboard .ddown .conback .mainnote .content center .holder .viii {
                 animation: fade-up-blokviii 1.554s none 0s 1 normal;
             }
 
@@ -2382,6 +2374,17 @@ label.obj_button.darkmode_border.backfff {
                     background-position: 468px 0
                 }
             }
+            @keyframes placeHolderShimmerlll {
+                0% {
+                    background-position: -868px 0;opacity:.20;
+                }
+10% {opacity:.21;}
+40% {opacity:.2;}
+90% {opacity:.21;}
+                100% {
+                    background-position: 728px 0;opacity:.20;
+                }
+            }
 
             @keyframes con {
                 0% {
@@ -2834,7 +2837,7 @@ label.obj_button.darkmode_border.backfff {
                 opacity: 0;
             }
 
-            #a:checked~.dashboard .dnav .path .divide2, #b:checked~.dashboard .dnav .path .divide2, #c:checked~.dashboard .dnav .path .divide2,.divide3 #d:checked~.dashboard .dnav .path .divide2 {
+            #dasha:checked~.dashboard .dnav .path .divide2, #dashb:checked~.dashboard .dnav .path .divide2, #dashc:checked~.dashboard .dnav .path .divide2,.divide3 #d:checked~.dashboard .dnav .path .divide2 {
                 opacity: 1;
             }
 
@@ -2861,7 +2864,7 @@ label.obj_button.darkmode_border.backfff {
                 margin: 0;
             }
 
-            #dash:checked~.dashboard .dnav .path .path2, #a:checked~.dashboard .dnav .path .path3, #b:checked~.dashboard .dnav .path .path4, #c:checked~.dashboard .dnav .path .path5, .path6 {
+            #dash:checked~.dashboard .dnav .path .path2, #dasha:checked~.dashboard .dnav .path .path3, #dashb:checked~.dashboard .dnav .path .path4, #dashc:checked~.dashboard .dnav .path .path5, .path6 {
                 transform: scale(1) translatex(0px);
                 width: auto;
                 padding: 1px 9px;
@@ -2917,48 +2920,48 @@ label.obj_button.darkmode_border.backfff {
                 box-sizing: border-box;
             }
 
-            #b:checked~.dashboard .dnoties .main_banner {
+            #dashb:checked~.dashboard .dnoties .main_banner {
                 transform: translatey(0px);
                 opacity: 1;
             }
 
-            #b:checked~.dashboard .dnoties .banner_news:nth-child(1) {
+            #dashb:checked~.dashboard .dnoties .banner_news:nth-child(1) {
                 transform: translatey(0px);
                 opacity: 1;
                 transition: all .3s .05s;
             }
 
-            #b:checked~.dashboard .dnoties .banner_news:nth-child(2) {
+            #dashb:checked~.dashboard .dnoties .banner_news:nth-child(2) {
                 transform: translatey(0px);
                 opacity: 1;
                 transition: all .3s .1s;
             }
 
-            #b:checked~.dashboard .dnoties .banner_news:nth-child(3) {
+            #dashb:checked~.dashboard .dnoties .banner_news:nth-child(3) {
                 transform: translatey(0px);
                 opacity: 1;
                 transition: all .3s .15s;
             }
 
-            #b:checked~.dashboard .dnoties .banner_news:nth-child(4) {
+            #dashb:checked~.dashboard .dnoties .banner_news:nth-child(4) {
                 transform: translatey(0px);
                 opacity: 1;
                 transition: all .3s .2s;
             }
 
-            #b:checked~.dashboard .dnoties .banner_news:nth-child(5) {
+            #dashb:checked~.dashboard .dnoties .banner_news:nth-child(5) {
                 transform: translatey(0px);
                 opacity: 1;
                 transition: all .3s .25s;
             }
 
-            #b:checked~.dashboard .dnoties .banner_news:nth-child(6) {
+            #dashb:checked~.dashboard .dnoties .banner_news:nth-child(6) {
                 transform: translatey(0px);
                 opacity: 1;
                 transition: all .3s .28s;
             }
 
-            #b:checked~.dashboard .dnoties .banner_news:nth-child(7) {
+            #dashb:checked~.dashboard .dnoties .banner_news:nth-child(7) {
                 transform: translatey(0px);
                 opacity: 1;
                 transition: all .3s .3s;
@@ -3136,7 +3139,7 @@ label.obj_button.darkmode_border.backfff {
                 }
             }
 
-            #b:checked~.dashboard .dnoties .main_banner .banner_back .banner_back1:nth-child(1) {
+            #dashb:checked~.dashboard .dnoties .main_banner .banner_back .banner_back1:nth-child(1) {
                 opacity: .6;
                 transform: scale(1);
                 animation: banner1 10s none 3s infinite alternate;
@@ -3144,7 +3147,7 @@ label.obj_button.darkmode_border.backfff {
                 transition: all .3s .3s;
             }
 
-            #b:checked~.dashboard .dnoties .main_banner .banner_back .banner_back1:nth-child(2) {
+            #dashb:checked~.dashboard .dnoties .main_banner .banner_back .banner_back1:nth-child(2) {
                 opacity: .6;
                 transform: scale(1);
                 animation: banner2 10s none 3s infinite alternate;
@@ -3152,7 +3155,7 @@ label.obj_button.darkmode_border.backfff {
                 transition: all .13s .34s;
             }
 
-            #b:checked~.dashboard .dnoties .main_banner .banner_back .banner_back1:nth-child(3) {
+            #dashb:checked~.dashboard .dnoties .main_banner .banner_back .banner_back1:nth-child(3) {
                 opacity: .6;
                 transform: scale(1);
                 animation: banner3 10s none 3s infinite alternate;
@@ -3160,7 +3163,7 @@ label.obj_button.darkmode_border.backfff {
                 transition: all .43s .35s;
             }
 
-            #b:checked~.dashboard .dnoties .main_banner .banner_back .banner_back1:nth-child(4) {
+            #dashb:checked~.dashboard .dnoties .main_banner .banner_back .banner_back1:nth-child(4) {
                 opacity: .6;
                 transform: scale(1);
                 animation: banner4 10s none 3s infinite alternate;
@@ -3168,7 +3171,7 @@ label.obj_button.darkmode_border.backfff {
                 transition: all 1.3s .36s;
             }
 
-            #b:checked~.dashboard .dnoties .main_banner .banner_back .banner_back1:nth-child(5) {
+            #dashb:checked~.dashboard .dnoties .main_banner .banner_back .banner_back1:nth-child(5) {
                 opacity: .6;
                 transform: scale(1.6);
                 animation: banner5 4s none 3s 1 alternate;
@@ -3267,7 +3270,7 @@ label.obj_button.darkmode_border.backfff {
                 transform: rotatey(0deg) translatey(0px) rotate(-10deg);
             }
 
-            #c:checked~.dashboard .dassociation .knz_oneplus {
+            #dashc:checked~.dashboard .dassociation .knz_oneplus {
                 animation: knz 1s none 0s 1 alternate;
             }
 
@@ -3345,12 +3348,12 @@ label.obj_button.darkmode_border.backfff {
                 box-shadow: inset 0px -3px 0 0px rgba(0,0,0,.8);
             }
 
-            #t2:checked~.dashboard .dassociation .tabs .lab2 {
+            #dasht2:checked~.dashboard .dassociation .tabs .lab2 {
                 color: #000;
                 box-shadow: inset 0px -3px 0 0px rgba(0,0,0,.8);
             }
 
-            #t3:checked~.dashboard .dassociation .tabs .lab3 {
+            #dasht3:checked~.dashboard .dassociation .tabs .lab3 {
                 color: #000;
                 box-shadow: inset 0px -3px 0 0px rgba(0,0,0,.8);
             }
@@ -3361,12 +3364,12 @@ label.obj_button.darkmode_border.backfff {
                 padding-bottom: 70px;
             }
 
-            #t2:checked~.dashboard .dassociation .tabs .tab2 {
+            #dasht2:checked~.dashboard .dassociation .tabs .tab2 {
                 height: auto;
                 min-height: 200px;
             }
 
-            #t3:checked~.dashboard .dassociation .tabs .tab3 {
+            #dasht3:checked~.dashboard .dassociation .tabs .tab3 {
                 height: auto;
                 min-height: 200px;
                 height: auto;
@@ -3454,7 +3457,7 @@ label.obj_button.darkmode_border.backfff {
                 margin: 10px 0px 124px 13px;
             }
 
-            .dash_title_back {
+            .dash_title_back {transition:all cubic-bezier(0.39, 0.06, 0.37, 0.98) .5s .2s,height cubic-bezier(0.39, 0.06, 0.37, 0.98) .5s .1s;height:200px;
                 background: url(download.jpg) no-repeat;
                 background-size: cover;    background-position: 50%;
             }
@@ -3462,8 +3465,8 @@ label.obj_button.darkmode_border.backfff {
             .dassociation #blur,.nextmain #blur {
                 background: url(david.jpg);
                 height: 42px;
-                background-size: cover;
-                background-position: 0% 100%;
+                background-size: cover;    background-repeat: no-repeat;
+                background-position: 0% 111%;
                 filter: blur(6px);
                 transform: scale(1.091) translate(0px,-3px);
                 position: relative;
@@ -3733,7 +3736,7 @@ label.obj_button.darkmode_border.backfff {
                 padding: 3px;
             }
 
-            #t2:checked~.dashboard .dassociation .tabs .tab2 {
+            #dasht2:checked~.dashboard .dassociation .tabs .tab2 {
                 padding-bottom: 70px;
             }
 
@@ -3748,10 +3751,14 @@ label.obj_button.darkmode_border.backfff {
 
             /*---------------------SLIDER-------------------------*/
             #one {
-                background: url('newsback.jpg') no-repeat;
-                background-size: cover;
+                background: url('newsback.jpg') no-repeat;opacity: 1;
+                background-size: cover;animation: comesupport 7s none 0s 1 normal !important;
             }
-
+@keyframes comesupport{
+    0%{opacity: 0;}
+    90%{opacity: 0;}
+    100%{opacity: 1;}
+}
             #two {
                 background: url('sefre.jpg') no-repeat;
                 background-size: cover;
@@ -3792,7 +3799,26 @@ label.obj_button.darkmode_border.backfff {
                 height: 80%;
                 z-index: -99;
             }
-
+.loading_slide{margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    animation: placeHolderShimmerlll 3s ease-in-out 0s infinite normal,comeup 6s none 0s 1 normal;
+    right: 0;
+    background: linear-gradient(to right, #484747a6 8%, #a9a4a46b 28%, #484747a6 53%);
+    background-size: 800px 104px;
+    opacity: .3;
+    border-radius: 3px;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    z-index: -2;}
+@keyframes comeup{
+    0%{z-index: -1;}
+    70%{z-index: 30;}
+    90%{z-index: 30;}
+    100%{z-index: -1;}
+}
             .for_slide {animation: fade-up-main-for_slide 5s none 0s 1 alternate !important;
                 opacity: 0;
                 font-size: 23px;
@@ -4227,7 +4253,7 @@ label.obj_button.darkmode_border.backfff {
     text-align: center;
 }
 .dhome{width:100vw;    padding: 35px 0px 41px 0px;margin: 49px 0px 320px 22px;}
-#sd:checked~.dashboard .dnav .iconi,#a:checked~.dashboard .dnav .iconii,#b:checked~.dashboard .dnav .iconiii,#c:checked~.dashboard .dnav .iconiv{box-shadow: inset 0px -6px 0px 0px rgba(0, 79, 255, 0.52);}
+#showdash:checked~.dashboard .dnav .iconi,#dasha:checked~.dashboard .dnav .iconii,#dashb:checked~.dashboard .dnav .iconiii,#dashc:checked~.dashboard .dnav .iconiv{box-shadow: inset 0px -6px 0px 0px rgba(0, 79, 255, 0.52);}
 label.obj_button.darkmode_border.backfff{position: static;}
 .gobj_tip{    max-width: 99%;}
 .gradients{margin: 9px 2px 9px 4px;font-size: 17px;    padding: 9px 16px;    min-width: 270px;}
@@ -4266,7 +4292,7 @@ label.obj_button.darkmode_border.backfff{position: static;}
     align-items: center;
 }
 .dashboard .dassociation .tabs label{width: 100%;text-align: center;transition: all .4s;}
-            #t1:checked~.dashboard .dassociation .tabs .lab1,#t2:checked~.dashboard .dassociation .tabs .lab2 ,#t3:checked~.dashboard .dassociation .tabs .lab3{color: #000;padding-top:25px;padding-bottom:25px;
+            #t1:checked~.dashboard .dassociation .tabs .lab1,#dasht2:checked~.dashboard .dassociation .tabs .lab2 ,#dasht3:checked~.dashboard .dassociation .tabs .lab3{color: #000;padding-top:25px;padding-bottom:25px;
                 box-shadow: inset 0px -3px 0 0px rgba(0,0,0,.8);background: #000;color: #fff;}
 .tab_fac_headtip {font-size: 19px;margin:27px 14px 10px 4%;}
 .tab_fac{    padding: 9px 13px 9px 14px;}
@@ -4363,74 +4389,124 @@ label.obj_button.darkmode_border.backfff{position: static;}
                     width: 100%;
                 }
             }
-.loading_bar{height: 1px;width: 100vw;background:rgba(0, 0, 0, 0.82);position: absolute;top: 0px;box-shadow:0 0 20px 1px rgba(0, 0, 0, 0.52);    z-index: 1000;animation: loading_bar 4s none 0s 1 alternate;opacity: 0;}
-#dash:checked~.loading_bar{z-index: 1000000;animation: loading_bar 4s none 0s 1 alternate;opacity: 0;}
+.loading_bar,#dash:checked~.loading_bar{    height: 1px;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 0px;
+    box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.32);
+    z-index: 1000;
+    animation: loading_bar 4s none 0s 1 normal;
+    opacity: 0;}
 @keyframes loading_bar{
-    0%{width:0vw;opacity: 1;}
+    0%{width:0vw;opacity: 1;z-index: 9999;}
     0%{width:0vw;opacity: 1;}
     60%{width:10vw;}
     70%{width:20vw;}
     77%{opacity: 1;}
-    100%{width:100vw;opacity: 0;}
+    100%{width:100vw;opacity: 0;z-index: 9999;}
 }
 @keyframes loading_bar_for_star{
     0%{height:100vh;overflow: hidden !important;}
     100%{height:100vh;overflow: hidden !important;}
 }
 body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;height: auto;}
+iframe {    border: none;
+    width: 99.4%;
+    height: 0vh;}
 
-        </style>
+#dasht2:checked~.dashboard .tab_nav_lab {padding: 9px 10px 9px 9px;font-size: 13px;}
+#dasht2:checked~.dashboard .dassociation{overflow: hidden;height: 100vh;    margin: 0px 0px 0px 13px;    padding: 0px 0px 41px 5px;}
+#dasht2:checked~.dashboard .dassociation iframe{display: block;height: 92.5vh;}
+#dasht2:checked~.dashboard .dnav1{height: 0;}
+#dasht2:checked~.dashboard .dassociation .dash_title_back{height:0;background-size: cover;    background-position: 50%;transform:scaley(.80);z-index: -10;position: relative;opacity: 0;}
+#dasht2:checked~.dashboard .dassociation .tabs {margin:0;}
+#dasht2:checked~.dashboard .dassociation .tab {padding:0;}
+
+#adminmode:checked~.adm{display: flex;}
+.adm{display: none;    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.95);
+    font-size: 30px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;    justify-content: center;
+    align-items: center;}
+.adm input{display: block !important;
+    height: 70px;
+    width: 350px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'extralight';
+    color: #fff;
+    border: 2px solid #fff;
+    background: transparent;
+}
+.tip_adm{font-size: 13px;
+    font-family: 'extralight';
+    position: absolute;
+    bottom: 20px;}
+.adm_knz{font-size: 240px;
+    font-family: 'bb';
+    position: absolute;
+    bottom: -12vh;
+    left: -1vw;
+    opacity: .04;}
+</style>
         <script>
             $(document).ready(function() {
-                $('#sd').click(function(event) {
+
+                $('#showdash').click(function(event) {
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #a,#b,#c,#d,#e,#f,#g,#t1,#t2,#t3').each(function() {
-                        $(this).prop('checked', false);
-                    });
                     $('#dash').each(function() {
                         $(this).prop('checked', toStatus);
+                    });                    $('#home, #dasha,#dashb,#dashc,#dashd,#e,#f,#g,#t1,#dasht2,#dasht3').each(function() {
+                        $(this).prop('checked', false);
                     });
+
                 });
-                $('#a').click(function(event) {
+                $('#dasha').click(function(event) {
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home,#sd,#b,#c,#d,#e,#f,#g,#t1,#t2,#t3').each(function() {
+                    $('#home,#showdash,#dashb,#dashc,#dashd,#e,#f,#g,#t1,#dasht2,#dasht3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash,#unselect,#ktuback').each(function() {
                         $(this).prop('checked', toStatus);
                     });
                 });
-                $('#b').click(function(event) {
+                $('#dashb').click(function(event) {
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #sd,#a,#c,#d,#e,#f,#g,#t1,#t2,#t3').each(function() {
+                    $('#home, #showdash,#dasha,#dashc,#dashd,#e,#f,#g,#t1,#dasht2,#dasht3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash').each(function() {
                         $(this).prop('checked', toStatus);
                     });
                 });
-                $('#c').click(function(event) {
+                $('#dashc').click(function(event) {
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #sd,#a,#b,#d,#e,#f,#g,#t1,#t2,#t3').each(function() {
+                    $('#home, #showdash,#dasha,#dashb,#dashd,#e,#f,#g,#t1,#dasht2,#dasht3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash, #t1').each(function() {
                         $(this).prop('checked', toStatus);
                     });
                 });
-                $('#d').click(function(event) {
+                $('#dashd').click(function(event) {
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #sd,#a,#b,#c,#e,#f,#g,#t1,#t2,#t3').each(function() {
+                    $('#home, #showdash,#dasha,#dashb,#dashc,#e,#f,#g,#t1,#dasht2,#dasht3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash').each(function() {
@@ -4441,7 +4517,7 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #sd,#a,#b,#c,#d,#f,#g,#t1,#t2,#t3').each(function() {
+                    $('#home, #showdash,#dasha,#dashb,#dashc,#dashd,#f,#g,#t1,#dasht2,#dasht3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash').each(function() {
@@ -4452,7 +4528,7 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #sd,#a,#b,#c,#d,#e,#g,#t1,#t2,#t3').each(function() {
+                    $('#home, #showdash,#dasha,#dashb,#dashc,#dashd,#e,#g,#t1,#dasht2,#dasht3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash').each(function() {
@@ -4463,7 +4539,7 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#home, #sd,#a,#b,#c,#d,#e,#f,#t1,#t2,#t3').each(function() {
+                    $('#home, #showdash,#dasha,#dashb,#dashc,#dashd,#e,#f,#t1,#dasht2,#dasht3').each(function() {
                         $(this).prop('checked', false);
                     });
                     $('#dash').each(function() {
@@ -4482,11 +4558,11 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
+                    $('#showdash, #dash').each(function() {
+                        $(this).prop('checked', toStatus);
+                    });
                     $('#home').each(function() {
                         $(this).prop('checked', false);
-                    });
-                    $('#sd, #dash').each(function() {
-                        $(this).prop('checked', toStatus);
                     });
                 });
                 $('#bi').click(function(event) {
@@ -4564,28 +4640,30 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                         $(this).prop('checked', false);
                     });
                 });
-                $('#t3').click(function(event) {
+                $('#dasht3').click(function(event) {
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#c,#dash').each(function() {
+                    $('#dashc,#dash').each(function() {
                         $(this).prop('checked', toStatus);
                     });
                     $('').each(function() {
                         $(this).prop('checked', false);
                     });
                 });
-                $('#t2').click(function(event) {
+                $('#dasht2').click(function(event) {
                     var btn = this
                       , toStatus = btn.checked;
                     //loop through each checkbox
-                    $('#c,#dash').each(function() {
+                    $('#dashc,#dash').each(function() {
                         $(this).prop('checked', toStatus);
                     });
                     $('').each(function() {
                         $(this).prop('checked', false);
                     });
                 });
+
+
                 /*Radio toggle, only if z-index dont work---------
   $("#toggleMe").click(function(){
         var radio = $(this);
@@ -4604,6 +4682,8 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
     <body>
         <input type='checkbox' class='checkers' name='dev' id='dev'>
         <!--Dev mode-->
+        <input type='checkbox' class='checkers' name='admin' id='adminmode'>
+        <!--Admin mode-->
         <input type='checkbox' class='checkers' name='darkmode' id='darkmode'>
         <!--Dark mode-->
         <input type='checkbox' class='checkers' name='mobMenu' id='mobmenu'>
@@ -4614,15 +4694,15 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
             <!--home-->
             <input type='radio' class='checkers' name='home' id='dash' value='da'>
             <!--dash-->
-            <input type='radio' class='checkers' name='sd' id='sd' value='a'>
+            <input type='radio' class='checkers' name='showdash' id='showdash' value='a'>
             <!--show dash-->
-            <input type='radio' class='checkers' name='sd' id='a' value='b'>
+            <input type='radio' class='checkers notes' name='showdash' id='dasha' value='b'>
             <!--downloads-->
-            <input type='radio' class='checkers' name='sd' id='b'>
+            <input type='radio' class='checkers' name='showdash' id='dashb'>
             <!--news-->
-            <input type='radio' class='checkers' name='sd' id='c'>
+            <input type='radio' class='checkers' name='showdash' id='dashc'>
             <!--association-->
-            <input type='radio' class='checkers' name='d' id='d'>
+            <input type='radio' class='checkers' name='d' id='dashd'>
             <!--notifications-->
             <input type='radio' class='checkers' name='e' id='e'>
             <!--dash unused slot1-->
@@ -4654,9 +4734,11 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
             <!--Ktuguru back path slot-->
             <input type='radio' class='checkers' name='tab' id='t1'>
             <!--dassociation faculty-->
-            <input type='radio' class='checkers' name='tab' id='t2'>
+            <input type='radio' class='checkers' name='tab' id='dasht2'>
+             <!--<input type='radio' class='checkers' name='tab' id='dasht2' value="gallery.html"
+ onclick="self.frames['iframe'].location.href=this.value; return true;">-->
             <!--dassociation gallery-->
-            <input type='radio' class='checkers' name='tab' id='t3'>
+            <input type='radio' class='checkers' name='tab' id='dasht3'>
             <!--dassociation team-->
             <input type='radio' class='checkers' name='acro' id='arco_ass_details1'>
             <input type='radio' class='checkers' name='acro' id='arco_ass_details2'>
@@ -4666,15 +4748,26 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
             <input type='radio' class='checkers' name='acro' id='arco_ass_details6'>
             <!--acro expands( for department logs )-->
             <!--end Navigation Checkboxes.-->
+            <!--------------URL Suffix Buffer----------------
+                Donot modify.
+                Url ?chk=tag lookup table is initialized and maintained in the last lines.
+                Relation tables maintainded above-->
+            <input type='radio' class='checkers' name='url' id='showdash'>
+            <input type='radio' class='checkers' name='url' id='notes'>
+            <input type='radio' class='checkers' name='url' id='news'>
+            <input type='radio' class='checkers' name='url' id='association'>
+            <input type='radio' class='checkers' name='url' id='gallery'>
+            <input type='radio' class='checkers' name='url' id='downloads'>
+            <!--end --------URL Suffix Buffer------------------>
             <div class='loading_bar'></div>
             <div class='nav'>
                 <div class='heading'></div>
                 <div class='nav-cover'>
-                    <label for='b' class='nav-item'>News
+                    <label for='dashb' class='nav-item'>News
             </label>
-                    <label for='c' class='nav-item'>Faculty
+                    <label for='dashc' class='nav-item'>Faculty
             </label>
-                    <label for='a' class='nav-item'>Notes
+                    <label for='dasha' class='nav-item'>Notes
             </label>
                     <label for='dash' class='nav-item navitem1'>Dashboard
             </label>
@@ -4686,8 +4779,9 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                     <input type="radio" class='gall' id="i2" name="images"/>
                     <input type="radio" class='gall' id="i3" name="images"/>
                     <input type="radio" class='gall' id="i4" name="images"/>
-                    <div class="container">
+                    <div class="container"><div class='loading_slide'></div>
                         <div class="slide_img" id="one">
+                            
                             <div class='slider'></div>
                             <div class='slide_inner1 slide_innera1'></div>
                             <div class='slide_inner2 slide_innera2'></div>
@@ -4752,13 +4846,13 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                         
                             
                             </label>
-                            <label for='a' class='tool2 light sub-head'>
+                            <label for='dasha' class='tool2 light sub-head'>
                                 <div class='tooltippic2'></div>
                                 Notes
                         
                             
                             </label>
-                            <label for='b' class='tool3news light sub-head'>
+                            <label for='dashb' class='tool3news light sub-head'>
                                 <div class='tooltippic3'></div>
                                 <div class='tooltip' id='blur'></div>
                                 <div class='tooltip toola'>
@@ -4860,35 +4954,35 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                         <!--Acro slot left unused-->
                     </div>
                     <div class="dbanner">
-                        <label for='a' class="gradients">
+                        <label for='dasha' class="gradients">
                             <div class="ghead">Notes
                         </div>
                             <div class="gfoot">Download semester-wise notes.
                         </div>
                             <div class="gbutton darkmode_border opacity1 backfff"></div>
                         </label>
-                        <label for='t2'  class="gradients">
+                        <label for='dasht2'  class="gradients">
                             <div class="ghead">Gallery
                         </div>
                             <div class="gfoot">Holygrace snaps and events!
                         </div>
                             <div class="gbutton darkmode_border opacity1 backfff"></div>
                         </label>
-                        <label for='b' class="gradients">
+                        <label for='dashb' class="gradients">
                             <div class="ghead">Notifications
                         </div>
                             <div class="gfoot">Updates on events intra-collage and more
                         </div>
                             <div class="gbutton darkmode_border opacity1 backfff"></div>
                         </label>
-                        <label for='c' class="gradients">
+                        <label for='dashc' class="gradients">
                             <div class="ghead">Faculties
                         </div>
                             <div class="gfoot">HOD and Teachers-in-charge
                         </div>
                             <div class="gbutton darkmode_border opacity1 backfff"></div>
                         </label>
-                        <label for='t3' class="gradients">
+                        <label for='dasht3' class="gradients">
                             <div class="ghead">Donwloads
                         </div>
                             <div class="gfoot">Info and docs of reports and forms
@@ -4898,7 +4992,7 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                     </div>
                     <div class='tab tab1'>
                         <div class='nxtmain_head about_cse head'>Faculty</div>
-                        <div class="tipout">Click to view resume.Android Studio is the IDE for Android that was announced in May 2013 at the Google I/O developers event, and is intended as an alternative to Eclipse. At the time of this writing, Android Studio is currently in Early Access Preview, with the most recent version being 0.0.5.Android Studio is the IDE for Android that was announced in May 2013 at the Google I/O developers event, and is intended as an alternative to Eclipse. At the time of this writing, Android Studio is currently in Early Access Preview, with the most recent version being 0.0.5.
+                        <div class="tipout"><!--Write about things here-->
 
 
                                 </div>
@@ -5046,11 +5140,11 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                     <div class='foothead extralight head'>
                         Wissen, The Computer Science Department Assosciation
                         <label for='dash' class='foot_links'>Dashboard</label>
-                        <label for='a' class='foot_links'>Downloads</label>
-                        <label for='b' class='foot_links'>News</label>
-                        <label for='c' class='foot_links'>Faculty</label>
-                        <label for='t2' class='foot_links'>Gallery</label>
-                        <label for='t3' class='foot_links'>Information</label>
+                        <label for='dasha' class='foot_links'>Downloads</label>
+                        <label for='dashb' class='foot_links'>News</label>
+                        <label for='dashc' class='foot_links'>Faculty</label>
+                        <label for='dasht2' class='foot_links'>Gallery</label>
+                        <label for='dasht3' class='foot_links'>Information</label>
                 </div>
                 <div class='foothead extralight head'>
                         Holy Grace Academy of Engineering, Mala, Thrissur, Kerala
@@ -5078,13 +5172,13 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                         <label for='dash' class='pathdiv path2'>Dashboard</label>
                         <div class='divider divide2'>/</div>
                         <div class='pathdiv path3'>
-                            <label for='a'>Notes</label>
+                            <label for='dasha'>Notes</label>
                         </div>
                         <div class='pathdiv path4'>
-                            <label for='b'>Notifications</label>
+                            <label for='dashb'>Notifications</label>
                         </div>
                         <div class='pathdiv path5'>
-                            <label for='c'>Association</label>
+                            <label for='dashc'>Association</label>
                         </div>
                         <div class='divider divide3'>/</div>
                         <div class='pathdiv path6'>Semester</div>
@@ -5103,10 +5197,10 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                     </div>
                     <label for='mobmenu' class='mobmenu'></label>
                     <div class='label_list'><label for='home' class='labels_in_list'>Home</label>
-                    <label for='sd' class='labels_in_list'>Dashboard home</label>
-                <label for='a' class='labels_in_list'>Downloads</label>
-            <label for='b' class='labels_in_list'>Notifications</label>
-        <label for='c' class='labels_in_list'>Association</label></div>
+                    <label for='showdash' class='labels_in_list'>Dashboard home</label>
+                <label for='dasha' class='labels_in_list'>Downloads</label>
+            <label for='dashb' class='labels_in_list'>Notifications</label>
+        <label for='dashc' class='labels_in_list'>Association</label></div>
                 </div>
                 <label for='mobmenu' class='mobmenu_cover'></label>
                 <div class='dnav dnav2 darkmode_border'>
@@ -5119,28 +5213,28 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                             <div class='wlogo_txt'>issen</div>
                         </div>
                     </div>
-                    <label for='sd' class='icon_holder iconi'>
+                    <label for='showdash' class='icon_holder iconi'>
                         <div class='icon_holder1'>
                             <div class='icon icon1 icon1i'></div>
                         </div>
                         <div class='icontip icontipi'>Dashboard
             </div>
                     </label>
-                    <label for='a' class='icon_holder iconii'>
+                    <label for='dasha' class='icon_holder iconii'>
                         <div class='icon_holder1'>
                             <div class='icon icon1 icon1ii'></div>
                         </div>
                         <div class='icontip icontipii'>Downloads
             </div>
                     </label>
-                    <label for='b' class='icon_holder iconiii'>
+                    <label for='dashb' class='icon_holder iconiii'>
                         <div class='icon_holder1'>
                             <div class='icon icon1 icon1iii'></div>
                         </div>
                         <div class='icontip icontipiii'>Notifications
             </div>
                     </label>
-                    <label for='c' class='icon_holder iconiv'>
+                    <label for='dashc' class='icon_holder iconiv'>
                         <div class='icon_holder1'>
                             <div class='icon icon1 icon1iv'></div>
                         </div>
@@ -5167,35 +5261,35 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                     <div class='dash_title extralight'>Dashboard
                 </div>
                     <div class="dbanner">
-                        <label for='a' class="gradients">
+                        <label for='dasha' class="gradients">
                             <div class="ghead">Notes
                         </div>
                             <div class="gfoot">Download semester-wise notes.
                         </div>
                             <div class="gbutton darkmode_border opacity1 backfff"></div>
                         </label>
-                        <label for='t2'  class="gradients">
+                        <label for='dasht2'  class="gradients">
                             <div class="ghead">Gallery
                         </div>
                             <div class="gfoot">Holygrace snaps and events!
                         </div>
                             <div class="gbutton darkmode_border opacity1 backfff"></div>
                         </label>
-                        <label for='b' class="gradients">
+                        <label for='dashb' class="gradients">
                             <div class="ghead">Notifications
                         </div>
                             <div class="gfoot">Updates on events intra-collage and more
                         </div>
                             <div class="gbutton darkmode_border opacity1 backfff"></div>
                         </label>
-                        <label for='c' class="gradients">
+                        <label for='dashc' class="gradients">
                             <div class="ghead">Faculties
                         </div>
                             <div class="gfoot">HOD and Teachers-in-charge
                         </div>
                             <div class="gbutton darkmode_border opacity1 backfff"></div>
                         </label>
-                        <label for='t3' class="gradients">
+                        <label for='dasht3' class="gradients">
                             <div class="ghead">Donwloads
                         </div>
                             <div class="gfoot">Info and docs of reports and forms
@@ -5221,7 +5315,7 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
                                 <span class='subbb'>Yo bro. Holygrace Academy the new department website. Yo watsupp
                             Google I/O developers event, and is intended as</span>
                             </div>
-                            <label for='b' class='obj_button darkmode_border backfff'>All News
+                            <label for='dashb' class='obj_button darkmode_border backfff'>All News
                         </label>
                         </div>
                     </div>
@@ -15783,8 +15877,8 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
     <div class='tabs'>
         <div class='tab_nav'>
             <label for='t1' class='tab_nav_lab lab1'>Faculty</label>
-            <label for='t2' class='tab_nav_lab lab2'>Gallery (30)</label>
-            <label for='t3' class='tab_nav_lab lab3'>Informations and Downloads</label>
+            <label for='dasht2' class='tab_nav_lab lab2'>Gallery (30)</label>
+            <label for='dasht3' class='tab_nav_lab lab3'>Informations and Downloads</label>
         </div>
         <div class='tab tab1'>
             <div class="tipout">Click to view resume.
@@ -15926,7 +16020,9 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
             </div>
             
         </div>
-        <div class='tab tab2'><div class='err_505'></div></div>
+        <div class='tab tab2'><!--<div class='err_505'></div>-->
+<iframe name='iframe' src="gallery.html"></iframe>
+    </div>
         <div class='tab tab3'>
             <div class='tab_fac_headtip'>General Downloads
                     </div>
@@ -16079,7 +16175,13 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
         </div>
     </div>
 </div>
-</div></div><script>
+</div></div>
+<div class='adm'>
+<input class='adm_bar' placeholder="password" type='password'/>
+<div class='tip_adm'>If this is not what you're looking for, remove 'kn=*******' from the URL.</div>
+<div class='adm_knz'>knz</div>
+</div>
+<script>
     window.sr = ScrollReveal({
         reset: false
     });
@@ -16123,6 +16225,7 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
         reset: false
     });
 </script>
+
 </body><style>
     .switches {
         width: 26%;
@@ -16261,4 +16364,45 @@ body{animation: loading_bar_for_star 3s none 0s 1 alternate;overflow: hidden;hei
     -----------------------------------------
 
 -->
+<!--<script>
+var url = window.location.href.split("?");
+if(url[1].toLowerCase().includes("chk=dash")){
+    $('#dash').attr('checked', true);
+}
+else{
+    //false
+}
+</script>-->
+<script>
+var CHK_ID_LOOKUP = {
+    '':    '',
+'dash':         '#showdash,#dash',
+'notes':        '#dasha,#dash',
+'notes=cs':      '#dasha,#dash,#dropi',
+'notes=cs.s1':      '#dasha,#dash,#dropi,#bi',
+'notes=cs.s2':      '#dasha,#dash,#dropi,#bi',
+'notes=cs.s3':      '#dasha,#dash,#dropi,#bii',
+'notes=cs.s4':      '#dasha,#dash,#dropi,#biii',
+'notes=cs.s5':      '#dasha,#dash,#dropi,#biv',
+'notes=cs.s6':      '#dasha,#dash,#dropi,#bv',
+'notes=cs.s7':      '#dasha,#dash,#dropi,#bvi',
+'notes=cs.s8':      '#dasha,#dash,#dropi,#bvii',
+'news':        '#dashb,#dash',
+'ass':        '#dashc,#dash,#t1',
+'gallery':        '#dashc,#dash,#dasht2',
+'downloads':        '#dashc,#dash,#dasht3',
+'night':         '#darkmode',
+'dev':         '#dev',
+'admin':         '#adminmode',
+
+};
+
+var chk = (location.search.match(/[?&]kn=([^&#]+)|$/i)[1] || '').toLowerCase();
+if (CHK_ID_LOOKUP.hasOwnProperty(chk)) {
+  $(CHK_ID_LOOKUP[chk]).attr('checked', true);
+}
+ else {
+  $('#adminmode').attr('checked', true);
+  // unknown chk
+}</script>
 </html>
