@@ -1,0 +1,44 @@
+{
+
+   "big": [
+       {
+           "heading": "The official site is here.",
+           "tooltip": "The Holygrace department of computer science brings a new portal for students and teachers alike to have an access to free resources.",
+           "pic": "n1.jpg"
+       }
+   ],
+   "small": [
+       {
+           "heading": "Test",
+           "tooltip": "This is a test notification. Dont mind."
+       },
+       {
+           "heading": "S5",
+           "tooltip": "Hello World"
+       },
+      {
+           "heading": "S6",
+           "tooltip": "Hello WorldHello WorldHello WorldHello WorldHello "
+       },
+       {
+           "heading": "S5",
+           "tooltip": "Hello World"
+       },
+      {
+           "heading": "S6",
+           "tooltip": "Hello WorldHello WorldHello WorldHello WorldHello "
+       },
+       {
+           "heading": "S5",
+           "tooltip": "Hello World"
+       },
+      {
+           "heading": "S6",
+           "tooltip": "Hello WorldHello WorldHello WorldHello WorldHello "
+       },
+       {
+           "heading": "S5",
+           "tooltip": "Hello World"
+       }
+   ]
+}
